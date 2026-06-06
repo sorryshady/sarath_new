@@ -129,6 +129,23 @@
   /* Contact section ink bleed, crimson */
 
 
+  /* --- Ghost Bar navigation colours (matched to logo tone per theme) --- */
+
+  --nav-brand-light:         var(--color-crimson);
+  --nav-brand-light-muted:   rgba(139, 30, 30, 0.55);
+  --nav-brand-dark:          var(--color-parchment-text);
+  --nav-brand-dark-muted:    var(--color-parchment-50);
+  --nav-logo-filter-light:   contrast(1.25) saturate(1.15);
+  --nav-logo-filter-dark:    brightness(0) saturate(100%) invert(90%) sepia(14%) saturate(650%) hue-rotate(358deg) brightness(104%) contrast(88%);
+  --nav-logo-filter-menu:    var(--nav-logo-filter-dark);
+  --nav-link-inactive-opacity: 1;
+  --nav-backdrop-light:      transparent;
+  --nav-backdrop-dark:       transparent;
+  --nav-border-light:        var(--border-lighter);
+  --nav-border-dark:         var(--border-dark);
+  --mobile-overlay-bg:       var(--color-crimson);
+
+
   /* --- Hero section --- */
 
   --hero-meta-text:    rgba(249, 246, 240, 0.72);
@@ -229,7 +246,15 @@
   --preloader-progress-height: 3px;
 
   /* Data — Courier New */
-  --size-nav:           10px;        /* Navigation links */
+  --size-nav:           13px;        /* Navigation links */
+  --size-nav-monogram:  20px;        /* SM initials beside logo */
+  --nav-logo-height:    100px;        /* Logo mark in ghost bar — desktop */
+  --nav-logo-height-mobile: 80px;  /* Logo mark in ghost bar — mobile */
+  --nav-logo-height-menu: 80px;     /* Logo in mobile overlay header */
+  --size-nav-mobile-link: 52px;     /* Mobile overlay nav links */
+  --nav-burger-width:     22px;    /* Mobile menu burger icon */
+  --nav-burger-line:      1.5px;   /* Burger bar thickness */
+  --nav-burger-gap:       5px;     /* Space between burger bars */
   --size-label:         9px;         /* All UI micro-labels */
   --size-caption:       8px;         /* Photo/film captions */
   --size-tag:           8px;         /* Role tags */
@@ -249,6 +274,8 @@
 
   --tracking-tight:     -0.02em;    /* Large display headings */
   --tracking-normal:    0;
+  --tracking-monogram:  0.04em;     /* SM monogram */
+  --tracking-menu-trigger: 0.08em; /* Mobile dash trigger */
   --tracking-label:     0.12em;     /* Standard Courier labels */
   --tracking-wide:      0.14em;     /* Section labels, captions */
   --tracking-wider:     0.18em;     /* Preloader status text */
@@ -288,6 +315,22 @@
   --space-2xl:  48px;
   --space-3xl:  64px;
   --space-4xl:  80px;
+
+  /* --- Ghost Bar navigation --- */
+
+  --nav-logo-padding-top:   4px;     /* Breathing room above logo mark only */
+  --nav-height-desktop:     108px;   /* scroll offset: logo + bar padding */
+  --nav-height-mobile:      88px;
+  --nav-padding-x-desktop:  28px;
+  --nav-padding-x-mobile:   20px;
+  --nav-padding-y-mobile:   14px;
+  --nav-link-gap-desktop:   32px;
+  --nav-link-gap-tablet:    20px;
+  --nav-backdrop-blur:      4px;
+  --nav-border-width:       0.5px;
+  --nav-underline-height:   1px;
+  --nav-underline-offset:   2px;
+  --nav-theme-switch-ratio-down: 0.8; /* Scrolling down — section must fill this much of viewport */
 }
 
 
@@ -302,6 +345,7 @@
   --z-section-overlay:  2;      /* Overlays within sections */
   --z-cinema-dim:       9;      /* Cinema lights-down overlay (App.tsx) */
   --z-nav:              1000;   /* Ghost Bar navigation */
+  --z-mobile-menu:      2000;   /* Full-screen mobile nav overlay */
   --z-lightbox:         9990;   /* Vimeo film lightbox */
   --z-transition:       9995;   /* Page transition portal image */
   --z-paper:            9998;   /* Global paper grain texture */
@@ -338,6 +382,13 @@
 
   --duration-instant:   0.15s;   /* Immediate feedback (fade out chrome) */
   --duration-fast:      0.25s;   /* Quick transitions */
+  --duration-mobile-fade: 0.2s;  /* Mobile menu link fade-out */
+  --duration-nav-active: 0.3s;   /* Nav link opacity + underline */
+  --duration-nav-theme: 0.4s;    /* Ghost Bar light/dark colour shift */
+  --duration-nav-entry: 0.6s;   /* Ghost Bar slide-in after hero */
+  --duration-nav-entry-delay: 0.2s; /* Pause after hero before nav appears */
+  --duration-mobile-overlay: 0.5s;  /* Mobile menu slide up */
+  --duration-mobile-close: 0.45s;   /* Mobile menu slide down */
   --duration-normal:    0.45s;   /* Standard transitions */
   --duration-slow:      0.65s;   /* Page transitions, zoom */
   --duration-slower:    0.8s;    /* Scatter, flip */

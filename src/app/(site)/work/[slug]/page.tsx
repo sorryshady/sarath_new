@@ -1,7 +1,7 @@
 import { notFound } from 'next/navigation';
 
 import Copy from '@/components/copy/Copy';
-import { SiteNav } from '@/components/navigation/SiteNav';
+import { GhostBar } from '@/components/navigation/GhostBar';
 import { WorkHero } from '@/components/work/WorkHero';
 import { client, isSanityConfigured } from '@/sanity/lib/client';
 import { urlFor } from '@/sanity/lib/image';
@@ -46,8 +46,11 @@ export default async function WorkPage({ params }: WorkPageProps) {
 
     return (
       <>
-        <SiteNav />
-        <main style={{ background: 'var(--color-cream)', color: 'var(--color-ink)' }}>
+        <GhostBar />
+        <main
+          data-nav-theme="light"
+          style={{ background: 'var(--color-cream)', color: 'var(--color-ink)' }}
+        >
           <div className="flex min-h-[40vh] items-center justify-center px-6 py-32 md:px-16">
             <Copy animateOnScroll={false}>
               <h1
@@ -76,8 +79,11 @@ export default async function WorkPage({ params }: WorkPageProps) {
 
   return (
     <>
-      <SiteNav />
-      <main style={{ background: 'var(--color-cream)', color: 'var(--color-ink)' }}>
+      <GhostBar />
+      <main
+        data-nav-theme="light"
+        style={{ background: 'var(--color-cream)', color: 'var(--color-ink)' }}
+      >
         <WorkHero slug={slug} imageSrc={imageSrc} imageAlt={series.title} />
         <div className="px-6 py-16 md:px-16 md:py-24">
           <Copy animateOnScroll={false}>

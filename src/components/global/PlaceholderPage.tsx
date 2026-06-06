@@ -1,13 +1,14 @@
 import type { Metadata } from 'next';
 
 import Copy from '@/components/copy/Copy';
-import { SiteNav } from '@/components/navigation/SiteNav';
+import { GhostBar } from '@/components/navigation/GhostBar';
 
 type PlaceholderPageProps = {
   title: string;
   description: string;
   background?: string;
   foreground?: string;
+  navTheme?: 'light' | 'dark';
 };
 
 export function PlaceholderPage({
@@ -15,11 +16,13 @@ export function PlaceholderPage({
   description,
   background = 'var(--color-cream)',
   foreground = 'var(--color-ink)',
+  navTheme = 'light',
 }: PlaceholderPageProps) {
   return (
     <>
-      <SiteNav />
+      <GhostBar />
       <main
+        data-nav-theme={navTheme}
         className="flex min-h-screen flex-col justify-center px-6 py-32 md:px-16"
         style={{ background, color: foreground }}
       >

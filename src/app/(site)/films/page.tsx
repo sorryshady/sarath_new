@@ -15,6 +15,7 @@ export default function FilmsPage() {
       description="Filmography section — full GSAP build coming soon."
       background="var(--color-cinema-dark)"
       foreground="var(--color-parchment-text)"
+      navTheme="dark"
     />
   );
 }

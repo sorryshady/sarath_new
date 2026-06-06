@@ -16,7 +16,7 @@ gsap.registerPlugin(ScrollTrigger, useGSAP);
 export type HeroSectionProps = {
   isPreloaderDone: boolean;
   onVideoReady: () => void;
-  onHeroComplete: () => void;
+  onHeroComplete: (complete: boolean) => void;
 };
 
 const metaLabelStyle = {
@@ -111,7 +111,8 @@ export function HeroSection({
           end: '+=300%',
           pin: true,
           scrub: 1,
-          onLeave: () => onHeroCompleteRef.current(),
+          onLeave: () => onHeroCompleteRef.current(true),
+          onEnterBack: () => onHeroCompleteRef.current(false),
         },
       });
 
