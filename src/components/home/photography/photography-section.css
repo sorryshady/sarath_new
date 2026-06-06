@@ -1,0 +1,511 @@
+/* ============================================================
+   Photography Section — Polaroid Scatter
+   ============================================================ */
+
+.photography-section {
+  position: relative;
+  background: var(--color-cream);
+  padding: var(--section-padding-mobile);
+}
+
+@media (min-width: 768px) {
+  .photography-section {
+    padding: var(--section-padding-tablet);
+  }
+}
+
+@media (min-width: 1024px) {
+  .photography-section {
+    padding: var(--section-padding-desktop);
+  }
+}
+
+/* Desktop + tablet: the section is pinned as a single viewport-height block so
+   the header row stays put while the stage runs the scatter/flip sequence. */
+@media (min-width: 768px) {
+  .photography-section:not(.photography-mobile) {
+    height: 100vh;
+    height: 100dvh;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    /* Tighter vertical padding than a normal section so the pinned viewport has
+       room for the header + two enlarged rows of polaroids. The larger top
+       padding clears the fixed navbar so the "Selected Work" header doesn't
+       collide with it. */
+    padding-top: 92px;
+    padding-bottom: 32px;
+  }
+
+  .photography-section:not(.photography-mobile) .photography-header {
+    margin-bottom: var(--space-md);
+  }
+
+  .photography-section:not(.photography-mobile) .photography-stage {
+    flex: 1 1 auto;
+    min-height: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  /* The grid is the only in-flow child of the stage (heading, scroll hint and
+     view-all link are absolutely positioned), so flex-centring balances it
+     within the reduced stage height. */
+  .photography-section:not(.photography-mobile) .polaroid-grid {
+    min-height: 0;
+  }
+}
+
+/* --- Section header row --- */
+
+.photography-header {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  padding-bottom: var(--space-md);
+  border-bottom: var(--nav-border-width) solid var(--border-light);
+  margin-bottom: var(--space-2xl);
+}
+
+.photography-header__title {
+  font-family: var(--font-editorial);
+  font-weight: var(--weight-semibold);
+  font-size: var(--size-series-title);
+  color: var(--color-ink);
+  line-height: var(--leading-snug);
+}
+
+.photography-header__count {
+  font-family: var(--font-data);
+  font-size: var(--size-label);
+  letter-spacing: var(--tracking-wide);
+  color: var(--color-ink-40);
+  text-transform: uppercase;
+}
+
+/* --- Animation stage (desktop) --- */
+
+.photography-stage {
+  position: relative;
+  min-height: 100vh;
+  min-height: 100dvh;
+}
+
+.photography-stage__scroll-hint {
+  position: absolute;
+  top: calc(50% + 120px);
+  left: 50%;
+  transform: translateX(-50%);
+  font-family: var(--font-data);
+  font-size: var(--size-label);
+  letter-spacing: var(--tracking-label);
+  color: var(--color-ink);
+  opacity: 0.4;
+  text-transform: uppercase;
+  pointer-events: none;
+  z-index: 2;
+  white-space: nowrap;
+}
+
+/* --- Polaroid grid --- */
+
+.polaroid-grid {
+  position: relative;
+  display: grid;
+  grid-template-columns: repeat(3, auto);
+  column-gap: clamp(64px, 9vw, 140px);
+  row-gap: 44px;
+  justify-content: center;
+  align-items: start;
+  z-index: 2;
+}
+
+@media (min-width: 768px) and (max-width: 1023px) {
+  .polaroid-grid {
+    grid-template-columns: repeat(2, auto);
+    column-gap: clamp(48px, 8vw, 96px);
+    row-gap: 40px;
+  }
+}
+
+/* --- Polaroid card --- */
+
+.polaroid-card {
+  --polaroid-width: 232px;
+  --polaroid-cardstock: #F5F0E8;
+
+  width: var(--polaroid-width);
+  /* Rotation + lift are applied by GSAP (see PhotographySection), not CSS, so
+     the scatter and hover transforms don't clash with a stylesheet transform. */
+  cursor: default;
+  flex-shrink: 0;
+}
+
+/* Card tilt (GRID_ROTATIONS) and lift are GSAP-driven; columns stay vertically
+   aligned because no margin offsets are applied. */
+
+@media (min-width: 768px) and (max-width: 1023px) {
+  .polaroid-card {
+    --polaroid-width: 178px;
+  }
+}
+
+.polaroid-card--hover-enabled {
+  cursor: pointer;
+}
+
+/* Shadow lives on the faces (not the static shell) so it rotates WITH the card.
+   A shadow on the shell would stay full-size while the card narrows during the
+   flip, leaving a stray shadow rectangle behind it (the "back section"). */
+.polaroid-card--hover-enabled:hover .polaroid-card__border,
+.polaroid-card--hover-enabled:hover .polaroid-card__back {
+  box-shadow: 4px 10px 32px rgba(0, 0, 0, 0.28);
+}
+
+.polaroid-card__shell {
+  /* Perspective must sit on the flipper's direct parent for the 3D rotateY to
+     read with depth. */
+  perspective: 1200px;
+}
+
+.polaroid-card__flipper {
+  position: relative;
+  width: 100%;
+  /* The whole polaroid (image + caption strip) is 3:4; both faces fill it. */
+  aspect-ratio: 3 / 4;
+  transform-style: preserve-3d;
+  transform: rotateY(0deg);
+}
+
+.polaroid-card--reduced .polaroid-card__flipper {
+  transform: rotateY(180deg);
+}
+
+.polaroid-card__face {
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+}
+
+.polaroid-card__back {
+  position: absolute;
+  inset: 0;
+  background: var(--polaroid-cardstock);
+  border: 1px solid var(--color-ink-06);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transform: rotateY(0deg);
+  box-shadow: 3px 6px 20px rgba(0, 0, 0, 0.18);
+  transition: box-shadow var(--duration-nav-active) ease;
+}
+
+.polaroid-card__back-monogram {
+  font-family: var(--font-editorial);
+  font-size: 28px;
+  font-weight: var(--weight-semibold);
+  color: var(--color-ink-08);
+  letter-spacing: var(--tracking-monogram);
+  user-select: none;
+}
+
+.polaroid-card__back-frame {
+  position: absolute;
+  bottom: 10px;
+  right: 10px;
+  font-family: var(--font-data);
+  font-size: var(--size-label);
+  color: var(--color-ink-18);
+  letter-spacing: var(--tracking-label);
+}
+
+.polaroid-card__front {
+  position: absolute;
+  inset: 0;
+  transform: rotateY(180deg);
+}
+
+/* White polaroid body: image fills the top, the caption sits inside the bottom
+   strip (classic polaroid). */
+.polaroid-card__border {
+  position: absolute;
+  inset: 0;
+  background: #ffffff;
+  border-radius: 0;
+  padding: 8px;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 3px 6px 20px rgba(0, 0, 0, 0.18);
+  transition: box-shadow var(--duration-nav-active) ease;
+}
+
+.polaroid-card__image-wrap {
+  position: relative;
+  flex: 1 1 auto;
+  min-height: 0;
+  overflow: hidden;
+  width: 100%;
+}
+
+.polaroid-card__image {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  /* Counter the global paper grain (mix-blend-mode: multiply) which mutes
+     midtones and flattens contrast: push contrast + saturation harder and keep
+     brightness modest so the photos read punchy rather than washed out. */
+  filter: contrast(1.18) saturate(1.2) brightness(1.04);
+}
+
+.polaroid-card__hover-overlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.78), rgba(0, 0, 0, 0.15) 70%, transparent);
+  padding: var(--space-lg) 12px var(--space-sm);
+  opacity: 0;
+  transition: opacity var(--duration-nav-active) ease;
+  pointer-events: none;
+  z-index: 3;
+}
+
+.polaroid-card--hover-enabled:hover .polaroid-card__hover-overlay {
+  opacity: 1;
+}
+
+.polaroid-card__hover-title {
+  font-family: var(--font-editorial);
+  font-style: italic;
+  font-size: 16px;
+  color: #ffffff;
+  display: block;
+  text-shadow: 0 1px 4px rgba(0, 0, 0, 0.5);
+}
+
+.polaroid-card__hover-frames {
+  font-family: var(--font-data);
+  font-size: 11px;
+  color: rgba(255, 255, 255, 0.88);
+  letter-spacing: var(--tracking-label);
+  text-transform: uppercase;
+  display: block;
+  margin-top: var(--space-xs);
+  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.5);
+}
+
+.polaroid-card__caption {
+  flex: 0 0 auto;
+  padding: 8px 4px 4px;
+  text-align: center;
+}
+
+.polaroid-card__series-name {
+  display: block;
+  font-family: var(--font-editorial);
+  font-weight: var(--weight-semibold);
+  font-size: 16px;
+  color: var(--color-ink);
+  letter-spacing: 0.01em;
+  line-height: var(--leading-snug);
+}
+
+.polaroid-card__series-name-char {
+  opacity: 0;
+}
+
+.polaroid-card__series-meta {
+  display: block;
+  margin-top: var(--space-xs);
+  font-family: var(--font-data);
+  font-size: 11px;
+  color: #6b6b6b;
+  letter-spacing: var(--tracking-label);
+  text-transform: uppercase;
+  opacity: 0;
+}
+
+/* --- View all link --- */
+
+.photography-view-all {
+  position: absolute;
+  bottom: var(--space-xl);
+  right: var(--space-xl);
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  opacity: 0;
+  z-index: 5;
+}
+
+.photography-view-all__text {
+  font-family: var(--font-data);
+  font-size: 10px;
+  letter-spacing: var(--tracking-wide);
+  color: var(--color-crimson);
+  text-transform: uppercase;
+}
+
+.photography-view-all__arrow {
+  font-family: var(--font-data);
+  font-size: 10px;
+  color: var(--color-crimson);
+}
+
+.photography-view-all:hover .photography-view-all__text,
+.photography-view-all:hover .photography-view-all__arrow {
+  opacity: 0.8;
+}
+
+/* --- Mobile horizontal strip --- */
+
+.photography-mobile {
+  position: relative;
+}
+
+.photography-strip-wrap {
+  position: relative;
+}
+
+/* --- Mobile horizontal-scroll affordances --- */
+
+.photography-strip-hint {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-sm);
+  margin-bottom: var(--space-md);
+  font-family: var(--font-data);
+  font-size: var(--size-label);
+  letter-spacing: var(--tracking-label);
+  text-transform: uppercase;
+  color: var(--color-ink-40);
+  transition: opacity var(--duration-nav-active) ease;
+}
+
+.photography-strip-hint--hidden {
+  opacity: 0;
+  pointer-events: none;
+}
+
+.photography-strip-hint__line {
+  width: 28px;
+  height: 1px;
+  background: var(--color-ink-18);
+}
+
+.photography-strip-hint__arrow {
+  display: inline-block;
+  animation: photography-swipe-nudge 1.4s ease-in-out infinite;
+}
+
+@keyframes photography-swipe-nudge {
+  0%,
+  100% {
+    transform: translateX(0);
+  }
+  50% {
+    transform: translateX(6px);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .photography-strip-hint__arrow {
+    animation: none;
+  }
+}
+
+.photography-strip-dots {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 7px;
+  margin-top: var(--space-lg);
+}
+
+.photography-strip-dot {
+  width: 6px;
+  height: 6px;
+  border-radius: 999px;
+  background: var(--color-ink-18);
+  transition: width var(--duration-nav-active) ease,
+    background-color var(--duration-nav-active) ease;
+}
+
+.photography-strip-dot--active {
+  width: 20px;
+  background: var(--color-ink);
+}
+
+.photography-strip {
+  display: flex;
+  gap: var(--space-lg);
+  overflow-x: scroll;
+  overflow-y: hidden;
+  scroll-snap-type: x mandatory;
+  -webkit-overflow-scrolling: touch;
+  padding: 0 var(--space-xl);
+  scrollbar-width: none;
+}
+
+.photography-strip::-webkit-scrollbar {
+  display: none;
+}
+
+.photography-strip .polaroid-card {
+  --polaroid-width: 200px;
+  scroll-snap-align: center;
+  opacity: 0.4;
+  transition: opacity var(--duration-nav-active) ease;
+}
+
+.photography-strip .polaroid-card--active {
+  opacity: 1;
+}
+
+.photography-strip-arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  font-family: var(--font-data);
+  font-size: 18px;
+  color: var(--color-ink);
+  opacity: 0.35;
+  transition: opacity var(--duration-fast) ease;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: var(--space-sm);
+  z-index: 4;
+}
+
+.photography-strip-arrow:hover {
+  opacity: 1;
+}
+
+.photography-strip-arrow--left {
+  left: var(--space-sm);
+}
+
+.photography-strip-arrow--right {
+  right: var(--space-sm);
+}
+
+.photography-strip-arrow--hidden {
+  opacity: 0 !important;
+  pointer-events: none;
+}
+
+.photography-mobile .photography-view-all {
+  position: relative;
+  bottom: auto;
+  right: auto;
+  justify-content: flex-end;
+  margin-top: var(--space-xl);
+  padding-right: var(--space-xl);
+}
+
+.photography-mobile .photography-view-all--visible {
+  opacity: 1;
+}

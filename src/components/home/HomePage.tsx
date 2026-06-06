@@ -4,6 +4,7 @@ import { useCallback, useState } from 'react';
 
 import { GhostBar } from '@/components/navigation/GhostBar';
 import { HeroSection } from '@/components/home/HeroSection';
+import { PhotographySection } from '@/components/home/photography/PhotographySection';
 import { Preloader } from '@/components/home/Preloader';
 
 export function HomePage() {
@@ -42,13 +43,7 @@ export function HomePage() {
           onHeroComplete={handleHeroComplete}
         />
 
-        <section
-          id="photography"
-          data-nav-theme="light"
-          className="min-h-screen"
-          style={{ background: 'var(--color-cream)' }}
-          aria-label="Photography"
-        />
+        <PhotographySection />
 
         <section
           id="about"

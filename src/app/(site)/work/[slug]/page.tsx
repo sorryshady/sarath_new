@@ -3,6 +3,7 @@ import { notFound } from 'next/navigation';
 import Copy from '@/components/copy/Copy';
 import { GhostBar } from '@/components/navigation/GhostBar';
 import { WorkHero } from '@/components/work/WorkHero';
+import { FEATURED_SERIES } from '@/lib/featuredSeries';
 import { client, isSanityConfigured } from '@/sanity/lib/client';
 import { urlFor } from '@/sanity/lib/image';
 import { photoSeriesBySlugQuery } from '@/sanity/lib/queries';
@@ -39,10 +40,13 @@ export default async function WorkPage({ params }: WorkPageProps) {
   const { slug } = await params;
 
   if (!isSanityConfigured) {
-    const title = slug
-      .split('-')
-      .map((word) => word.charAt(0).toUpperCase() + word.slice(1))
-      .join(' ');
+    const placeholder = FEATURED_SERIES.find((s) => s.slug === slug);
+    const title =
+      placeholder?.title ??
+      slug
+        .split('-')
+        .map((word) => word.charAt(0).toUpperCase() + word.slice(1))
+        .join(' ');
 
     return (
       <>
@@ -51,7 +55,17 @@ export default async function WorkPage({ params }: WorkPageProps) {
           data-nav-theme="light"
           style={{ background: 'var(--color-cream)', color: 'var(--color-ink)' }}
         >
-          <div className="flex min-h-[40vh] items-center justify-center px-6 py-32 md:px-16">
+          {placeholder ? (
+            <WorkHero
+              slug={slug}
+              imageSrc={placeholder.coverImage}
+              imageAlt={placeholder.title}
+            />
+          ) : null}
+          <div
+            data-work-content
+            className="flex min-h-[40vh] items-center justify-center px-6 py-32 md:px-16"
+          >
             <Copy animateOnScroll={false}>
               <h1
                 style={{
@@ -62,6 +76,20 @@ export default async function WorkPage({ params }: WorkPageProps) {
               >
                 {title}
               </h1>
+              {placeholder && (
+                <p
+                  className="mt-4"
+                  style={{
+                    fontFamily: 'var(--font-data)',
+                    fontSize: 'var(--size-label)',
+                    letterSpacing: 'var(--tracking-wide)',
+                    textTransform: 'uppercase',
+                    color: 'var(--color-ink-45)',
+                  }}
+                >
+                  {[placeholder.category, placeholder.year].join(' · ')}
+                </p>
+              )}
             </Copy>
           </div>
         </main>
@@ -85,7 +113,10 @@ export default async function WorkPage({ params }: WorkPageProps) {
         style={{ background: 'var(--color-cream)', color: 'var(--color-ink)' }}
       >
         <WorkHero slug={slug} imageSrc={imageSrc} imageAlt={series.title} />
-        <div className="px-6 py-16 md:px-16 md:py-24">
+        <div
+          data-work-content
+          className="px-6 py-16 md:px-16 md:py-24"
+        >
           <Copy animateOnScroll={false}>
             <h1
               style={{

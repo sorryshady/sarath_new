@@ -111,6 +111,12 @@ export function HeroSection({
           end: '+=300%',
           pin: true,
           scrub: 1,
+          // Hero is first on the page and pins for 300vh, which shifts every
+          // section below it. A higher refreshPriority guarantees this trigger
+          // refreshes before the photography section so that section measures
+          // its `start` with the hero's pin-spacer already applied.
+          refreshPriority: 1,
+          invalidateOnRefresh: true,
           onLeave: () => onHeroCompleteRef.current(true),
           onEnterBack: () => onHeroCompleteRef.current(false),
         },

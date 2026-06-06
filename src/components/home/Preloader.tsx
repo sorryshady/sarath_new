@@ -24,8 +24,8 @@ function useSprocketCount() {
   useEffect(() => {
     const update = () => {
       const w = window.innerWidth;
-      if (w < 480) setCount(3);
-      else if (w < 768) setCount(4);
+      if (w < 480) setCount(5);
+      else if (w < 768) setCount(6);
       else if (w < 1024) setCount(6);
       else setCount(8);
     };
@@ -310,10 +310,39 @@ export function Preloader({ isVideoReady, onComplete }: PreloaderProps) {
           }
         }
         .preloader-corner {
+          position: absolute;
           font-family: var(--font-data);
           font-size: var(--size-preloader-corner);
           font-weight: var(--weight-bold);
           color: var(--color-parchment-50);
+          line-height: 1;
+          white-space: nowrap;
+          pointer-events: none;
+        }
+        .preloader-corner--tl {
+          top: 10px;
+          left: 10px;
+        }
+        .preloader-corner--tr {
+          top: 10px;
+          right: 10px;
+          text-align: right;
+        }
+        .preloader-frame-body {
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          width: 100%;
+          padding-top: 18px;
+        }
+        .preloader-counter {
+          font-family: var(--font-editorial);
+          font-size: var(--size-preloader-counter);
+          font-weight: var(--weight-bold);
+          color: var(--color-cream);
+          letter-spacing: var(--tracking-tight);
+          font-variant-numeric: tabular-nums;
+          line-height: 1;
         }
         .preloader-status {
           font-family: var(--font-data);
@@ -340,6 +369,7 @@ export function Preloader({ isVideoReady, onComplete }: PreloaderProps) {
           white-space: nowrap;
         }
         .preloader-frame {
+          box-sizing: border-box;
           padding: 36px 64px;
           border-width: var(--preloader-frame-border);
           border-style: solid;
@@ -351,13 +381,36 @@ export function Preloader({ isVideoReady, onComplete }: PreloaderProps) {
           }
         }
         @media (max-width: 767px) {
+          .preloader-corner {
+            font-size: 7px;
+          }
+          .preloader-corner--tl {
+            top: 8px;
+            left: 8px;
+          }
+          .preloader-corner--tr {
+            top: 8px;
+            right: 8px;
+          }
+          .preloader-frame-body {
+            padding-top: 14px;
+          }
+          .preloader-counter {
+            font-size: clamp(48px, 13vw, 60px);
+          }
+          .preloader-status {
+            font-size: 9px;
+            letter-spacing: 0.1em;
+          }
           .preloader-frame {
-            padding: 20px 24px;
+            width: min(70vw, 276px);
+            padding: 22px 28px 20px;
           }
         }
         @media (max-width: 479px) {
           .preloader-frame {
-            padding: 16px 18px;
+            width: min(74vw, 252px);
+            padding: 20px 24px 18px;
           }
         }
       `}</style>
@@ -451,27 +504,16 @@ export function Preloader({ isVideoReady, onComplete }: PreloaderProps) {
             ))}
           </div>
 
-          <div className="preloader-corner absolute left-0 top-0">
+          <div className="preloader-corner preloader-corner--tl">
             ▲ 01
           </div>
 
-          <div className="preloader-corner absolute right-0 top-0 text-right">
+          <div className="preloader-corner preloader-corner--tr">
             T 1.3 ▲
           </div>
 
-          <div className="flex flex-col items-center">
-            <span
-              className="preloader-counter-slot"
-              style={{
-                fontFamily: 'var(--font-editorial)',
-                fontSize: 'var(--size-preloader-counter)',
-                fontWeight: 'var(--weight-bold)',
-                color: 'var(--color-cream)',
-                letterSpacing: 'var(--tracking-tight)',
-                fontVariantNumeric: 'tabular-nums',
-                lineHeight: 1,
-              }}
-            >
+          <div className="preloader-frame-body">
+            <span className="preloader-counter-slot preloader-counter">
               <span className="preloader-counter-sizer" aria-hidden="true">
                 100
               </span>
