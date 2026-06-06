@@ -42,6 +42,7 @@ export function HomePage() {
             Hero sequence in progress
           </span>
         )}
+        <div className='min-h-screen bg-[#F9F6F0]'/>
       </main>
     </>
   );

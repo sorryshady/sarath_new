@@ -8,7 +8,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className={`${fontVariables} h-full`}>
+    <html lang="en" className={`${fontVariables} h-full`} suppressHydrationWarning>
       <body className="min-h-full">{children}</body>
     </html>
   );

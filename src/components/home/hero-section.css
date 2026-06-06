@@ -1,13 +1,19 @@
-.hero-vimeo-bg iframe {
+/* Cover the viewport without letterboxing — 16:9 sized, centred and clipped.
+   Applies to the Vimeo SDK iframe, the YouTube embed iframe, and the
+   local <video> test reel alike. */
+.hero-video-bg iframe,
+.hero-video-bg video {
   position: absolute;
   top: 50%;
   left: 50%;
   width: 100vw;
-  height: 56.25vw;
+  height: 56.25vw; /* 16:9 ratio */
   min-height: 100vh;
-  min-width: 177.77vh;
+  min-width: 177.77vh; /* 16:9 ratio */
   transform: translate(-50%, -50%);
+  object-fit: cover;
   pointer-events: none;
+  border: 0;
 }
 
 @keyframes hero-scroll-bounce {
@@ -23,4 +29,17 @@
 .hero-scroll-bounce {
   display: inline-block;
   animation: hero-scroll-bounce 1.8s ease-in-out infinite;
+}
+
+/* Hero corner meta + scroll prompt shrink on smaller screens.
+   --size-hero-meta is consumed inline by those elements. */
+@media (max-width: 767px) {
+  :root {
+    --size-hero-meta: 9px;
+  }
+}
+@media (max-width: 479px) {
+  :root {
+    --size-hero-meta: 8px;
+  }
 }

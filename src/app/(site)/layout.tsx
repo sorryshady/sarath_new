@@ -21,13 +21,14 @@ export default function SiteLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <div className="site-root min-h-full flex flex-col">
+    <div className="site-root min-h-full flex flex-col relative">
       <GSAPProvider>
-        <LenisProvider>
-          {children}
-          <PaperGrain />
-        </LenisProvider>
+        <LenisProvider>{children}</LenisProvider>
       </GSAPProvider>
+      {/* Global paper grain — last child, fixed full-viewport, multiply blend.
+          Sits outside the smooth-scroll/GSAP providers so nothing can create a
+          containing block that would break its fixed positioning. */}
+      <PaperGrain />
     </div>
   );
 }

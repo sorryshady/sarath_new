@@ -38,24 +38,13 @@ function useSprocketCount() {
   return count;
 }
 
-function useIsMobileMeta() {
-  const [hidden, setHidden] = useState(false);
-
-  useEffect(() => {
-    const mq = window.matchMedia('(max-width: 767px)');
-    const update = () => setHidden(mq.matches);
-    update();
-    mq.addEventListener('change', update);
-    return () => mq.removeEventListener('change', update);
-  }, []);
-
-  return hidden;
-}
-
 export function Preloader({ isVideoReady, onComplete }: PreloaderProps) {
   const [skipped] = useState(() => {
-    if (typeof window === 'undefined') return false;
-    return sessionStorage.getItem(SESSION_KEY) === 'true';
+    // TEMP (testing): always replay the preloader on refresh.
+    // Restore the session check below when done testing.
+    return false;
+    // if (typeof window === 'undefined') return false;
+    // return sessionStorage.getItem(SESSION_KEY) === 'true';
   });
 
   const [visible, setVisible] = useState(!skipped);
@@ -76,7 +65,6 @@ export function Preloader({ isVideoReady, onComplete }: PreloaderProps) {
   const onCompleteRef = useRef(onComplete);
 
   const sprocketCount = useSprocketCount();
-  const hideMetaBars = useIsMobileMeta();
 
   useEffect(() => {
     onCompleteRef.current = onComplete;
@@ -309,6 +297,18 @@ export function Preloader({ isVideoReady, onComplete }: PreloaderProps) {
           color: var(--color-parchment-60);
           -webkit-font-smoothing: antialiased;
         }
+        @media (max-width: 767px) {
+          .preloader-meta {
+            font-size: 8px;
+            letter-spacing: 0.1em;
+          }
+        }
+        @media (max-width: 479px) {
+          .preloader-meta {
+            font-size: 7px;
+            letter-spacing: 0.06em;
+          }
+        }
         .preloader-corner {
           font-family: var(--font-data);
           font-size: var(--size-preloader-corner);
@@ -321,6 +321,23 @@ export function Preloader({ isVideoReady, onComplete }: PreloaderProps) {
           font-weight: var(--weight-bold);
           letter-spacing: 0.18em;
           color: var(--color-parchment-70);
+        }
+        .preloader-status-slot {
+          position: relative;
+          display: inline-block;
+        }
+        .preloader-status-sizer {
+          visibility: hidden;
+          pointer-events: none;
+          user-select: none;
+        }
+        .preloader-status-value {
+          position: absolute;
+          inset: 0;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          white-space: nowrap;
         }
         .preloader-frame {
           padding: 36px 64px;
@@ -368,21 +385,19 @@ export function Preloader({ isVideoReady, onComplete }: PreloaderProps) {
           aria-hidden="true"
         />
 
-        {!hideMetaBars && (
-          <div
-            ref={metaTopRef}
-            className="preloader-entry-target preloader-meta absolute flex items-center justify-between uppercase"
-            style={{
-              top: 'var(--space-lg)',
-              left: '28px',
-              right: '28px',
-            }}
-          >
-            <span>KODAK VISION3 500T</span>
-            <span>35MM · 1.85:1</span>
-            <span>SM · MMXIX</span>
-          </div>
-        )}
+        <div
+          ref={metaTopRef}
+          className="preloader-entry-target preloader-meta absolute flex items-center justify-between uppercase"
+          style={{
+            top: 'var(--space-lg)',
+            left: '28px',
+            right: '28px',
+          }}
+        >
+          <span>KODAK VISION3 500T</span>
+          <span>35MM · 1.85:1</span>
+          <span>SM · MMXIX</span>
+        </div>
 
         <div
           ref={filmFrameRef}
@@ -473,17 +488,22 @@ export function Preloader({ isVideoReady, onComplete }: PreloaderProps) {
               aria-hidden="true"
             />
 
-            <p className="preloader-status uppercase">
-              {isReady ? (
-                'READY'
-              ) : (
-                <>
-                  DEVELOPING{' '}
-                  <span className="preloader-blink" aria-hidden="true">
-                    ●
-                  </span>
-                </>
-              )}
+            <p className="preloader-status preloader-status-slot uppercase">
+              <span className="preloader-status-sizer" aria-hidden="true">
+                DEVELOPING ●
+              </span>
+              <span className="preloader-status-value">
+                {isReady ? (
+                  'READY'
+                ) : (
+                  <>
+                    DEVELOPING{' '}
+                    <span className="preloader-blink" aria-hidden="true">
+                      ●
+                    </span>
+                  </>
+                )}
+              </span>
             </p>
           </div>
         </div>
@@ -512,20 +532,18 @@ export function Preloader({ isVideoReady, onComplete }: PreloaderProps) {
           </div>
         </div>
 
-        {!hideMetaBars && (
-          <div
-            ref={metaBottomRef}
-            className="preloader-entry-target preloader-meta absolute flex items-center justify-between uppercase"
-            style={{
-              bottom: 'var(--space-md)',
-              left: '28px',
-              right: '28px',
-            }}
-          >
-            <span>PHOTOGRAPHER · FILMMAKER · POET</span>
-            <span>LONDON</span>
-          </div>
-        )}
+        <div
+          ref={metaBottomRef}
+          className="preloader-entry-target preloader-meta absolute flex items-center justify-between uppercase"
+          style={{
+            bottom: 'var(--space-md)',
+            left: '28px',
+            right: '28px',
+          }}
+        >
+          <span>PHOTOGRAPHER · FILMMAKER · POET</span>
+          <span>LONDON</span>
+        </div>
       </div>
     </>
   );

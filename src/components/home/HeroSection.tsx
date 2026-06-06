@@ -4,11 +4,11 @@ import { useEffect, useId, useRef } from 'react';
 import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import { useGSAP } from '@gsap/react';
-import Player from '@vimeo/player';
 
 import { useMedia } from '@/hooks/useMedia';
-import { getHeroVimeoVideoId, getVimeoPosterUrl } from '@/lib/video';
+import { getHeroVideoSource } from '@/lib/video';
 
+import { HeroVideoBackground } from './HeroVideoBackground';
 import './hero-section.css';
 
 gsap.registerPlugin(ScrollTrigger, useGSAP);
@@ -21,9 +21,10 @@ export type HeroSectionProps = {
 
 const metaLabelStyle = {
   fontFamily: 'var(--font-data)',
-  fontSize: 'var(--size-label)',
+  fontSize: 'var(--size-hero-meta)',
+  fontWeight: 'var(--weight-bold)',
   letterSpacing: 'var(--tracking-wide)',
-  color: 'color-mix(in srgb, var(--color-cream) 45%, transparent)',
+  color: 'var(--hero-meta-text)',
   textTransform: 'uppercase' as const,
   lineHeight: 'var(--leading-data)',
 };
@@ -35,7 +36,6 @@ export function HeroSection({
 }: HeroSectionProps) {
   const maskId = useId().replace(/:/g, '');
   const containerRef = useRef<HTMLDivElement>(null);
-  const vimeoContainerRef = useRef<HTMLDivElement>(null);
   const bgOverlayRef = useRef<HTMLDivElement>(null);
   const headerRef = useRef<HTMLDivElement>(null);
   const scrollPromptRef = useRef<HTMLDivElement>(null);
@@ -46,10 +46,10 @@ export function HeroSection({
   const rightTextRef = useRef<SVGTextElement>(null);
   const circleRef = useRef<SVGCircleElement>(null);
 
-  const onVideoReadyRef = useRef(onVideoReady);
   const onHeroCompleteRef = useRef(onHeroComplete);
-  onVideoReadyRef.current = onVideoReady;
-  onHeroCompleteRef.current = onHeroComplete;
+  useEffect(() => {
+    onHeroCompleteRef.current = onHeroComplete;
+  }, [onHeroComplete]);
 
   const isMobile = useMedia('(max-width: 767px)', false);
   const isSmallMobile = useMedia('(max-width: 479px)', false);
@@ -64,50 +64,15 @@ export function HeroSection({
         : 'var(--size-hero-name)';
 
   const circleRadius = isSmallMobile
-    ? '5vw'
+    ? '2.4vw'
     : isMobile
-      ? '4vw'
+      ? '2.1vw'
       : isTablet
-        ? '2.8vw'
-        : '2.2vw';
+        ? '1.7vw'
+        : '1.5vw';
 
   const textYTarget = isMobile ? '68%' : '65%';
-  const vimeoId = getHeroVimeoVideoId();
-  const posterUrl = getVimeoPosterUrl(vimeoId);
-
-  useEffect(() => {
-    const container = vimeoContainerRef.current;
-    if (!container) return;
-
-    let resolved = false;
-    const resolveReady = () => {
-      if (resolved) return;
-      resolved = true;
-      onVideoReadyRef.current();
-    };
-
-    const player = new Player(container, {
-      id: vimeoId,
-      background: true,
-      muted: true,
-      autoplay: true,
-      loop: true,
-      responsive: true,
-    });
-
-    player
-      .ready()
-      .then(() => player.play())
-      .catch(() => {});
-
-    player.on('bufferend', resolveReady);
-    const fallback = window.setTimeout(resolveReady, 8000);
-
-    return () => {
-      window.clearTimeout(fallback);
-      player.destroy();
-    };
-  }, [vimeoId]);
+  const videoSource = getHeroVideoSource();
 
   useGSAP(
     () => {
@@ -193,8 +158,8 @@ export function HeroSection({
         0.8,
       );
 
-      tl.to(svg, { opacity: 0, duration: 0.3 }, 1.9);
-      tl.to(bgOverlay, { opacity: 0, duration: 0.5 }, 1.9);
+      tl.to(svg, { opacity: 0, duration: 0.4 }, 1.9);
+      tl.to(bgOverlay, { opacity: 0, duration: 0.4 }, 1.9);
     },
     {
       scope: containerRef,
@@ -205,24 +170,14 @@ export function HeroSection({
 
   return (
     <section ref={containerRef} className="relative h-screen w-full overflow-hidden">
-      <div
-        ref={vimeoContainerRef}
-        className="hero-vimeo-bg absolute inset-0 z-0 h-full w-full overflow-hidden"
-        style={{
-          pointerEvents: 'none',
-          backgroundImage: `url('${posterUrl}')`,
-          backgroundSize: 'cover',
-          backgroundPosition: 'center',
-        }}
-      />
+      <HeroVideoBackground source={videoSource} onReady={onVideoReady} />
 
       <div
         ref={bgOverlayRef}
-        className="absolute inset-0"
+        className="absolute inset-0 h-full w-full will-change-transform"
         style={{
           zIndex: 'var(--z-section-overlay)',
-          background:
-            'linear-gradient(to bottom, rgba(0,0,0,0.15) 0%, rgba(0,0,0,0.05) 40%, rgba(0,0,0,0.25) 100%)',
+          backgroundImage: 'var(--hero-overlay)',
         }}
       />
 
@@ -232,7 +187,7 @@ export function HeroSection({
         style={{ height: '50%', pointerEvents: 'none' }}
       >
         <div
-          className="hero-meta-left absolute hidden md:block"
+          className="hero-meta-left absolute block"
           style={{ ...metaLabelStyle, top: '24px', left: '28px' }}
         >
           <div>Photographer</div>
@@ -255,7 +210,7 @@ export function HeroSection({
         </div>
 
         <div
-          className="hero-meta-right absolute hidden md:block"
+          className="hero-meta-right absolute block"
           style={{
             ...metaLabelStyle,
             top: '24px',
@@ -270,27 +225,25 @@ export function HeroSection({
 
       <svg
         ref={svgRef}
-        className="absolute inset-0 h-full w-full"
+        className="pointer-events-none absolute inset-0 h-full w-full"
         style={{ zIndex: 10 }}
-        viewBox="0 0 100 100"
-        preserveAspectRatio="xMidYMid slice"
         aria-hidden="true"
       >
         <defs>
           <mask id={maskId}>
-            <rect ref={maskRectRef} x="0" y="0" width="100" height="50" fill="white" />
+            <rect ref={maskRectRef} width="100%" height="50%" fill="white" />
             <text
               ref={leftTextRef}
               x="46%"
               y="50%"
+              dy="0.25em"
               textAnchor="end"
-              dominantBaseline="middle"
+              dominantBaseline="alphabetic"
               fill="black"
-              letterSpacing="0.02em"
+              letterSpacing="-0.05em"
               style={{
                 fontSize: nameFontSize,
-                fontFamily: 'var(--font-editorial)',
-                fontWeight: 'var(--weight-bold)',
+                fontFamily: 'var(--font-display)',
               }}
             >
               SARATH
@@ -300,14 +253,14 @@ export function HeroSection({
               ref={rightTextRef}
               x="54%"
               y="50%"
+              dy="0.25em"
               textAnchor="start"
-              dominantBaseline="middle"
+              dominantBaseline="alphabetic"
               fill="black"
-              letterSpacing="0.02em"
+              letterSpacing="-0.05em"
               style={{
                 fontSize: nameFontSize,
-                fontFamily: 'var(--font-editorial)',
-                fontWeight: 'var(--weight-bold)',
+                fontFamily: 'var(--font-display)',
               }}
             >
               MENON
@@ -316,10 +269,8 @@ export function HeroSection({
         </defs>
         <rect
           ref={visibleRectRef}
-          x="0"
-          y="0"
-          width="100"
-          height="50"
+          width="100%"
+          height="50%"
           fill="var(--color-crimson)"
           mask={`url(#${maskId})`}
         />
@@ -327,12 +278,13 @@ export function HeroSection({
 
       <div
         ref={scrollPromptRef}
-        className="absolute bottom-7 left-7 z-20 hidden items-center gap-2.5 md:flex"
+        className="absolute bottom-7 left-7 z-20 flex items-center gap-2.5"
         style={{
           fontFamily: 'var(--font-data)',
-          fontSize: 'var(--size-label)',
+          fontSize: 'var(--size-hero-meta)',
+          fontWeight: 'var(--weight-bold)',
           letterSpacing: 'var(--tracking-wider)',
-          color: 'color-mix(in srgb, var(--color-cream) 40%, transparent)',
+          color: 'var(--hero-prompt-text)',
           textTransform: 'uppercase',
         }}
       >
