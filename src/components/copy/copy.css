@@ -1,0 +1,21 @@
+.line {
+  position: relative;
+  padding: 0.35rem 0;
+  margin-bottom: -4px;
+  transform: translateY(100%);
+  will-change: transform;
+}
+
+[data-copy-wrapper][data-animate='enter'] {
+  visibility: hidden;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  [data-copy-wrapper][data-animate='enter'] {
+    visibility: visible;
+  }
+
+  .line {
+    transform: none;
+  }
+}
