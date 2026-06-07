@@ -13,10 +13,3 @@ export function getAnimationMode(): AnimationMode {
 
   return 'full';
 }
-
-/** Stack fan rotation per card — random between -8 and +8 degrees. */
-export function getStackRotation(index: number): number {
-  const seed = (index + 1) * 17;
-  const normalized = ((seed * 9301 + 49297) % 233280) / 233280;
-  return normalized * 16 - 8;
-}
