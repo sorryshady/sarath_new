@@ -1,4 +1,7 @@
 export const VIEW_TRANSITION_MS = 1500;
+/** Work page hero height — morph target for polaroid → work transitions. */
+export const WORK_HERO_VH = 75;
+export const WORK_HERO_MORPH_MS = 650;
 /** When page-enter animations start relative to the route transition (0–1). */
 export const PAGE_ENTER_AT = 0.58;
 export const PAGE_ENTER_BUFFER_S = 0;
@@ -21,7 +24,9 @@ export const ENTER_EASE = 'power4.out';
 const NAV_TRANSITION_KEY = 'sm-vt-start';
 
 type DocumentWithViewTransition = Document & {
-  startViewTransition?: (callback: () => void) => { finished: Promise<void> };
+  startViewTransition?: (
+    callback: () => void | Promise<void>,
+  ) => { finished: Promise<void> };
   activeViewTransition?: { finished: Promise<void> };
 };
 
@@ -42,13 +47,61 @@ export function setWorkHeroTransitionName(
   element.style.viewTransitionName = workHeroTransitionName(slug);
 }
 
+export function workHeroMorphSelector(slug: string): string {
+  return `[data-work-hero-morph="${CSS.escape(slug)}"]`;
+}
+
 export function clearWorkHeroTransitionNames(): void {
   if (typeof document === 'undefined') return;
 
-  document.querySelectorAll('[data-work-hero]').forEach((node) => {
+  document.querySelectorAll('[data-work-hero-morph]').forEach((node) => {
     if (node instanceof HTMLElement) {
       node.style.viewTransitionName = '';
     }
+  });
+}
+
+/**
+ * Next.js renders the destination route asynchronously. The View Transitions
+ * callback must not resolve until the work hero morph target exists in the DOM
+ * with a matching view-transition-name.
+ */
+export function waitForWorkHeroMorph(
+  slug: string,
+  timeoutMs = 4000,
+): Promise<HTMLElement | null> {
+  if (typeof document === 'undefined') return Promise.resolve(null);
+
+  const selector = workHeroMorphSelector(slug);
+  const existing = document.querySelector(selector);
+  if (existing instanceof HTMLElement) {
+    return Promise.resolve(existing);
+  }
+
+  return new Promise((resolve) => {
+    let settled = false;
+
+    const finish = (el: HTMLElement | null) => {
+      if (settled) return;
+      settled = true;
+      observer.disconnect();
+      window.clearTimeout(timeoutId);
+      resolve(el);
+    };
+
+    const observer = new MutationObserver(() => {
+      const el = document.querySelector(selector);
+      if (el instanceof HTMLElement) {
+        finish(el);
+      }
+    });
+
+    observer.observe(document.documentElement, {
+      childList: true,
+      subtree: true,
+    });
+
+    const timeoutId = window.setTimeout(() => finish(null), timeoutMs);
   });
 }
 
@@ -139,6 +192,8 @@ export function slideInOut() {
 export function runTransition(variant: TransitionVariant) {
   switch (variant) {
     case 'polaroid-hero':
+      // Handled by GSAP portal zoom in view-transition-nav — no root wipe.
+      return;
     case 'default':
     default:
       slideInOut();

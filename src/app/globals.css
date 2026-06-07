@@ -2,6 +2,11 @@
 @import "../styles/tokens.css";
 @import "../styles/view-transitions.css";
 
+.work-hero-morph {
+  height: 75vh;
+  overflow: hidden;
+}
+
 html,
 body {
   scrollbar-width: none;

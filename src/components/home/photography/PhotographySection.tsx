@@ -9,9 +9,11 @@ import { useGSAP } from '@gsap/react';
 
 import { PolaroidCard } from '@/components/home/photography/PolaroidCard';
 import { getAnimationMode, getStackRotation } from '@/lib/animationMode';
-import { FEATURED_SERIES } from '@/lib/featuredSeries';
-import { useTransitionStore } from '@/store/transitionStore';
+import { markHomeReturn } from '@/lib/home-scroll';
+import { navigateWithTransition } from '@/lib/view-transition-nav';
+import type { PhotoSeries } from '@/types/photoSeries';
 import { useMedia } from '@/hooks/useMedia';
+import { useLenis } from 'lenis/react';
 
 import './photography-section.css';
 
@@ -37,7 +39,70 @@ function padSeriesCount(count: number): string {
   return String(count).padStart(2, '0');
 }
 
-export function PhotographySection() {
+function getRevealScrollTop(section: HTMLElement): number {
+  ScrollTrigger.refresh();
+
+  const probe = ScrollTrigger.create({
+    trigger: section,
+    start: 'top top',
+    end: PIN_DISTANCE,
+  });
+
+  const revealScroll = probe.start + (probe.end - probe.start) * REVEAL_AT;
+  probe.kill();
+
+  return revealScroll;
+}
+
+function applySettledState(
+  cards: HTMLDivElement[],
+  flippers: Element[],
+  scrollHint: HTMLDivElement | null,
+  viewAll: HTMLAnchorElement | null,
+  isReduced: boolean,
+) {
+  cards.forEach((el, i) => {
+    gsap.set(el, {
+      x: 0,
+      y: 0,
+      rotation: GRID_ROTATIONS[i] ?? 0,
+      autoAlpha: 1,
+      opacity: 1,
+    });
+  });
+
+  cards.forEach((card) => {
+    card.querySelectorAll('[data-char]').forEach((char) => {
+      gsap.set(char, { opacity: 1 });
+    });
+
+    const meta = card.querySelector('.polaroid-card__series-meta');
+    if (meta) gsap.set(meta, { opacity: 1 });
+
+    const border = card.querySelector('.polaroid-border');
+    const caption = card.querySelector('.polaroid-caption');
+    if (border) gsap.set(border, { opacity: 1 });
+    if (caption) gsap.set(caption, { opacity: 1 });
+  });
+
+  if (!isReduced && flippers.length > 0) {
+    gsap.set(flippers, { rotateY: 180 });
+  }
+
+  if (scrollHint) gsap.set(scrollHint, { autoAlpha: 0 });
+  if (viewAll) gsap.set(viewAll, { opacity: 1 });
+}
+
+type PhotographySectionProps = {
+  series: PhotoSeries[];
+  scrollReady?: boolean;
+};
+
+export function PhotographySection({
+  series,
+  scrollReady = true,
+}: PhotographySectionProps) {
+  const lenis = useLenis();
   const router = useRouter();
   const isMobile = useMedia('(max-width: 767px)', false);
 
@@ -57,8 +122,6 @@ export function PhotographySection() {
   const [stripIndex, setStripIndex] = useState(0);
   const [arrowsHidden, setArrowsHidden] = useState(false);
 
-  const series = FEATURED_SERIES;
-
   useEffect(() => {
     animationModeRef.current = getAnimationMode();
   }, [series]);
@@ -71,41 +134,47 @@ export function PhotographySection() {
   );
 
   const handleSeriesClick = useCallback(
-    (slug: string, imageSrc: string, cardRef: HTMLDivElement) => {
-      const imageEl = cardRef.querySelector('.polaroid-image') as HTMLElement | null;
-      if (!imageEl) return;
+    async (slug: string, imageSrc: string, cardRef: HTMLDivElement) => {
+      const morphEl = cardRef.querySelector(
+        '[data-work-hero-morph]',
+      ) as HTMLElement | null;
+      if (!morphEl) return;
 
-      const rect = imageEl.getBoundingClientRect();
+      const scrollY =
+        typeof lenis?.scroll === 'number' ? lenis.scroll : window.scrollY;
+      markHomeReturn(scrollY);
+
       const border = cardRef.querySelector('.polaroid-border');
       const caption = cardRef.querySelector('.polaroid-caption');
 
-      if (border) gsap.to(border, { opacity: 0, duration: 0.15 });
-      if (caption) gsap.to(caption, { opacity: 0, duration: 0.15 });
+      await navigateWithTransition({
+        navigate: () => router.push(`/work/${slug}`),
+        variant: 'polaroid-hero',
+        heroElement: morphEl,
+        heroImageSrc: imageSrc,
+        onBeforeNavigate: async () => {
+          const tweens: gsap.core.Tween[] = [];
 
-      polaroidRefs.current.forEach((el) => {
-        if (el && el !== cardRef) gsap.to(el, { opacity: 0, duration: 0.3 });
-      });
+          if (border) {
+            tweens.push(gsap.to(border, { opacity: 0, duration: 0.15 }));
+          }
+          if (caption) {
+            tweens.push(gsap.to(caption, { opacity: 0, duration: 0.15 }));
+          }
 
-      ScrollTrigger.getAll().forEach((trigger) => trigger.kill());
+          polaroidRefs.current.forEach((el) => {
+            if (el && el !== cardRef) {
+              tweens.push(gsap.to(el, { opacity: 0, duration: 0.25 }));
+            }
+          });
 
-      useTransitionStore.getState().setTransition(imageSrc, rect);
-
-      gsap.to(imageEl, {
-        position: 'fixed',
-        top: 0,
-        left: 0,
-        width: '100vw',
-        height: '100vh',
-        zIndex: 9995,
-        objectFit: 'cover',
-        duration: 0.65,
-        ease: 'power3.inOut',
-        onComplete: () => {
-          router.push(`/work/${slug}`);
+          if (tweens.length > 0) {
+            await Promise.all(tweens);
+          }
         },
       });
     },
-    [router],
+    [lenis, router],
   );
 
   // Hover lift/straighten is GSAP-driven because the card's transform is owned
@@ -138,7 +207,7 @@ export function PhotographySection() {
   /* --- Desktop pinned scroll sequence --- */
   useGSAP(
     () => {
-      if (isMobile) return;
+      if (isMobile || !scrollReady) return;
 
       const section = sectionRef.current;
       const stage = stageRef.current;
@@ -148,15 +217,24 @@ export function PhotographySection() {
 
       if (!section || !stage || cards.length === 0) return;
 
-      // Compute mode here rather than reading a ref — useGSAP runs in a layout
-      // effect that fires before the mount effect that would populate the ref.
       const mode = getAnimationMode();
       const isReduced = mode === 'reduced';
 
-      // Cards are visible from the very first frame so the stacked deck is
-      // already present the moment the section reaches the top of the viewport.
-      // Rotation/position are managed entirely by GSAP (no CSS transform) so the
-      // scatter and hover tweens never fight an inline-vs-stylesheet transform.
+      const flippers = cards
+        .map((card) => card.querySelector('.polaroid-card__flipper'))
+        .filter(Boolean) as Element[];
+
+      const currentScroll =
+        typeof lenis?.scroll === 'number' ? lenis.scroll : window.scrollY;
+      const revealScrollTop = getRevealScrollTop(section);
+      const shouldStartSettled = currentScroll >= revealScrollTop - 8;
+
+      if (shouldStartSettled) {
+        applySettledState(cards, flippers, scrollHint, viewAll, isReduced);
+        setHoverEnabled(true);
+        return;
+      }
+
       cards.forEach((el, i) => {
         gsap.set(el, {
           willChange: 'transform',
@@ -165,10 +243,6 @@ export function PhotographySection() {
         });
         gsap.set(el, { rotation: GRID_ROTATIONS[i] ?? 0 });
       });
-
-      const flippers = cards
-        .map((card) => card.querySelector('.polaroid-card__flipper'))
-        .filter(Boolean) as Element[];
 
       // --- Reveal: SCROLL-TRIGGERED (not scrubbed) ---
       // The flip + text run on a normal, time-based timeline that plays once and
@@ -299,7 +373,7 @@ export function PhotographySection() {
     },
     {
       scope: sectionRef,
-      dependencies: [isMobile],
+      dependencies: [isMobile, scrollReady, lenis],
       revertOnUpdate: true,
     },
   );

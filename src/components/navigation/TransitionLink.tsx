@@ -52,14 +52,13 @@ export function TransitionLink({
       const heroElement =
         transition === 'polaroid-hero'
           ? (event.currentTarget.querySelector(
-              '[data-work-hero]',
+              '[data-work-hero-morph]',
             ) as HTMLElement | null)
           : null;
 
       void navigateWithTransition({
         navigate: () => router.push(url),
         variant: transition,
-        heroSlug,
         heroElement,
         onBeforeNavigate,
       });

@@ -1,6 +1,7 @@
 import type { Metadata } from 'next';
 
 import { PaperGrain } from '@/components/global/PaperGrain';
+import { ScrollRestoration } from '@/components/global/ScrollRestoration';
 import { GSAPProvider } from '@/components/providers/GSAPProvider';
 import { LenisProvider } from '@/components/providers/LenisProvider';
 
@@ -23,7 +24,10 @@ export default function SiteLayout({
   return (
     <div className="site-root min-h-full flex flex-col relative">
       <GSAPProvider>
-        <LenisProvider>{children}</LenisProvider>
+        <LenisProvider>
+          <ScrollRestoration />
+          {children}
+        </LenisProvider>
       </GSAPProvider>
       {/* Global paper grain — last child, fixed full-viewport, multiply blend.
           Sits outside the smooth-scroll/GSAP providers so nothing can create a

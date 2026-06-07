@@ -1,16 +1,28 @@
 'use client';
 
-import { useCallback, useState } from 'react';
+import { useCallback, useEffect, useState } from 'react';
 
 import { GhostBar } from '@/components/navigation/GhostBar';
 import { HeroSection } from '@/components/home/HeroSection';
 import { PhotographySection } from '@/components/home/photography/PhotographySection';
 import { Preloader } from '@/components/home/Preloader';
+import {
+  dispatchHomeLayoutReady,
+  HOME_SCROLL_RESTORED_EVENT,
+  isReturningToHome,
+} from '@/lib/home-scroll';
+import type { PhotoSeries } from '@/types/photoSeries';
 
-export function HomePage() {
-  const [isPreloaderDone, setIsPreloaderDone] = useState(false);
-  const [isVideoReady, setIsVideoReady] = useState(false);
-  const [isHeroComplete, setIsHeroComplete] = useState(false);
+type HomePageProps = {
+  featuredSeries: PhotoSeries[];
+};
+
+export function HomePage({ featuredSeries }: HomePageProps) {
+  const [returningToHome] = useState(() => isReturningToHome());
+  const [isPreloaderDone, setIsPreloaderDone] = useState(returningToHome);
+  const [isVideoReady, setIsVideoReady] = useState(returningToHome);
+  const [isHeroComplete, setIsHeroComplete] = useState(returningToHome);
+  const [isScrollRestored, setIsScrollRestored] = useState(!returningToHome);
 
   const handlePreloaderComplete = useCallback(() => {
     setIsPreloaderDone(true);
@@ -24,9 +36,33 @@ export function HomePage() {
     setIsHeroComplete(complete);
   }, []);
 
+  useEffect(() => {
+    if (!isPreloaderDone) return;
+
+    requestAnimationFrame(() => {
+      requestAnimationFrame(() => {
+        dispatchHomeLayoutReady();
+      });
+    });
+  }, [isPreloaderDone]);
+
+  useEffect(() => {
+    if (!returningToHome) return;
+
+    const onRestored = () => setIsScrollRestored(true);
+
+    window.addEventListener(HOME_SCROLL_RESTORED_EVENT, onRestored, {
+      once: true,
+    });
+
+    return () => {
+      window.removeEventListener(HOME_SCROLL_RESTORED_EVENT, onRestored);
+    };
+  }, [returningToHome]);
+
   return (
     <>
-      {!isPreloaderDone && (
+      {!isPreloaderDone && !returningToHome && (
         <Preloader
           isVideoReady={isVideoReady}
           onComplete={handlePreloaderComplete}
@@ -34,7 +70,7 @@ export function HomePage() {
       )}
       <GhostBar
         isHeroComplete={isHeroComplete}
-        deferUntilHeroComplete
+        deferUntilHeroComplete={!returningToHome}
       />
       <main>
         <HeroSection
@@ -43,7 +79,10 @@ export function HomePage() {
           onHeroComplete={handleHeroComplete}
         />
 
-        <PhotographySection />
+        <PhotographySection
+          series={featuredSeries}
+          scrollReady={isScrollRestored}
+        />
 
         <section
           id="about"

@@ -64,7 +64,7 @@ export function PolaroidTransitionLink({
         <span className="polaroid-border block border-[6px] border-b-[20px] border-white bg-white">
           <span
             className="polaroid-image relative block aspect-[3/4] overflow-hidden"
-            data-work-hero
+            data-work-hero-morph={slug}
           >
             <Image
               src={imageSrc}

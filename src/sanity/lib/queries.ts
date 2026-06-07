@@ -13,7 +13,9 @@ export const featuredPhotoSeriesQuery = defineQuery(`
     "slug": slug.current,
     coverImage,
     category,
-    year
+    year,
+    frameCount,
+    order
   }
 `);
 

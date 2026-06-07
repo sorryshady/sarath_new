@@ -1,3 +1,4 @@
+/* Root route transition — custom slideInOut via Web Animations API in JS */
 ::view-transition-old(root),
 ::view-transition-new(root) {
   animation: none !important;
@@ -23,13 +24,26 @@
   animation: none !important;
 }
 
-::view-transition-group(*),
-::view-transition-image-pair(*) {
-  animation: none !important;
+/*
+ * Named shared elements (polaroid → work hero morph).
+ * Do NOT disable animation here — the browser morphs old/new snapshots
+ * between matching view-transition-name values on each route.
+ */
+::view-transition-group(*) {
+  animation-duration: 650ms;
+  animation-timing-function: cubic-bezier(0.87, 0, 0.13, 1);
 }
 
 ::view-transition-image-pair(*) {
+  isolation: isolate;
   z-index: 10001;
+}
+
+::view-transition-old(*),
+::view-transition-new(*) {
+  height: 100%;
+  object-fit: cover;
+  animation: none;
 }
 
 html.lenis {
@@ -54,7 +68,8 @@ html.lenis {
 
 @media (prefers-reduced-motion: reduce) {
   ::view-transition-old(root),
-  ::view-transition-new(root) {
+  ::view-transition-new(root),
+  ::view-transition-group(*) {
     animation: none !important;
   }
 }

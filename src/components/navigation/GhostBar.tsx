@@ -47,9 +47,9 @@ type NavItem = {
 
 const NAV_ITEMS: NavItem[] = [
   { id: 'works', label: 'Works', href: '/#photography', sectionId: 'photography' },
+  { id: 'about', label: 'About', href: '/about', sectionId: 'about' },
   { id: 'films', label: 'Films', href: '/#films', sectionId: 'films' },
   { id: 'poetry', label: 'Poetry', href: '/poetry' },
-  { id: 'about', label: 'About', href: '/about', sectionId: 'about' },
   { id: 'contact', label: 'Contact', href: '/#contact', sectionId: 'contact' },
 ];
 
@@ -81,7 +81,7 @@ function NavBrand({
   return (
     <TransitionLink href="/" className={className} onClick={onClick}>
       <NavLogo className={logoClassName} />
-      <span className={initialsClassName}>SM</span>
+      {/* <span className={initialsClassName}>SM</span> */}
       <span className="sr-only">Sarath Menon home</span>
     </TransitionLink>
   );
