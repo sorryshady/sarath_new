@@ -3,6 +3,8 @@
 import Image from 'next/image';
 import { forwardRef, useMemo } from 'react';
 
+import { ViewTransition } from '@/components/transitions/ViewTransition';
+
 import type { PhotoSeries } from '@/types/photoSeries';
 
 type PolaroidCardProps = {
@@ -78,17 +80,16 @@ export const PolaroidCard = forwardRef<HTMLDivElement, PolaroidCardProps>(
 
             <div className="polaroid-card__face polaroid-card__front">
               <div className="polaroid-border polaroid-card__border">
-                <div
-                  className="polaroid-card__image-wrap"
-                  data-work-hero-morph={series.slug}
-                >
-                  <Image
-                    src={series.coverImage}
-                    alt={series.title}
-                    fill
-                    sizes="(max-width: 767px) 200px, (max-width: 1023px) 150px, 200px"
-                    className="polaroid-image polaroid-card__image"
-                  />
+                <div className="polaroid-card__image-wrap">
+                  <ViewTransition name={`work-hero-${series.slug}`} share="morph">
+                    <Image
+                      src={series.coverImage}
+                      alt={series.title}
+                      fill
+                      sizes="(max-width: 767px) 200px, (max-width: 1023px) 150px, 200px"
+                      className="polaroid-image polaroid-card__image"
+                    />
+                  </ViewTransition>
                   <div className="polaroid-card__hover-overlay">
                     <span className="polaroid-card__hover-title">
                       {series.title}
