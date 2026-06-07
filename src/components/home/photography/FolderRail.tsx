@@ -39,6 +39,7 @@ export function FolderRail({ series, selectedIndex, onSelect }: FolderRailProps)
           type="button"
           role="tab"
           aria-selected={index === selectedIndex}
+          aria-label={item.title}
           className={`selected-work__thumb${
             index === selectedIndex ? ' selected-work__thumb--active' : ''
           }`}
@@ -52,10 +53,6 @@ export function FolderRail({ series, selectedIndex, onSelect }: FolderRailProps)
               sizes="120px"
               className="object-cover"
             />
-          </span>
-          <span className="selected-work__thumb-label">
-            <span className="selected-work__thumb-title">{item.title}</span>
-            <span className="selected-work__thumb-year">{item.year}</span>
           </span>
         </button>
       ))}

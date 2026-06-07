@@ -50,7 +50,7 @@ export function PhotographySection({ series }: PhotographySectionProps) {
         <SelectedWorkHero series={selected} direction={directionRef.current} />
 
         <div className="selected-work__panel">
-          <FolderMeta series={selected} />
+          <FolderMeta key={selected.slug} series={selected} />
           <FolderRail
             series={series}
             selectedIndex={selectedIndex}

@@ -33,7 +33,7 @@
 /* ---- Hero (left) ---- */
 .selected-work__hero {
   position: relative;
-  aspect-ratio: 3 / 4;
+  aspect-ratio: 3 / 2;
   overflow: hidden;
   cursor: pointer;
   background: var(--color-ink-05, rgba(0, 0, 0, 0.05));
@@ -47,6 +47,13 @@
 
 .selected-work__hero-layer--incoming {
   z-index: 2;
+}
+
+/* Parallax inner layer for the curtain glide — slightly oversized so the
+   scale/translate never exposes an edge. */
+.selected-work__hero-parallax {
+  position: absolute;
+  inset: 0;
 }
 
 .selected-work__hero-img {
@@ -78,8 +85,16 @@
   font-size: var(--size-label, 0.8rem);
   letter-spacing: 0.12em;
   text-transform: uppercase;
-  color: var(--color-ink-45, rgba(0, 0, 0, 0.45));
   margin-top: 0.4rem;
+}
+
+.selected-work__meta-sub {
+  color: var(--color-ink-45, rgba(0, 0, 0, 0.45));
+}
+
+.selected-work__meta-frames {
+  color: var(--color-ink, #1a1a1a);
+  font-size: 0.9rem;
 }
 
 /* ---- Rail ---- */
@@ -113,29 +128,10 @@
 .selected-work__thumb-img {
   position: relative;
   flex: none;
-  width: 56px;
-  aspect-ratio: 3 / 4;
+  width: 96px;
+  aspect-ratio: 3 / 2;
   overflow: hidden;
   background: var(--color-ink-05, rgba(0, 0, 0, 0.05));
-}
-
-.selected-work__thumb-label {
-  display: flex;
-  flex-direction: column;
-  gap: 0.15rem;
-}
-
-.selected-work__thumb-title {
-  font-family: var(--font-data, monospace);
-  font-size: 0.8rem;
-  letter-spacing: 0.08em;
-  text-transform: uppercase;
-}
-
-.selected-work__thumb-year {
-  font-family: var(--font-data, monospace);
-  font-size: 0.7rem;
-  color: var(--color-ink-45, rgba(0, 0, 0, 0.45));
 }
 
 /* ---- View all ---- */

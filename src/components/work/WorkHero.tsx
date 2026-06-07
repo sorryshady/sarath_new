@@ -13,7 +13,7 @@ type WorkHeroProps = {
 export function WorkHero({ slug, imageSrc, imageAlt }: WorkHeroProps) {
   return (
     <ViewTransition name={`work-hero-${slug}`} share="morph">
-      <div className="work-hero-morph relative w-full">
+      <div className="work-hero-morph relative h-[85vh] w-full">
         <Image
           src={imageSrc}
           alt={imageAlt}

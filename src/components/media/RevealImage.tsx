@@ -50,7 +50,7 @@ export function RevealImage({
   trigger = 'in-view',
   direction = 'up',
   delay = 0,
-  duration = 0.9,
+  duration = 1.4,
   ease = 'power4.inOut',
   start = 'top 80%',
   once = true,

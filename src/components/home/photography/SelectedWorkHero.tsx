@@ -30,7 +30,7 @@ export function SelectedWorkHero({ series, direction }: SelectedWorkHeroProps) {
   const incomingRef = useRef<HTMLDivElement>(null);
   const isSliding = useRef(false);
 
-  // Detect a folder change → start a slide (or instant swap when reduced).
+  // Detect a folder change → start the curtain glide (or instant swap when reduced).
   useEffect(() => {
     if (series.slug === resting.slug) return;
     if (getAnimationMode() === 'reduced') {
@@ -40,27 +40,40 @@ export function SelectedWorkHero({ series, direction }: SelectedWorkHeroProps) {
     setIncoming(series);
   }, [series, resting.slug]);
 
-  // Animate the incoming layer over the resting one, then commit it.
+  // Reveal the incoming image with a clip-path curtain + parallax glide, then commit it.
   useGSAP(
     () => {
       if (!incoming) return;
       const layer = incomingRef.current;
       if (!layer) return;
+      const inner = layer.querySelector('.selected-work__hero-parallax');
 
       isSliding.current = true;
-      gsap.fromTo(
-        layer,
-        { yPercent: direction === 'next' ? 100 : -100 },
-        {
-          yPercent: 0,
-          duration: 0.7,
-          ease: 'power3.inOut',
-          onComplete: () => {
-            setResting(incoming);
-            setIncoming(null);
-            isSliding.current = false;
-          },
+
+      // next → curtain pulls up (reveals bottom→top); prev → pulls down.
+      const hidden =
+        direction === 'next' ? 'inset(100% 0% 0% 0%)' : 'inset(0% 0% 100% 0%)';
+      const glide = direction === 'next' ? 14 : -14;
+
+      const tl = gsap.timeline({
+        onComplete: () => {
+          setResting(incoming);
+          setIncoming(null);
+          isSliding.current = false;
         },
+      });
+
+      gsap.set(layer, { clipPath: hidden });
+      gsap.set(inner, { yPercent: glide, scale: 1.14 });
+      tl.to(
+        layer,
+        { clipPath: 'inset(0% 0% 0% 0%)', duration: 1.2, ease: 'power4.inOut' },
+        0,
+      );
+      tl.to(
+        inner,
+        { yPercent: 0, scale: 1, duration: 1.2, ease: 'power4.inOut' },
+        0,
       );
     },
     { dependencies: [incoming, direction] },
@@ -120,13 +133,15 @@ export function SelectedWorkHero({ series, direction }: SelectedWorkHeroProps) {
           ref={incomingRef}
           className="selected-work__hero-layer selected-work__hero-layer--incoming"
         >
-          <Image
-            src={incoming.coverImage}
-            alt={incoming.title}
-            fill
-            sizes={HERO_SIZES}
-            className="selected-work__hero-img object-cover"
-          />
+          <div className="selected-work__hero-parallax">
+            <Image
+              src={incoming.coverImage}
+              alt={incoming.title}
+              fill
+              sizes={HERO_SIZES}
+              className="selected-work__hero-img object-cover"
+            />
+          </div>
         </div>
       ) : null}
     </div>
