@@ -10,6 +10,7 @@ type SanityFeaturedSeriesRow = {
   title: string;
   slug: string;
   coverImage: SanityImageSource;
+  coverAspectRatio?: number | null;
   category?: string | null;
   year?: string | null;
   frameCount?: string | null;
@@ -26,7 +27,8 @@ function mapSanityRow(row: SanityFeaturedSeriesRow, index: number): PhotoSeries 
   return {
     title: row.title,
     slug: row.slug,
-    coverImage: urlFor(row.coverImage).width(800).height(1067).quality(82).url(),
+    coverImage: urlFor(row.coverImage).width(1600).quality(85).url(),
+    coverAspectRatio: row.coverAspectRatio ?? 1.5,
     category: row.category ?? '',
     year: row.year ?? '',
     frameCount: parseFrameCount(row.frameCount),

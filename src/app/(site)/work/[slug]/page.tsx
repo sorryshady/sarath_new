@@ -60,6 +60,7 @@ export default async function WorkPage({ params }: WorkPageProps) {
               slug={slug}
               imageSrc={placeholder.coverImage}
               imageAlt={placeholder.title}
+              aspectRatio={placeholder.coverAspectRatio}
             />
           ) : null}
           <div
@@ -103,7 +104,7 @@ export default async function WorkPage({ params }: WorkPageProps) {
     notFound();
   }
 
-  const imageSrc = urlFor(series.coverImage).width(2400).quality(85).url();
+  const imageSrc = urlFor(series.coverImage).width(1600).quality(85).url();
 
   return (
     <>
@@ -112,7 +113,12 @@ export default async function WorkPage({ params }: WorkPageProps) {
         data-nav-theme="light"
         style={{ background: 'var(--color-cream)', color: 'var(--color-ink)' }}
       >
-        <WorkHero slug={slug} imageSrc={imageSrc} imageAlt={series.title} />
+        <WorkHero
+          slug={slug}
+          imageSrc={imageSrc}
+          imageAlt={series.title}
+          aspectRatio={series.coverAspectRatio ?? 1.5}
+        />
         <div
           data-work-content
           className="px-6 py-16 md:px-16 md:py-24"

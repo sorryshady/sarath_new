@@ -1,11 +1,13 @@
 import type { PhotoSeries } from '@/types/photoSeries';
 
-/** Placeholder featured series — wire Sanity query later. */
+/** Placeholder featured series — wire Sanity query later.
+ *  Dimensions vary on purpose so the native-aspect hero is visible without Sanity. */
 export const FEATURED_SERIES: PhotoSeries[] = [
   {
     title: 'Rajasthan',
     slug: 'rajasthan',
-    coverImage: 'https://picsum.photos/seed/rajasthan/600/800',
+    coverImage: 'https://picsum.photos/seed/rajasthan/1200/800',
+    coverAspectRatio: 1.5,
     category: 'Travel',
     year: '2023',
     frameCount: 24,
@@ -15,7 +17,8 @@ export const FEATURED_SERIES: PhotoSeries[] = [
   {
     title: 'Monsoon',
     slug: 'monsoon',
-    coverImage: 'https://picsum.photos/seed/monsoon/600/800',
+    coverImage: 'https://picsum.photos/seed/monsoon/800/1000',
+    coverAspectRatio: 0.8,
     category: 'Documentary',
     year: '2022',
     frameCount: 18,
@@ -25,7 +28,8 @@ export const FEATURED_SERIES: PhotoSeries[] = [
   {
     title: 'Coastal Light',
     slug: 'coastal-light',
-    coverImage: 'https://picsum.photos/seed/coastal/600/800',
+    coverImage: 'https://picsum.photos/seed/coastal/1600/900',
+    coverAspectRatio: 1.7778,
     category: 'Landscape',
     year: '2024',
     frameCount: 32,
@@ -35,7 +39,8 @@ export const FEATURED_SERIES: PhotoSeries[] = [
   {
     title: 'Night Market',
     slug: 'night-market',
-    coverImage: 'https://picsum.photos/seed/nightmarket/600/800',
+    coverImage: 'https://picsum.photos/seed/nightmarket/800/1100',
+    coverAspectRatio: 0.7273,
     category: 'Street',
     year: '2023',
     frameCount: 21,
@@ -45,7 +50,8 @@ export const FEATURED_SERIES: PhotoSeries[] = [
   {
     title: 'Portraits',
     slug: 'portraits',
-    coverImage: 'https://picsum.photos/seed/portraits/600/800',
+    coverImage: 'https://picsum.photos/seed/portraits/800/1000',
+    coverAspectRatio: 0.8,
     category: 'Portrait',
     year: '2021',
     frameCount: 16,
@@ -55,7 +61,8 @@ export const FEATURED_SERIES: PhotoSeries[] = [
   {
     title: 'Himalaya',
     slug: 'himalaya',
-    coverImage: 'https://picsum.photos/seed/himalaya/600/800',
+    coverImage: 'https://picsum.photos/seed/himalaya/1400/900',
+    coverAspectRatio: 1.5556,
     category: 'Travel',
     year: '2024',
     frameCount: 28,

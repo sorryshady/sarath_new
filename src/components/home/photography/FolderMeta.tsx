@@ -45,8 +45,8 @@ export function FolderMeta({ series }: FolderMetaProps) {
       gsap.set(lines, { yPercent: 110 });
       gsap.to(lines, {
         yPercent: 0,
-        duration: 0.6,
-        stagger: 0.06,
+        duration: 1.0,
+        stagger: 0.14,
         ease: 'power4.out',
       });
 

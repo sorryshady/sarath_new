@@ -12,6 +12,7 @@ export const featuredPhotoSeriesQuery = defineQuery(`
     title,
     "slug": slug.current,
     coverImage,
+    "coverAspectRatio": coverImage.asset->metadata.dimensions.aspectRatio,
     category,
     year,
     frameCount,
@@ -20,7 +21,10 @@ export const featuredPhotoSeriesQuery = defineQuery(`
 `);
 
 export const photoSeriesBySlugQuery = defineQuery(`
-  *[_type == "photoSeries" && slug.current == $slug][0]
+  *[_type == "photoSeries" && slug.current == $slug][0] {
+    ...,
+    "coverAspectRatio": coverImage.asset->metadata.dimensions.aspectRatio
+  }
 `);
 
 export const allPhotoSeriesSlugsQuery = defineQuery(`

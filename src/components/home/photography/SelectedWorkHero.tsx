@@ -90,6 +90,7 @@ export function SelectedWorkHero({ series, direction }: SelectedWorkHeroProps) {
   return (
     <div
       className="selected-work__hero"
+      style={{ aspectRatio: String(series.coverAspectRatio) }}
       role="link"
       tabIndex={0}
       aria-label={`Open ${resting.title}`}

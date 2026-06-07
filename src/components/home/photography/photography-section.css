@@ -1,4 +1,8 @@
 .selected-work {
+  min-height: 100svh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
   padding: clamp(4rem, 10vh, 8rem) clamp(1.5rem, 5vw, 6rem);
 }
 
@@ -33,7 +37,7 @@
 /* ---- Hero (left) ---- */
 .selected-work__hero {
   position: relative;
-  aspect-ratio: 3 / 2;
+  /* aspect-ratio is set inline per image (native cover ratio) */
   overflow: hidden;
   cursor: pointer;
   background: var(--color-ink-05, rgba(0, 0, 0, 0.05));
