@@ -115,7 +115,12 @@ export function RevealImage({
     <div
       ref={wrapRef}
       className={className}
-      style={{ position: 'relative', clipPath: HIDDEN[direction] }}
+      style={{
+        position: 'relative',
+        width: '100%',
+        height: '100%',
+        clipPath: HIDDEN[direction],
+      }}
     >
       <Image
         src={src}
