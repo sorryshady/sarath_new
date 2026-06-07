@@ -10,7 +10,7 @@ import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import { useNavObserver } from '@/hooks/useNavObserver';
 import { useMedia } from '@/hooks/useMedia';
 
-import { TransitionLink } from './TransitionLink';
+import Link from 'next/link';
 import './ghost-bar.css';
 
 gsap.registerPlugin(ScrollTrigger);
@@ -79,11 +79,16 @@ function NavBrand({
   onClick?: () => void;
 }) {
   return (
-    <TransitionLink href="/" className={className} onClick={onClick}>
+    <Link
+      href="/"
+      className={className}
+      onClick={onClick}
+      transitionTypes={['nav-back']}
+    >
       <NavLogo className={logoClassName} />
       {/* <span className={initialsClassName}>SM</span> */}
       <span className="sr-only">Sarath Menon home</span>
-    </TransitionLink>
+    </Link>
   );
 }
 
@@ -264,6 +269,7 @@ export function GhostBar({
         aria-label="Primary"
         className="ghost-bar"
         data-theme={navTheme}
+        style={{ viewTransitionName: 'ghost-bar' }}
       >
         <NavBrand
           className="ghost-bar__brand"
@@ -274,13 +280,14 @@ export function GhostBar({
         <ul className="ghost-bar__links">
           {NAV_ITEMS.map((item) => (
             <li key={item.id}>
-              <TransitionLink
+              <Link
                 href={item.href}
                 className={`ghost-bar__link${activeLink === item.id ? ' ghost-bar__link--active' : ''}`}
+                transitionTypes={['nav-forward']}
                 onClick={(event) => handleSectionClick(event, item)}
               >
                 {item.label}
-              </TransitionLink>
+              </Link>
             </li>
           ))}
         </ul>
@@ -328,14 +335,15 @@ export function GhostBar({
 
           <div ref={linksRef} className="mobile-menu__links">
             {NAV_ITEMS.map((item) => (
-              <TransitionLink
+              <Link
                 key={item.id}
                 href={item.href}
                 className={`mobile-menu__link${activeLink === item.id ? ' mobile-menu__link--active' : ''}`}
+                transitionTypes={['nav-forward']}
                 onClick={(event) => handleMobileLinkClick(event, item)}
               >
                 {item.label}
-              </TransitionLink>
+              </Link>
             ))}
           </div>
 

@@ -4,6 +4,7 @@ import { PaperGrain } from '@/components/global/PaperGrain';
 import { ScrollRestoration } from '@/components/global/ScrollRestoration';
 import { GSAPProvider } from '@/components/providers/GSAPProvider';
 import { LenisProvider } from '@/components/providers/LenisProvider';
+import { ViewTransition } from '@/components/transitions/ViewTransition';
 
 import '../globals.css';
 
@@ -26,7 +27,21 @@ export default function SiteLayout({
       <GSAPProvider>
         <LenisProvider>
           <ScrollRestoration />
-          {children}
+          <ViewTransition
+            enter={{
+              'nav-forward': 'nav-forward',
+              'nav-back': 'nav-back',
+              default: 'none',
+            }}
+            exit={{
+              'nav-forward': 'nav-forward',
+              'nav-back': 'nav-back',
+              default: 'none',
+            }}
+            default="none"
+          >
+            {children}
+          </ViewTransition>
         </LenisProvider>
       </GSAPProvider>
       {/* Global paper grain — last child, fixed full-viewport, multiply blend.
