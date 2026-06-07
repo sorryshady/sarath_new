@@ -9,13 +9,9 @@ import { SplitText } from 'gsap/SplitText';
 import { type RefObject, useRef } from 'react';
 
 import { useMedia } from '@/hooks/useMedia';
-import {
-  ENTER_DURATION,
-  ENTER_EASE,
-  ENTER_STAGGER,
-  PAGE_ENTER_BUFFER_S,
-  waitForPageEnter,
-} from '@/lib/view-transition';
+const ENTER_DURATION = 0.75;
+const ENTER_STAGGER = 0.06;
+const ENTER_EASE = 'power4.out';
 
 gsap.registerPlugin(SplitText, ScrollTrigger);
 
@@ -108,18 +104,12 @@ export default function Copy({
           gsap.set(containerRef.current, { visibility: 'visible' });
         }
 
-        let pageEnterDelay = 0;
-        if (!animateOnScroll) {
-          await waitForPageEnter();
-          pageEnterDelay = PAGE_ENTER_BUFFER_S;
-        }
-
         const animationProps = {
           y: '0%',
           duration: animateOnScroll ? 1 : ENTER_DURATION,
           stagger: animateOnScroll ? 0.1 : ENTER_STAGGER,
           ease: animateOnScroll ? 'power4.out' : ENTER_EASE,
-          delay: delay + pageEnterDelay,
+          delay,
           onComplete,
         };
 

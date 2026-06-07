@@ -2,22 +2,6 @@ export const HOME_SCROLL_POS_KEY = 'scrollPos';
 export const HOME_RETURNING_KEY = 'homeReturningFromWork';
 export const HOME_SCROLL_RESTORED_EVENT = 'home-scroll-restored';
 export const HOME_LAYOUT_READY_EVENT = 'home-layout-ready';
-export const FROM_POLAROID_TRANSITION_KEY = 'fromPolaroidTransition';
-
-export function markFromPolaroidTransition(): void {
-  sessionStorage.setItem(FROM_POLAROID_TRANSITION_KEY, 'true');
-}
-
-export function consumeFromPolaroidTransition(): boolean {
-  const value = sessionStorage.getItem(FROM_POLAROID_TRANSITION_KEY) === 'true';
-  sessionStorage.removeItem(FROM_POLAROID_TRANSITION_KEY);
-  return value;
-}
-
-export function removeTransitionPortal(): void {
-  document.querySelector('[data-transition-portal]')?.remove();
-}
-
 export function markHomeReturn(scrollY: number): void {
   sessionStorage.setItem(HOME_SCROLL_POS_KEY, String(Math.round(scrollY)));
   sessionStorage.setItem(HOME_RETURNING_KEY, 'true');
