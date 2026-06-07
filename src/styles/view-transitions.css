@@ -1,48 +1,75 @@
-/* Root route transition — custom slideInOut via Web Animations API in JS */
-::view-transition-old(root),
-::view-transition-new(root) {
-  animation: none !important;
-}
-
-::view-transition-group(root) {
-  z-index: auto !important;
-}
-
-::view-transition-image-pair(root) {
-  isolation: isolate;
-  will-change: transform, opacity, clip-path;
-  z-index: 1;
-}
-
-::view-transition-new(root) {
-  z-index: 10000;
-  animation: none !important;
-}
-
-::view-transition-old(root) {
-  z-index: 1;
-  animation: none !important;
-}
-
-/*
- * Named shared elements (polaroid → work hero morph).
- * Do NOT disable animation here — the browser morphs old/new snapshots
- * between matching view-transition-name values on each route.
- */
-::view-transition-group(*) {
+/* ---- Shared-element morph (polaroid card image <-> work hero) ---- */
+::view-transition-group(.morph) {
   animation-duration: 650ms;
   animation-timing-function: cubic-bezier(0.87, 0, 0.13, 1);
 }
-
-::view-transition-image-pair(*) {
+::view-transition-image-pair(.morph) {
   isolation: isolate;
-  z-index: 10001;
+}
+/* Soften pixel interpolation mid-morph. */
+::view-transition-image-pair(.morph) {
+  animation-name: vt-morph-blur;
+}
+@keyframes vt-morph-blur {
+  30% {
+    filter: blur(3px);
+  }
 }
 
-::view-transition-old(*),
-::view-transition-new(*) {
-  height: 100%;
-  object-fit: cover;
+/* ---- Directional page slides (GhostBar nav links) ---- */
+::view-transition-old(.nav-forward) {
+  --vt-slide: -60px;
+  animation:
+    150ms ease-in both vt-fade reverse,
+    400ms ease-in-out both vt-slide reverse;
+}
+::view-transition-new(.nav-forward) {
+  --vt-slide: 60px;
+  animation:
+    210ms ease-out 150ms both vt-fade,
+    400ms ease-in-out both vt-slide;
+}
+::view-transition-old(.nav-back) {
+  --vt-slide: 60px;
+  animation:
+    150ms ease-in both vt-fade reverse,
+    400ms ease-in-out both vt-slide reverse;
+}
+::view-transition-new(.nav-back) {
+  --vt-slide: -60px;
+  animation:
+    210ms ease-out 150ms both vt-fade,
+    400ms ease-in-out both vt-slide;
+}
+
+@keyframes vt-fade {
+  from {
+    opacity: 0;
+    filter: blur(3px);
+  }
+  to {
+    opacity: 1;
+    filter: blur(0);
+  }
+}
+@keyframes vt-slide {
+  from {
+    translate: var(--vt-slide);
+  }
+  to {
+    translate: 0;
+  }
+}
+
+/* ---- Anchor the GhostBar: it must not slide with the page ---- */
+::view-transition-group(ghost-bar) {
+  animation: none;
+  z-index: 100;
+}
+::view-transition-old(ghost-bar) {
+  display: none;
+}
+::view-transition-new(ghost-bar) {
   animation: none;
 }
 
@@ -67,9 +94,10 @@ html.lenis {
 }
 
 @media (prefers-reduced-motion: reduce) {
-  ::view-transition-old(root),
-  ::view-transition-new(root),
+  ::view-transition-old(*),
+  ::view-transition-new(*),
   ::view-transition-group(*) {
-    animation: none !important;
+    animation-duration: 0s !important;
+    animation-delay: 0s !important;
   }
 }
