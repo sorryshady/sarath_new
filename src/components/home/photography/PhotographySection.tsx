@@ -10,7 +10,6 @@ import { useGSAP } from '@gsap/react';
 import { PolaroidCard } from '@/components/home/photography/PolaroidCard';
 import { getAnimationMode, getStackRotation } from '@/lib/animationMode';
 import { markHomeReturn } from '@/lib/home-scroll';
-import { navigateWithTransition } from '@/lib/view-transition-nav';
 import type { PhotoSeries } from '@/types/photoSeries';
 import { useMedia } from '@/hooks/useMedia';
 import { useLenis } from 'lenis/react';
@@ -134,45 +133,11 @@ export function PhotographySection({
   );
 
   const handleSeriesClick = useCallback(
-    async (slug: string, imageSrc: string, cardRef: HTMLDivElement) => {
-      const morphEl = cardRef.querySelector(
-        '[data-work-hero-morph]',
-      ) as HTMLElement | null;
-      if (!morphEl) return;
-
+    (slug: string) => {
       const scrollY =
         typeof lenis?.scroll === 'number' ? lenis.scroll : window.scrollY;
       markHomeReturn(scrollY);
-
-      const border = cardRef.querySelector('.polaroid-border');
-      const caption = cardRef.querySelector('.polaroid-caption');
-
-      await navigateWithTransition({
-        navigate: () => router.push(`/work/${slug}`),
-        variant: 'polaroid-hero',
-        heroElement: morphEl,
-        heroImageSrc: imageSrc,
-        onBeforeNavigate: async () => {
-          const tweens: gsap.core.Tween[] = [];
-
-          if (border) {
-            tweens.push(gsap.to(border, { opacity: 0, duration: 0.15 }));
-          }
-          if (caption) {
-            tweens.push(gsap.to(caption, { opacity: 0, duration: 0.15 }));
-          }
-
-          polaroidRefs.current.forEach((el) => {
-            if (el && el !== cardRef) {
-              tweens.push(gsap.to(el, { opacity: 0, duration: 0.25 }));
-            }
-          });
-
-          if (tweens.length > 0) {
-            await Promise.all(tweens);
-          }
-        },
-      });
+      router.push(`/work/${slug}`);
     },
     [lenis, router],
   );
@@ -578,13 +543,7 @@ export function PhotographySection({
                   hoverEnabled={hoverEnabled}
                   isActive={index === stripIndex}
                   animationMode={animationModeRef.current}
-                  onClick={() =>
-                    handleSeriesClick(
-                      item.slug,
-                      item.coverImage,
-                      polaroidRefs.current[index]!,
-                    )
-                  }
+                  onClick={() => handleSeriesClick(item.slug)}
                 />
               ))}
             </div>
@@ -631,13 +590,7 @@ export function PhotographySection({
                 animationMode={animationModeRef.current}
                 onMouseEnter={() => handleCardEnter(index)}
                 onMouseLeave={() => handleCardLeave(index)}
-                onClick={() =>
-                  handleSeriesClick(
-                    item.slug,
-                    item.coverImage,
-                    polaroidRefs.current[index]!,
-                  )
-                }
+                onClick={() => handleSeriesClick(item.slug)}
               />
             ))}
           </div>
