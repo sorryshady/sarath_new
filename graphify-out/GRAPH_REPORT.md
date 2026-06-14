@@ -1,16 +1,16 @@
 # Graph Report - sarath_menon  (2026-06-14)
 
 ## Corpus Check
-- 77 files · ~57,719 words
+- 87 files · ~61,217 words
 - Verdict: corpus is large enough that graph structure adds value.
 
 ## Summary
-- 682 nodes · 775 edges · 41 communities (29 shown, 12 thin omitted)
-- Extraction: 98% EXTRACTED · 2% INFERRED · 0% AMBIGUOUS · INFERRED: 12 edges (avg confidence: 0.77)
+- 731 nodes · 866 edges · 44 communities (31 shown, 13 thin omitted)
+- Extraction: 99% EXTRACTED · 1% INFERRED · 0% AMBIGUOUS · INFERRED: 12 edges (avg confidence: 0.77)
 - Token cost: 0 input · 0 output
 
 ## Graph Freshness
-- Built from commit: `059fd0dc`
+- Built from commit: `8cc556ca`
 - Run `git rev-parse HEAD` and compare to check if the graph is stale.
 - Run `graphify update .` after code changes (no API cost).
 
@@ -53,6 +53,9 @@
 - [[_COMMUNITY_Community 38|Community 38]]
 - [[_COMMUNITY_Community 39|Community 39]]
 - [[_COMMUNITY_Community 40|Community 40]]
+- [[_COMMUNITY_Community 41|Community 41]]
+- [[_COMMUNITY_Community 42|Community 42]]
+- [[_COMMUNITY_Community 43|Community 43]]
 
 ## God Nodes (most connected - your core abstractions)
 1. `Photography Section — AI Build Prompt` - 21 edges
@@ -64,7 +67,7 @@
 7. `Ghost Bar Navigation Component — AI Build Prompt` - 15 edges
 8. `Poetry Anthology (Live Site)` - 15 edges
 9. `About Teaser Section — AI Build Prompt` - 14 edges
-10. `scripts` - 11 edges
+10. `useMedia()` - 12 edges
 
 ## Surprising Connections (you probably didn't know these)
 - `Next.js Agent Rules (Breaking Changes)` --semantically_similar_to--> `Think Before Coding`  [INFERRED] [semantically similar]
@@ -86,15 +89,15 @@
 - **Shared Crimson/Cream + GSAP + Sanity Design System** — concept_crimson_cream_palette, concept_gsap_scrolltrigger_stack, concept_sanity_cms [INFERRED 0.85]
 - **Preloader to Hero Handoff Flow** — reference_files_preloader_build_prompt_counter_logic, reference_files_hero_section_build_prompt_preloader_handshake, reference_files_hero_section_build_prompt_vimeo_background, reference_files_hero_section_build_prompt_scroll_timeline [INFERRED 0.85]
 
-## Communities (41 total, 12 thin omitted)
+## Communities (44 total, 13 thin omitted)
 
 ### Community 0 - "Sanity Data Layer"
-Cohesion: 0.20
-Nodes (9): aboutTeaserQuery, allPhotoSeriesSlugsQuery, allPoemsQuery, featuredFilmsQuery, featuredPhotoSeriesQuery, featuredPoemsQuery, photoSeriesBySlugQuery, poetryTeaserQuery (+1 more)
+Cohesion: 0.09
+Nodes (31): FilmLightbox(), FilmLightboxProps, filmStill(), HeroSection(), HeroSectionProps, metaLabelStyle, HeroVideoBackground(), HeroVideoBackgroundProps (+23 more)
 
 ### Community 1 - "Page Routes & Nav Observer"
-Cohesion: 0.06
-Nodes (26): metadata, metadata, placeholderMetadata(), PlaceholderPage(), PlaceholderPageProps, HomePage(), HomePageProps, Preloader() (+18 more)
+Cohesion: 0.09
+Nodes (19): HomePage(), HomePageProps, Preloader(), PreloaderProps, useSprocketCount(), getNavHeight(), getSectionBehindNav(), NavTheme (+11 more)
 
 ### Community 2 - "Home Page & Preloader Scroll"
 Cohesion: 0.05
@@ -113,15 +116,15 @@ Cohesion: 0.05
 Nodes (39): ACCEPTANCE CRITERIA, Advancing right (next film), Background and wrapper, Card states, Card width calculations, CAROUSEL HEIGHT, COLOUR TOKEN REFERENCE, Concept (+31 more)
 
 ### Community 6 - "Providers & Layout Effects"
-Cohesion: 0.09
-Nodes (20): PaperGrain(), HeroSection(), HeroSectionProps, metaLabelStyle, HeroVideoBackground(), HeroVideoBackgroundProps, useMedia(), getHeroVideoSource() (+12 more)
+Cohesion: 0.11
+Nodes (16): PaperGrain(), useMedia(), GSAPProvider(), LenisProvider(), Copy(), CopyProps, metadata, Copy() (+8 more)
 
 ### Community 7 - "TypeScript Config"
 Cohesion: 0.10
 Nodes (20): compilerOptions, allowJs, esModuleInterop, incremental, isolatedModules, jsx, lib, module (+12 more)
 
 ### Community 8 - "Sanity Schema Definitions"
-Cohesion: 0.08
+Cohesion: 0.09
 Nodes (16): aboutTeaser, film, photoSeries, poem, poetryTeaser, siteSettings, client, builder (+8 more)
 
 ### Community 9 - "Hero Video Section"
@@ -192,25 +195,33 @@ Nodes (9): Content model (Sanity), Dependencies, Design tokens, Getting started,
 Cohesion: 0.29
 Nodes (5): 1. Think Before Coding, 2. Simplicity First, 3. Surgical Changes, 4. Goal-Driven Execution, graphify
 
+### Community 41 - "Community 41"
+Cohesion: 0.12
+Nodes (14): metadata, CRAFTS, CraftStub(), CraftStubProps, FilmsExperience(), FilmsPage(), metadata, placeholderMetadata() (+6 more)
+
+### Community 42 - "Community 42"
+Cohesion: 0.13
+Nodes (14): 0. Design constraint — Hero images on every page, 1. Architecture — Hybrid (teaser → page), 2. Page transition — the crimson shutter (the heartbeat), 3. Home panels — each a unique signature, 4. Craft pages, 5. Reusable motion system (configurable primitives), 6. Cross-cutting defaults (veto-able), 7. CMS reconciliation (+6 more)
+
 ## Knowledge Gaps
-- **400 isolated node(s):** `PreToolUse`, `eslintConfig`, `projectRoot`, `nextConfig`, `name` (+395 more)
+- **423 isolated node(s):** `version`, `configurations`, `PreToolUse`, `eslintConfig`, `projectRoot` (+418 more)
   These have ≤1 connection - possible missing edges or undocumented components.
-- **12 thin communities (<3 nodes) omitted from report** — run `graphify query` to explore isolated nodes.
+- **13 thin communities (<3 nodes) omitted from report** — run `graphify query` to explore isolated nodes.
 
 ## Suggested Questions
 _Questions this graph is uniquely positioned to answer:_
 
 - **Why does `Films Section — AI Build Prompt` connect `View Transitions Engine` to `Cinematic Design System`?**
-  _High betweenness centrality (0.014) - this node is a cross-community bridge._
+  _High betweenness centrality (0.012) - this node is a cross-community bridge._
 - **Why does `VIMEO LIGHTBOX` connect `Cinematic Design System` to `View Transitions Engine`?**
-  _High betweenness centrality (0.011) - this node is a cross-community bridge._
-- **Why does `Sarath Menon (Artist | Filmmaker)` connect `Cinematic Design System` to `Poetry Anthology Content`?**
+  _High betweenness centrality (0.010) - this node is a cross-community bridge._
+- **Why does `useMedia()` connect `Providers & Layout Effects` to `Sanity Data Layer`, `Page Routes & Nav Observer`?**
   _High betweenness centrality (0.007) - this node is a cross-community bridge._
-- **What connects `PreToolUse`, `eslintConfig`, `projectRoot` to the rest of the system?**
-  _402 weakly-connected nodes found - possible documentation gaps or missing edges._
+- **What connects `version`, `configurations`, `PreToolUse` to the rest of the system?**
+  _425 weakly-connected nodes found - possible documentation gaps or missing edges._
+- **Should `Sanity Data Layer` be split into smaller, more focused modules?**
+  _Cohesion score 0.08846153846153847 - nodes in this community are weakly interconnected._
 - **Should `Page Routes & Nav Observer` be split into smaller, more focused modules?**
-  _Cohesion score 0.06105457909343201 - nodes in this community are weakly interconnected._
+  _Cohesion score 0.08817204301075268 - nodes in this community are weakly interconnected._
 - **Should `Home Page & Preloader Scroll` be split into smaller, more focused modules?**
   _Cohesion score 0.046511627906976744 - nodes in this community are weakly interconnected._
-- **Should `Sanity Migration Scripts` be split into smaller, more focused modules?**
-  _Cohesion score 0.112375533428165 - nodes in this community are weakly interconnected._

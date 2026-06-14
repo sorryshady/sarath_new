@@ -1,13 +1,18 @@
-# Graph Report - .  (2026-06-07)
+# Graph Report - sarath_menon  (2026-06-14)
 
 ## Corpus Check
-- 94 files · ~52,868 words
+- 77 files · ~57,719 words
 - Verdict: corpus is large enough that graph structure adds value.
 
 ## Summary
-- 406 nodes · 585 edges · 31 communities (24 shown, 7 thin omitted)
+- 682 nodes · 775 edges · 41 communities (29 shown, 12 thin omitted)
 - Extraction: 98% EXTRACTED · 2% INFERRED · 0% AMBIGUOUS · INFERRED: 12 edges (avg confidence: 0.77)
-- Token cost: 106,510 input · 0 output
+- Token cost: 0 input · 0 output
+
+## Graph Freshness
+- Built from commit: `059fd0dc`
+- Run `git rev-parse HEAD` and compare to check if the graph is stale.
+- Run `graphify update .` after code changes (no API cost).
 
 ## Community Hubs (Navigation)
 - [[_COMMUNITY_Sanity Data Layer|Sanity Data Layer]]
@@ -38,28 +43,38 @@
 - [[_COMMUNITY_ESLint Config|ESLint Config]]
 - [[_COMMUNITY_PostCSS Config|PostCSS Config]]
 - [[_COMMUNITY_README & Setup|README & Setup]]
+- [[_COMMUNITY_Community 31|Community 31]]
+- [[_COMMUNITY_Community 32|Community 32]]
+- [[_COMMUNITY_Community 33|Community 33]]
+- [[_COMMUNITY_Community 34|Community 34]]
+- [[_COMMUNITY_Community 35|Community 35]]
+- [[_COMMUNITY_Community 36|Community 36]]
+- [[_COMMUNITY_Community 37|Community 37]]
+- [[_COMMUNITY_Community 38|Community 38]]
+- [[_COMMUNITY_Community 39|Community 39]]
+- [[_COMMUNITY_Community 40|Community 40]]
 
 ## God Nodes (most connected - your core abstractions)
-1. `compilerOptions` - 17 edges
-2. `Poetry Anthology (Live Site)` - 15 edges
-3. `useMedia()` - 12 edges
-4. `scripts` - 11 edges
-5. `navigateWithTransition()` - 8 edges
-6. `extractSeriesImageUrls()` - 7 edges
-7. `migratePoems()` - 7 edges
-8. `main()` - 7 edges
-9. `GhostBar()` - 7 edges
-10. `GSAP + ScrollTrigger Animation Stack` - 7 edges
+1. `Photography Section — AI Build Prompt` - 21 edges
+2. `Films Section — AI Build Prompt` - 20 edges
+3. `Poetry Section (Home CTA) + /poetry Page — AI Build Prompt` - 18 edges
+4. `compilerOptions` - 17 edges
+5. `Preloader Component — AI Build Prompt` - 16 edges
+6. `Contact Section — AI Build Prompt` - 15 edges
+7. `Ghost Bar Navigation Component — AI Build Prompt` - 15 edges
+8. `Poetry Anthology (Live Site)` - 15 edges
+9. `About Teaser Section — AI Build Prompt` - 14 edges
+10. `scripts` - 11 edges
 
 ## Surprising Connections (you probably didn't know these)
 - `Next.js Agent Rules (Breaking Changes)` --semantically_similar_to--> `Think Before Coding`  [INFERRED] [semantically similar]
   AGENTS.md → CLAUDE.md
 - `Copy()` --calls--> `useMedia()`  [INFERRED]
   reference files/copy/copy.tsx → src/hooks/useMedia.ts
-- `Vimeo Player & Lightbox` --references--> `The Death of Don Quixote (Film)`  [INFERRED]
-  reference files/films-section-build-prompt.md → .firecrawl/home.md
 - `/poetry Page (Pinned Image Anthology)` --references--> `Poetry Anthology (Live Site)`  [INFERRED]
   reference files/poetry-section-build-prompt.md → .firecrawl/poems.md
+- `VIMEO LIGHTBOX` --references--> `The Death of Don Quixote (Film)`  [INFERRED]
+  reference files/films-section-build-prompt.md → .firecrawl/home.md
 - `Contact Section Build Prompt` --references--> `Sarath Menon (Artist | Filmmaker)`  [INFERRED]
   reference files/contact-section-build-prompt.md → .firecrawl/home.md
 
@@ -71,75 +86,71 @@
 - **Shared Crimson/Cream + GSAP + Sanity Design System** — concept_crimson_cream_palette, concept_gsap_scrolltrigger_stack, concept_sanity_cms [INFERRED 0.85]
 - **Preloader to Hero Handoff Flow** — reference_files_preloader_build_prompt_counter_logic, reference_files_hero_section_build_prompt_preloader_handshake, reference_files_hero_section_build_prompt_vimeo_background, reference_files_hero_section_build_prompt_scroll_timeline [INFERRED 0.85]
 
-## Communities (31 total, 7 thin omitted)
+## Communities (41 total, 12 thin omitted)
 
 ### Community 0 - "Sanity Data Layer"
-Cohesion: 0.09
-Nodes (25): client, FEATURED_SERIES, builder, urlFor(), { sanityFetch, SanityLive }, mapSanityRow(), parseFrameCount(), SanityFeaturedSeriesRow (+17 more)
+Cohesion: 0.20
+Nodes (9): aboutTeaserQuery, allPhotoSeriesSlugsQuery, allPoemsQuery, featuredFilmsQuery, featuredPhotoSeriesQuery, featuredPoemsQuery, photoSeriesBySlugQuery, poetryTeaserQuery (+1 more)
 
 ### Community 1 - "Page Routes & Nav Observer"
-Cohesion: 0.08
-Nodes (21): metadata, metadata, placeholderMetadata(), PlaceholderPage(), PlaceholderPageProps, getNavHeight(), getSectionBehindNav(), NavTheme (+13 more)
+Cohesion: 0.06
+Nodes (26): metadata, metadata, placeholderMetadata(), PlaceholderPage(), PlaceholderPageProps, HomePage(), HomePageProps, Preloader() (+18 more)
 
 ### Community 2 - "Home Page & Preloader Scroll"
-Cohesion: 0.08
-Nodes (25): HomePage(), HomePageProps, Preloader(), PreloaderProps, useSprocketCount(), AnimationMode, getAnimationMode(), getStackRotation() (+17 more)
+Cohesion: 0.05
+Nodes (42): ACCEPTANCE CRITERIA, Arrow navigation buttons, Auto-play reveal on enter, Beat 1 — Stack enters (on section enter), Beat 2 — Scatter (scroll progress 0% → 50%), Beat 3 — Flip (scroll progress 50% → 80%), Beat 4 — Series names type in (scroll progress 75% → 95%), Beat 5 — Settle and release (scroll progress 95% → 100%) (+34 more)
 
 ### Community 3 - "Sanity Migration Scripts"
 Cohesion: 0.11
 Nodes (33): createWriteClient(), decodeNextImageUrl(), dedupeGalleryByAsset(), extractSeriesImageUrls(), fetchPage(), imageRef(), loadEnvLocal(), mediaFilename() (+25 more)
 
 ### Community 4 - "Project Dependencies"
-Cohesion: 0.06
-Nodes (33): dependencies, gsap, @gsap/react, lenis, next, next-sanity, react, react-dom (+25 more)
+Cohesion: 0.04
+Nodes (44): dependencies, gsap, @gsap/react, lenis, next, next-sanity, react, react-dom (+36 more)
 
 ### Community 5 - "View Transitions Engine"
-Cohesion: 0.12
-Nodes (22): markFromPolaroidTransition(), DocumentWithViewTransition, ENTER, DocumentWithViewTransition, killPhotographyScrollTriggers(), markTransitionStart(), navigateWithTransition(), NavigateWithTransitionOptions (+14 more)
+Cohesion: 0.05
+Nodes (39): ACCEPTANCE CRITERIA, Advancing right (next film), Background and wrapper, Card states, Card width calculations, CAROUSEL HEIGHT, COLOUR TOKEN REFERENCE, Concept (+31 more)
 
 ### Community 6 - "Providers & Layout Effects"
-Cohesion: 0.13
-Nodes (11): PaperGrain(), ScrollRestoration(), useMedia(), waitForPageEnter(), GSAPProvider(), LenisProvider(), Copy(), CopyProps (+3 more)
+Cohesion: 0.09
+Nodes (20): PaperGrain(), HeroSection(), HeroSectionProps, metaLabelStyle, HeroVideoBackground(), HeroVideoBackgroundProps, useMedia(), getHeroVideoSource() (+12 more)
 
 ### Community 7 - "TypeScript Config"
 Cohesion: 0.10
 Nodes (20): compilerOptions, allowJs, esModuleInterop, incremental, isolatedModules, jsx, lib, module (+12 more)
 
 ### Community 8 - "Sanity Schema Definitions"
-Cohesion: 0.15
-Nodes (9): aboutTeaser, film, photoSeries, poem, poetryTeaser, siteSettings, singleton(), structure() (+1 more)
+Cohesion: 0.08
+Nodes (16): aboutTeaser, film, photoSeries, poem, poetryTeaser, siteSettings, client, builder (+8 more)
 
 ### Community 9 - "Hero Video Section"
-Cohesion: 0.21
-Nodes (11): HeroSection(), HeroSectionProps, metaLabelStyle, HeroVideoBackground(), HeroVideoBackgroundProps, getHeroVideoSource(), getVideoPosterUrl(), getVimeoPosterUrl() (+3 more)
+Cohesion: 0.05
+Nodes (36): ACCEPTANCE CRITERIA — HOME CTA, ACCEPTANCE CRITERIA — /POETRY PAGE, Attribution + CTA fade in, Attribution row, Background, Bottom row — attribution + CTA, COLOUR TOKEN REFERENCE, Concept (+28 more)
 
 ### Community 10 - "Poetry Anthology Content"
-Cohesion: 0.14
-Nodes (14): 7 Minutes (Poem), Always (Poem), Poetry Anthology (Live Site), Blood of God (Poem), Life (Poem), My friend Tony (Poem), Rain (Poem), Sleep (Poem) (+6 more)
+Cohesion: 0.23
+Nodes (15): 7 Minutes, Always, Poetry Anthology (Live Site), Blood of God, Contact, Life, My friend Tony, Rain (+7 more)
 
 ### Community 11 - "Cinematic Design System"
-Cohesion: 0.22
-Nodes (11): Crimson #8B1E1E / Cream #EFD9B6 Palette, Paper Texture (Global mix-blend-mode), Preloader Handshake, Hero Scroll Timeline (Crimson Drop + Zoom), Hero Section Build Prompt, Colour Inversion System, Ghost Bar Navigation Build Prompt, Non-Linear Counter Logic (00 to 100) (+3 more)
+Cohesion: 0.06
+Nodes (46): Crimson #8B1E1E / Cream #EFD9B6 Palette, GSAP + ScrollTrigger Animation Stack, Sanity CMS Data Source, About, Contact, The Death of Don Quixote (Film), Filmography, More options (+38 more)
 
 ### Community 12 - "npm Scripts"
-Cohesion: 0.18
-Nodes (11): scripts, audit:check, build, dev, lint, migrate, npm, repair:films (+3 more)
+Cohesion: 0.06
+Nodes (31): ACCEPTANCE CRITERIA, Background, Beat 1 — Ready state (0.4s), Beat 2 — Frame dissolve (0.5s), Beat 3 — Panel slide up (0.6s), Bottom Meta Bar, COLOUR TOKENS (for reference), COMPONENT STRUCTURE (+23 more)
 
 ### Community 13 - "Films & Artist Profile"
-Cohesion: 0.29
-Nodes (8): The Death of Don Quixote (Film), Sarath Menon Home (Live Site), Rajakumaran (Film), Sarath Menon (Artist | Filmmaker), The Red Ball (Film), Colophon Strip, Magnetic Cursor Effect, Contact Section Build Prompt
+Cohesion: 0.07
+Nodes (28): About Teaser Section — AI Build Prompt, ACCEPTANCE CRITERIA, Bio text, Bio text reveal, COLOUR TOKEN REFERENCE, COMPONENT STRUCTURE, CONTEXT, Divider rule (+20 more)
 
 ### Community 14 - "Animation & Transition Patterns"
-Cohesion: 0.33
-Nodes (7): GSAP + ScrollTrigger Animation Stack, Full-Screen Mobile Menu Overlay, Polaroid Scatter Sequence, Photography Section Build Prompt, Zustand Transition Store, GSAP Flip Zoom Page Transition, Scroll-Linked Image Transition
+Cohesion: 0.07
+Nodes (27): ACCEPTANCE CRITERIA, ACTIVE SECTION INDICATOR, Active state styles, COLOUR INVERSION SYSTEM, COLOUR TOKEN REFERENCE, COMPONENT INTERFACE, CONTEXT, Dark Mode (used over crimson `#8B1E1E` and dark video sections) (+19 more)
 
 ### Community 15 - "Photography & Poetry Content Specs"
-Cohesion: 0.29
-Nodes (7): Sanity CMS Data Source, Rajasthan (Photography Series), About Teaser Section Build Prompt, PhotoSeries Sanity Schema, Poetry Home CTA Section, /poetry Page (Pinned Image Anthology), Poetry Section Build Prompt
-
-### Community 16 - "Photography Section & Store"
-Cohesion: 0.33
-Nodes (4): gridTransforms, PhotographySection(), TransitionState, useTransitionStore
+Cohesion: 0.07
+Nodes (26): 10. WHAT COMES AFTER THE HERO, 1. COLOUR CORRECTION, 2. TYPOGRAPHY — THE NAME, 3. BACKGROUND — VIMEO VIDEO PLAYER, 4. DARK OVERLAY REFINEMENT, 5. META TEXT CORNERS — REPLACING THE HEADER, 6. SCROLL TIMELINE — REFINEMENTS, 7. PRELOADER HANDSHAKE (+18 more)
 
 ### Community 17 - "Root Layout & Fonts"
 Cohesion: 0.33
@@ -154,28 +165,52 @@ Cohesion: 0.50
 Nodes (5): Elegant Artistic Personal Brand Identity, Sarath Menon Portfolio Brandmark, Deep Maroon on Transparent Palette, Calligraphic Looping Monogram Motif, Minimal Hand-Drawn Line-Art Style
 
 ### Community 20 - "Films Section Build Spec"
-Cohesion: 0.40
-Nodes (5): Accordion Carousel, Lights-Down Transition, Films Section Build Prompt, Vimeo Player & Lightbox, Vimeo Video Background
+Cohesion: 0.09
+Nodes (21): ACCEPTANCE CRITERIA, Background, Beat 1 — Headline word drop (scroll triggered), Beat 2 — Ink bleeds spread, Beat 3 — Contact details stagger in, COLOUR TOKEN REFERENCE, CONTACT DETAILS GRID, Contact Section — AI Build Prompt (+13 more)
+
+### Community 31 - "Community 31"
+Cohesion: 0.13
+Nodes (14): 1. Enable the engine, 2. Shared-element morph (polaroid → work hero), 3. Directional page slides + anchored GhostBar, 4. Page-enter GSAP reveals (`Copy.tsx`), 5. Reduced motion & browser support, 6. The skill — `~/.claude/skills/nextjs-view-transitions/SKILL.md`, Architecture, Decisions (+6 more)
+
+### Community 32 - "Community 32"
+Cohesion: 0.15
+Nodes (12): File structure (what each unit owns), Native View Transitions (Next 16) Implementation Plan, Reference facts (verified during planning), Self-review (completed by planner), Task 1: Enable the engine and create the wrapper, Task 2: Shared-element morph — destination (WorkHero) and source (PolaroidCard), Task 3: Simplify PhotographySection navigation, Task 4: Directional page slides + GhostBar migration (+4 more)
+
+### Community 33 - "Community 33"
+Cohesion: 0.15
+Nodes (12): File structure, Reference facts (verified during planning), Selected Work Redesign Implementation Plan, Self-review (completed by planner), Task 1: Reusable `RevealImage` component, Task 2: `FolderMeta` (SplitText line-mask metadata), Task 3: `FolderRail` (thumbnail list / strip), Task 4: `SelectedWorkHero` (reveal + slide-swap + morph) (+4 more)
+
+### Community 34 - "Community 34"
+Cohesion: 0.15
+Nodes (12): Architecture, Component breakdown, Data flow, Decisions (resolved via grilling), `FolderMeta` (SplitText line-mask), Hero slide-swap (in `SelectedWorkHero`), Mobile (`max-width: 767px`), Problem (+4 more)
+
+### Community 35 - "Community 35"
+Cohesion: 0.20
+Nodes (9): Content model (Sanity), Dependencies, Design tokens, Getting started, Overrides, Premise, Sarath Menon Portfolio, Scripts (+1 more)
+
+### Community 36 - "Community 36"
+Cohesion: 0.29
+Nodes (5): 1. Think Before Coding, 2. Simplicity First, 3. Surgical Changes, 4. Goal-Driven Execution, graphify
 
 ## Knowledge Gaps
-- **148 isolated node(s):** `eslintConfig`, `projectRoot`, `nextConfig`, `name`, `version` (+143 more)
+- **400 isolated node(s):** `PreToolUse`, `eslintConfig`, `projectRoot`, `nextConfig`, `name` (+395 more)
   These have ≤1 connection - possible missing edges or undocumented components.
-- **7 thin communities (<3 nodes) omitted from report** — run `graphify query` to explore isolated nodes.
+- **12 thin communities (<3 nodes) omitted from report** — run `graphify query` to explore isolated nodes.
 
 ## Suggested Questions
 _Questions this graph is uniquely positioned to answer:_
 
-- **Why does `useMedia()` connect `Providers & Layout Effects` to `Hero Video Section`, `Home Page & Preloader Scroll`, `Page Routes & Nav Observer`?**
-  _High betweenness centrality (0.034) - this node is a cross-community bridge._
-- **Why does `GhostBar()` connect `Page Routes & Nav Observer` to `Sanity Data Layer`, `Home Page & Preloader Scroll`, `Providers & Layout Effects`?**
-  _High betweenness centrality (0.023) - this node is a cross-community bridge._
-- **Are the 2 inferred relationships involving `useMedia()` (e.g. with `Copy()` and `Copy()`) actually correct?**
-  _`useMedia()` has 2 INFERRED edges - model-reasoned connections that need verification._
-- **What connects `eslintConfig`, `projectRoot`, `nextConfig` to the rest of the system?**
-  _150 weakly-connected nodes found - possible documentation gaps or missing edges._
-- **Should `Sanity Data Layer` be split into smaller, more focused modules?**
-  _Cohesion score 0.08771929824561403 - nodes in this community are weakly interconnected._
+- **Why does `Films Section — AI Build Prompt` connect `View Transitions Engine` to `Cinematic Design System`?**
+  _High betweenness centrality (0.014) - this node is a cross-community bridge._
+- **Why does `VIMEO LIGHTBOX` connect `Cinematic Design System` to `View Transitions Engine`?**
+  _High betweenness centrality (0.011) - this node is a cross-community bridge._
+- **Why does `Sarath Menon (Artist | Filmmaker)` connect `Cinematic Design System` to `Poetry Anthology Content`?**
+  _High betweenness centrality (0.007) - this node is a cross-community bridge._
+- **What connects `PreToolUse`, `eslintConfig`, `projectRoot` to the rest of the system?**
+  _402 weakly-connected nodes found - possible documentation gaps or missing edges._
 - **Should `Page Routes & Nav Observer` be split into smaller, more focused modules?**
-  _Cohesion score 0.07539118065433854 - nodes in this community are weakly interconnected._
+  _Cohesion score 0.06105457909343201 - nodes in this community are weakly interconnected._
 - **Should `Home Page & Preloader Scroll` be split into smaller, more focused modules?**
-  _Cohesion score 0.07965860597439545 - nodes in this community are weakly interconnected._
+  _Cohesion score 0.046511627906976744 - nodes in this community are weakly interconnected._
+- **Should `Sanity Migration Scripts` be split into smaller, more focused modules?**
+  _Cohesion score 0.112375533428165 - nodes in this community are weakly interconnected._

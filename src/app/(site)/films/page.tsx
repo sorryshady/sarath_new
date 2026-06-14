@@ -1,12 +1,14 @@
 import type { Metadata } from 'next';
 
-import { CraftStub } from '@/components/dev/CraftStub';
+import { FilmsExperience } from '@/components/films/FilmsExperience';
+import { getAllFilms } from '@/lib/films';
 
 export const metadata: Metadata = {
   title: 'Films',
-  description: 'Filmography with cinema lightbox — full build coming soon.',
+  description: 'Filmography — direction, cinematography, and screenwriting.',
 };
 
-export default function FilmsPage() {
-  return <CraftStub name="Films" />;
+export default async function FilmsPage() {
+  const films = await getAllFilms();
+  return <FilmsExperience films={films} />;
 }

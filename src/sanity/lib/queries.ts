@@ -35,6 +35,25 @@ export const featuredFilmsQuery = defineQuery(`
   *[_type == "film" && featured == true] | order(order asc)
 `);
 
+export const allFilmsQuery = defineQuery(`
+  *[_type == "film"] | order(order asc) {
+    _id,
+    title,
+    "slug": slug.current,
+    videoProvider,
+    videoId,
+    vimeoId,
+    youtubeId,
+    thumbnail,
+    "thumbAspect": thumbnail.asset->metadata.dimensions.aspectRatio,
+    description,
+    format,
+    year,
+    role,
+    award
+  }
+`);
+
 export const featuredPoemsQuery = defineQuery(`
   *[_type == "poem" && featured == true] | order(order asc)
 `);

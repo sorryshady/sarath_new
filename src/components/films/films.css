@@ -1,0 +1,323 @@
+/* ============================================================
+   FILMS PAGE — typographic reel index over a hover-swapped still
+   ============================================================ */
+
+.films {
+  position: relative;
+  min-height: 100svh;
+  background: var(--color-cinema-dark);
+  color: var(--color-parchment-text);
+  overflow: hidden;
+}
+
+/* --- Hero stage (fixed behind the content) --- */
+
+.films-stage {
+  position: fixed;
+  inset: 0;
+  z-index: 0;
+}
+
+.films-still {
+  position: absolute;
+  inset: 0;
+  background-size: cover;
+  background-position: center;
+  transform: scale(1.04);
+  opacity: 0;
+  transition: opacity 0.8s ease;
+}
+
+.films-still[data-active] {
+  opacity: 1;
+}
+
+/* Legibility scrim — darken the left where the reel sits, and the base. */
+.films-scrim {
+  position: absolute;
+  inset: 0;
+  background:
+    linear-gradient(
+      90deg,
+      rgba(18, 15, 10, 0.97) 0%,
+      rgba(18, 15, 10, 0.8) 38%,
+      rgba(18, 15, 10, 0.4) 72%,
+      rgba(18, 15, 10, 0.25) 100%
+    ),
+    linear-gradient(0deg, rgba(18, 15, 10, 0.85) 0%, transparent 38%);
+}
+
+/* --- Chrome --- */
+
+.films-header {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: var(--space-2xl) var(--space-3xl);
+  font-family: var(--font-data);
+  font-size: var(--size-nav);
+  font-weight: var(--weight-bold);
+  letter-spacing: var(--tracking-label);
+  text-transform: uppercase;
+  text-shadow: 0 1px 18px rgba(18, 15, 10, 0.8);
+}
+
+.films-home-link {
+  color: var(--color-parchment-text);
+  transition: opacity 0.3s ease;
+}
+
+.films-home-link:hover {
+  opacity: 0.65;
+}
+
+.films-count {
+  color: var(--color-parchment-text);
+}
+
+.films-count span {
+  color: var(--color-parchment-text);
+}
+
+/* --- Reel index --- */
+
+.films-reel {
+  position: relative;
+  z-index: 2;
+  list-style: none;
+  margin-top: 10vh;
+  padding: 0 var(--space-3xl) var(--space-4xl);
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-lg);
+}
+
+.films-reel-button {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: var(--space-xs);
+  padding: var(--space-xs) 0;
+  background: none;
+  border: 0;
+  color: inherit;
+  text-align: left;
+  cursor: pointer;
+  opacity: 0.5;
+  transition:
+    opacity 0.4s ease,
+    transform 0.4s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.films-reel-button[data-active] {
+  opacity: 1;
+  transform: translateX(16px);
+}
+
+.films-reel-title {
+  font-family: var(--font-display);
+  font-weight: var(--weight-regular);
+  font-size: clamp(42px, 6vw, 82px);
+  line-height: 0.98;
+  letter-spacing: 0.005em;
+  text-shadow: 0 2px 30px rgba(18, 15, 10, 0.6);
+}
+
+.films-reel-meta {
+  font-family: var(--font-data);
+  font-size: var(--size-nav);
+  letter-spacing: var(--tracking-wide);
+  text-transform: uppercase;
+  color: var(--color-parchment-70);
+}
+
+/* --- Empty state --- */
+
+.films-empty {
+  min-height: 100svh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-lg);
+  padding: var(--space-3xl);
+  text-align: center;
+  background: var(--color-cinema-dark);
+  color: var(--color-parchment-text);
+}
+
+.films-eyebrow {
+  font-family: var(--font-data);
+  font-size: var(--size-label);
+  letter-spacing: var(--tracking-widest);
+  text-transform: uppercase;
+  color: var(--color-parchment-50);
+}
+
+.films-empty h1 {
+  font-family: var(--font-editorial);
+  font-size: var(--size-series-title);
+}
+
+/* --- Lightbox --- */
+
+.film-lightbox {
+  position: fixed;
+  inset: 0;
+  z-index: var(--z-lightbox);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: var(--space-3xl);
+  background: var(--color-cinema-dark);
+  animation: film-lightbox-in 0.4s ease both;
+}
+
+.film-lightbox[data-closing] {
+  animation: film-lightbox-out 0.28s ease both;
+}
+
+@keyframes film-lightbox-in {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes film-lightbox-out {
+  to {
+    opacity: 0;
+  }
+}
+
+.film-lightbox-inner {
+  width: min(1100px, 100%);
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-xl);
+  animation: film-frame-in 0.5s cubic-bezier(0.22, 1, 0.36, 1) both;
+}
+
+@keyframes film-frame-in {
+  from {
+    transform: translateY(18px);
+    opacity: 0;
+  }
+  to {
+    transform: none;
+    opacity: 1;
+  }
+}
+
+.film-lightbox-frame {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  overflow: hidden;
+  background: #000;
+}
+
+.film-lightbox-frame iframe {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  border: 0;
+}
+
+.film-lightbox-novideo {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--font-data);
+  font-size: var(--size-label);
+  letter-spacing: var(--tracking-label);
+  text-transform: uppercase;
+  color: var(--color-parchment-50);
+}
+
+.film-lightbox-credits h2 {
+  font-family: var(--font-display);
+  font-weight: var(--weight-regular);
+  font-size: clamp(28px, 3.5vw, 44px);
+  letter-spacing: 0.005em;
+  color: var(--color-parchment-text);
+}
+
+.film-lightbox-credits p {
+  margin-top: var(--space-md);
+  font-family: var(--font-data);
+  font-size: var(--size-nav);
+  letter-spacing: var(--tracking-wide);
+  text-transform: uppercase;
+  color: var(--color-parchment-70);
+}
+
+.film-lightbox-credits .film-lightbox-award {
+  color: var(--color-parchment-text);
+}
+
+.film-lightbox-close {
+  position: fixed;
+  top: var(--space-xl);
+  right: var(--space-xl);
+  z-index: 1;
+  background: none;
+  border: 0;
+  font-family: var(--font-data);
+  font-size: 18px;
+  color: var(--color-parchment-70);
+  cursor: pointer;
+  transition: color 0.3s ease;
+}
+
+.film-lightbox-close:hover {
+  color: var(--color-parchment-text);
+}
+
+/* --- Responsive --- */
+
+@media (max-width: 768px) {
+  .films-header {
+    padding: var(--space-xl);
+  }
+
+  .films-reel {
+    margin-top: 8vh;
+    padding: 0 var(--space-xl) var(--space-3xl);
+  }
+
+  .films-reel-title {
+    font-size: clamp(28px, 9vw, 44px);
+  }
+
+  .film-lightbox {
+    padding: var(--space-lg);
+  }
+}
+
+/* --- Reduced motion --- */
+
+@media (prefers-reduced-motion: reduce) {
+  .films-still {
+    transform: none;
+    transition: opacity 0.2s ease;
+  }
+
+  .films-reel-button,
+  .films-reel-button[data-active] {
+    transform: none;
+    transition: opacity 0.2s ease;
+  }
+
+  .film-lightbox,
+  .film-lightbox-inner {
+    animation-duration: 0.01ms;
+  }
+}

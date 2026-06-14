@@ -80,13 +80,13 @@
     "semantic_hash": "41c3333892800c45eafb94b91b718a79"
   },
   "src/app/(site)/films/page.tsx": {
-    "mtime": 1780733079.4535177,
-    "ast_hash": "751a0d659d115cec443c9d1bc0c2dcbf",
-    "semantic_hash": "751a0d659d115cec443c9d1bc0c2dcbf"
+    "mtime": 1781412404.3687305,
+    "ast_hash": "2a414217b68ca3f35b9fdb2c08b9c7ac",
+    "semantic_hash": ""
   },
   "src/app/(site)/layout.tsx": {
-    "mtime": 1781405579.1153107,
-    "ast_hash": "47dc91252981faf627f746b862bc4755",
+    "mtime": 1781427385.5203922,
+    "ast_hash": "62889344cfa062d822a2e5dfd30e023c",
     "semantic_hash": ""
   },
   "src/app/(site)/page.tsx": {
@@ -95,9 +95,9 @@
     "semantic_hash": ""
   },
   "src/app/(site)/poetry/page.tsx": {
-    "mtime": 1780726811.4720943,
-    "ast_hash": "74a55c8f25978992d5b6a5c8378f6874",
-    "semantic_hash": "74a55c8f25978992d5b6a5c8378f6874"
+    "mtime": 1781410681.7929971,
+    "ast_hash": "673689f57e66f5536b2263c545caeb68",
+    "semantic_hash": ""
   },
   "src/app/(site)/works/page.tsx": {
     "mtime": 1780726811.100379,
@@ -235,8 +235,8 @@
     "semantic_hash": "23a060414de984b25bad60297d09b8cb"
   },
   "src/sanity/lib/queries.ts": {
-    "mtime": 1781404947.2230508,
-    "ast_hash": "2474389f305c314de1c1c57b01b0f54a",
+    "mtime": 1781412234.4632766,
+    "ast_hash": "bffcd2578a82fe722ddf5f78224995b1",
     "semantic_hash": ""
   },
   "src/sanity/schemaTypes/documents/aboutTeaser.ts": {
@@ -422,6 +422,56 @@
   "docs/superpowers/specs/2026-06-07-selected-work-redesign-design.md": {
     "mtime": 1780843449.4816716,
     "ast_hash": "cae05ae99607bf64c73831aaf15898c4",
+    "semantic_hash": ""
+  },
+  ".claude/launch.json": {
+    "mtime": 1781411018.3497179,
+    "ast_hash": "de095783b03f7ff790c7bff22628f306",
+    "semantic_hash": ""
+  },
+  "src/app/(site)/photography/page.tsx": {
+    "mtime": 1781410694.0676646,
+    "ast_hash": "a5f6ff228cc90465b162c0494d5399d5",
+    "semantic_hash": ""
+  },
+  "src/components/dev/CraftStub.tsx": {
+    "mtime": 1781410655.2914026,
+    "ast_hash": "c84a213abbc435e18e122a815dfa0537",
+    "semantic_hash": ""
+  },
+  "src/components/films/FilmLightbox.tsx": {
+    "mtime": 1781412352.2038913,
+    "ast_hash": "bf34468ffbe6f489fb6664f20280ff44",
+    "semantic_hash": ""
+  },
+  "src/components/films/FilmsExperience.tsx": {
+    "mtime": 1781427519.0430403,
+    "ast_hash": "ff8a317d80f9d89a1b41b84528539cba",
+    "semantic_hash": ""
+  },
+  "src/components/transitions/TransitionLink.tsx": {
+    "mtime": 1781410596.7203429,
+    "ast_hash": "358a63a562ae67e8a82a89ab4b7fec87",
+    "semantic_hash": ""
+  },
+  "src/components/transitions/TransitionProvider.tsx": {
+    "mtime": 1781411618.8255353,
+    "ast_hash": "57519c7ebf3656080c143639f86d5397",
+    "semantic_hash": ""
+  },
+  "src/lib/films.ts": {
+    "mtime": 1781412252.6980548,
+    "ast_hash": "c60b9df635cd85d30112787fe13fb8be",
+    "semantic_hash": ""
+  },
+  "src/types/film.ts": {
+    "mtime": 1781412244.208922,
+    "ast_hash": "cea2bccd578c0b1930b809a1319f9949",
+    "semantic_hash": ""
+  },
+  "docs/BUILD-PLAN.md": {
+    "mtime": 1781411986.6750214,
+    "ast_hash": "c029b7ceb213bb9b73fa91706e849997",
     "semantic_hash": ""
   }
 }
