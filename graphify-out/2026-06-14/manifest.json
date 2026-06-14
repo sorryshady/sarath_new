@@ -1,427 +1,472 @@
 {
-  "eslint.config.mjs": {
+  "/Users/shady/Desktop/sarath_menon/eslint.config.mjs": {
     "mtime": 1780726045.6319132,
     "ast_hash": "dfa1f5f6a7037bf39dc510f30b180002",
     "semantic_hash": "dfa1f5f6a7037bf39dc510f30b180002"
   },
-  "next.config.ts": {
-    "mtime": 1780814213.1465204,
-    "ast_hash": "7b0b26676ee38bce85ad22c1132a5820",
-    "semantic_hash": ""
+  "/Users/shady/Desktop/sarath_menon/next.config.ts": {
+    "mtime": 1780735062.1148443,
+    "ast_hash": "48b7e40954190772404b21b3ba3e79ab",
+    "semantic_hash": "48b7e40954190772404b21b3ba3e79ab"
   },
-  "package.json": {
+  "/Users/shady/Desktop/sarath_menon/package.json": {
     "mtime": 1780734993.0523837,
     "ast_hash": "d70ec9fd64b869dd3561201fb302ab7c",
     "semantic_hash": "d70ec9fd64b869dd3561201fb302ab7c"
   },
-  "postcss.config.mjs": {
+  "/Users/shady/Desktop/sarath_menon/postcss.config.mjs": {
     "mtime": 1780726045.6324835,
     "ast_hash": "239f3ebf717465dc636818a1a619398d",
     "semantic_hash": "239f3ebf717465dc636818a1a619398d"
   },
-  "reference files/App-2.tsx": {
+  "/Users/shady/Desktop/sarath_menon/reference files/App-2.tsx": {
     "mtime": 1780730734.8067567,
     "ast_hash": "6763079e5dfb155006ef60728b90c814",
     "semantic_hash": "6763079e5dfb155006ef60728b90c814"
   },
-  "reference files/PhotographySection.tsx": {
+  "/Users/shady/Desktop/sarath_menon/reference files/PhotographySection.tsx": {
     "mtime": 1780736246.004401,
     "ast_hash": "935afd1cdf3f9cf69373a64172354533",
     "semantic_hash": "935afd1cdf3f9cf69373a64172354533"
   },
-  "reference files/copy/copy.tsx": {
+  "/Users/shady/Desktop/sarath_menon/reference files/copy/copy.tsx": {
     "mtime": 1780725323.0198967,
     "ast_hash": "c487e7627949ae60918f92a7ca6d39ab",
     "semantic_hash": "c487e7627949ae60918f92a7ca6d39ab"
   },
-  "reference files/view-transition.ts": {
+  "/Users/shady/Desktop/sarath_menon/reference files/view-transition.ts": {
     "mtime": 1780725559.3307347,
     "ast_hash": "c987aa17dfba03d75eec5f3eafbb70cd",
     "semantic_hash": "c987aa17dfba03d75eec5f3eafbb70cd"
   },
-  "sanity.cli.ts": {
+  "/Users/shady/Desktop/sarath_menon/sanity.cli.ts": {
     "mtime": 1780726771.361303,
     "ast_hash": "5d485f4f2ada1511578b39506ba6f23e",
     "semantic_hash": "5d485f4f2ada1511578b39506ba6f23e"
   },
-  "sanity.config.ts": {
+  "/Users/shady/Desktop/sarath_menon/sanity.config.ts": {
     "mtime": 1780727289.33936,
     "ast_hash": "36ea2eb94588169ffdaebf523c677f3f",
     "semantic_hash": "36ea2eb94588169ffdaebf523c677f3f"
   },
-  "scripts/lib/migrate-utils.ts": {
+  "/Users/shady/Desktop/sarath_menon/scripts/lib/migrate-utils.ts": {
     "mtime": 1780728660.007166,
     "ast_hash": "dcd136ac1a29d18e7ffcb8ec2ba65449",
     "semantic_hash": "dcd136ac1a29d18e7ffcb8ec2ba65449"
   },
-  "scripts/migrate-from-legacy.ts": {
+  "/Users/shady/Desktop/sarath_menon/scripts/migrate-from-legacy.ts": {
     "mtime": 1780728680.7066586,
     "ast_hash": "c51715d0a4df9b4041a2110c2d808191",
     "semantic_hash": "c51715d0a4df9b4041a2110c2d808191"
   },
-  "scripts/npm.mjs": {
+  "/Users/shady/Desktop/sarath_menon/scripts/npm.mjs": {
     "mtime": 1780726314.7535183,
     "ast_hash": "f7a9bfdc80424a77290e153c61e09a5f",
     "semantic_hash": "f7a9bfdc80424a77290e153c61e09a5f"
   },
-  "scripts/repair-films-video.ts": {
+  "/Users/shady/Desktop/sarath_menon/scripts/repair-films-video.ts": {
     "mtime": 1780728674.896207,
     "ast_hash": "028457756ba866f01480395ec5caf488",
     "semantic_hash": "028457756ba866f01480395ec5caf488"
   },
-  "scripts/repair-photo-series.ts": {
+  "/Users/shady/Desktop/sarath_menon/scripts/repair-photo-series.ts": {
     "mtime": 1780728673.6551611,
     "ast_hash": "166ac4d50f1684dc8bf32066e48dd91c",
     "semantic_hash": "166ac4d50f1684dc8bf32066e48dd91c"
   },
-  "src/app/(site)/about/page.tsx": {
+  "/Users/shady/Desktop/sarath_menon/src/app/(site)/about/page.tsx": {
     "mtime": 1780726810.3931928,
     "ast_hash": "41c3333892800c45eafb94b91b718a79",
     "semantic_hash": "41c3333892800c45eafb94b91b718a79"
   },
-  "src/app/(site)/films/page.tsx": {
+  "/Users/shady/Desktop/sarath_menon/src/app/(site)/films/page.tsx": {
     "mtime": 1780733079.4535177,
     "ast_hash": "751a0d659d115cec443c9d1bc0c2dcbf",
     "semantic_hash": "751a0d659d115cec443c9d1bc0c2dcbf"
   },
-  "src/app/(site)/layout.tsx": {
-    "mtime": 1781405579.1153107,
-    "ast_hash": "47dc91252981faf627f746b862bc4755",
-    "semantic_hash": ""
+  "/Users/shady/Desktop/sarath_menon/src/app/(site)/layout.tsx": {
+    "mtime": 1780738890.9369009,
+    "ast_hash": "954b8de5f10aec032b88ba78edbfac08",
+    "semantic_hash": "954b8de5f10aec032b88ba78edbfac08"
   },
-  "src/app/(site)/page.tsx": {
-    "mtime": 1781405582.6936758,
-    "ast_hash": "ec86aff3af2fb8ab35d4392c2e1347aa",
-    "semantic_hash": ""
+  "/Users/shady/Desktop/sarath_menon/src/app/(site)/page.tsx": {
+    "mtime": 1780738890.5869277,
+    "ast_hash": "e93274c22782b007c0f3efd8e1d8a52b",
+    "semantic_hash": "e93274c22782b007c0f3efd8e1d8a52b"
   },
-  "src/app/(site)/poetry/page.tsx": {
+  "/Users/shady/Desktop/sarath_menon/src/app/(site)/poetry/page.tsx": {
     "mtime": 1780726811.4720943,
     "ast_hash": "74a55c8f25978992d5b6a5c8378f6874",
     "semantic_hash": "74a55c8f25978992d5b6a5c8378f6874"
   },
-  "src/app/(site)/works/page.tsx": {
+  "/Users/shady/Desktop/sarath_menon/src/app/(site)/work/[slug]/page.tsx": {
+    "mtime": 1780735068.25553,
+    "ast_hash": "b8e1ad8e0b575603fa7d0e9225125e8c",
+    "semantic_hash": "b8e1ad8e0b575603fa7d0e9225125e8c"
+  },
+  "/Users/shady/Desktop/sarath_menon/src/app/(site)/works/page.tsx": {
     "mtime": 1780726811.100379,
     "ast_hash": "e43a3de2e98e60bbd294d412967a0040",
     "semantic_hash": "e43a3de2e98e60bbd294d412967a0040"
   },
-  "src/app/(studio)/layout.tsx": {
+  "/Users/shady/Desktop/sarath_menon/src/app/(studio)/layout.tsx": {
     "mtime": 1780726802.6780639,
     "ast_hash": "dd62682576f429a17cdc42526b46eada",
     "semantic_hash": "dd62682576f429a17cdc42526b46eada"
   },
-  "src/app/(studio)/studio/[[...tool]]/page.tsx": {
+  "/Users/shady/Desktop/sarath_menon/src/app/(studio)/studio/[[...tool]]/page.tsx": {
     "mtime": 1780727033.6198993,
     "ast_hash": "7c59b8b1de6015036f9104db6948bf37",
     "semantic_hash": "7c59b8b1de6015036f9104db6948bf37"
   },
-  "src/app/layout.tsx": {
+  "/Users/shady/Desktop/sarath_menon/src/app/layout.tsx": {
     "mtime": 1780731259.6397333,
     "ast_hash": "f8e0477a7d6a2e0e86900d67bedf5747",
     "semantic_hash": "f8e0477a7d6a2e0e86900d67bedf5747"
   },
-  "src/app/robots.ts": {
+  "/Users/shady/Desktop/sarath_menon/src/app/robots.ts": {
     "mtime": 1780726812.195581,
     "ast_hash": "ada1fe3b38cad92e172e9628eefae9e6",
     "semantic_hash": "ada1fe3b38cad92e172e9628eefae9e6"
   },
-  "src/app/sitemap.ts": {
+  "/Users/shady/Desktop/sarath_menon/src/app/sitemap.ts": {
     "mtime": 1780726812.6374762,
     "ast_hash": "b7c481b0f44684791ff5fb14b2edc07a",
     "semantic_hash": "b7c481b0f44684791ff5fb14b2edc07a"
   },
-  "src/app/studio/[[...tool]]/page.tsx": {
+  "/Users/shady/Desktop/sarath_menon/src/app/studio/[[...tool]]/page.tsx": {
     "mtime": 1780727144.0344205,
     "ast_hash": "6fa539b6cad86c5233773198a87810af",
     "semantic_hash": "6fa539b6cad86c5233773198a87810af"
   },
-  "src/components/copy/Copy.tsx": {
-    "mtime": 1780814458.0868344,
-    "ast_hash": "abbe7ddea88e69c985b4750159d676df",
-    "semantic_hash": ""
+  "/Users/shady/Desktop/sarath_menon/src/components/copy/Copy.tsx": {
+    "mtime": 1780726797.8664637,
+    "ast_hash": "6b434d2e64a030223e3f3264a87031cb",
+    "semantic_hash": "6b434d2e64a030223e3f3264a87031cb"
   },
-  "src/components/global/PaperGrain.tsx": {
+  "/Users/shady/Desktop/sarath_menon/src/components/global/PaperGrain.tsx": {
     "mtime": 1780726791.4305863,
     "ast_hash": "6293f606da3278594ed4f344783c2df3",
     "semantic_hash": "6293f606da3278594ed4f344783c2df3"
   },
-  "src/components/global/PlaceholderPage.tsx": {
+  "/Users/shady/Desktop/sarath_menon/src/components/global/PlaceholderPage.tsx": {
     "mtime": 1780733079.0110223,
     "ast_hash": "eccf88077b2ea311a11fde3def4038ec",
     "semantic_hash": "eccf88077b2ea311a11fde3def4038ec"
   },
-  "src/components/home/HeroSection.tsx": {
+  "/Users/shady/Desktop/sarath_menon/src/components/global/ScrollRestoration.tsx": {
+    "mtime": 1780739393.0865884,
+    "ast_hash": "774e6cdaa713d1511c2a6f43525abceb",
+    "semantic_hash": "774e6cdaa713d1511c2a6f43525abceb"
+  },
+  "/Users/shady/Desktop/sarath_menon/src/components/home/HeroSection.tsx": {
     "mtime": 1780735585.9080966,
     "ast_hash": "bf32df1772b7fd223ed8366c5d6f7238",
     "semantic_hash": "bf32df1772b7fd223ed8366c5d6f7238"
   },
-  "src/components/home/HeroVideoBackground.tsx": {
+  "/Users/shady/Desktop/sarath_menon/src/components/home/HeroVideoBackground.tsx": {
     "mtime": 1780730535.858225,
     "ast_hash": "27d1337a90915f63c922105420fe6eb0",
     "semantic_hash": "27d1337a90915f63c922105420fe6eb0"
   },
-  "src/components/home/HomePage.tsx": {
-    "mtime": 1781405596.8290637,
-    "ast_hash": "5503b7031cad44f3a3b8ef93c953fc7d",
-    "semantic_hash": ""
+  "/Users/shady/Desktop/sarath_menon/src/components/home/HomePage.tsx": {
+    "mtime": 1780739386.8296514,
+    "ast_hash": "db59cbed1fb36865c634f3e24906efc7",
+    "semantic_hash": "db59cbed1fb36865c634f3e24906efc7"
   },
-  "src/components/home/Preloader.tsx": {
+  "/Users/shady/Desktop/sarath_menon/src/components/home/Preloader.tsx": {
     "mtime": 1780738551.5866542,
     "ast_hash": "8808ba8b7ff6ee4a1486b5ba2dc22944",
     "semantic_hash": "8808ba8b7ff6ee4a1486b5ba2dc22944"
   },
-  "src/components/navigation/GhostBar.tsx": {
-    "mtime": 1780814369.39155,
-    "ast_hash": "dca193ac350888fc6b72a380cb250b86",
-    "semantic_hash": ""
+  "/Users/shady/Desktop/sarath_menon/src/components/home/photography/PhotographySection.tsx": {
+    "mtime": 1780739489.8468957,
+    "ast_hash": "1339c031d8f67bb2848b2ef646ed57cc",
+    "semantic_hash": "1339c031d8f67bb2848b2ef646ed57cc"
   },
-  "src/components/navigation/SiteNav.tsx": {
+  "/Users/shady/Desktop/sarath_menon/src/components/home/photography/PolaroidCard.tsx": {
+    "mtime": 1780739180.2785852,
+    "ast_hash": "6277e528a45bf9d03acb45c5b6569849",
+    "semantic_hash": "6277e528a45bf9d03acb45c5b6569849"
+  },
+  "/Users/shady/Desktop/sarath_menon/src/components/navigation/GhostBar.tsx": {
+    "mtime": 1780759275.3794708,
+    "ast_hash": "d901313f6e714432e8e20a9d2e08a99e",
+    "semantic_hash": "d901313f6e714432e8e20a9d2e08a99e"
+  },
+  "/Users/shady/Desktop/sarath_menon/src/components/navigation/PolaroidTransitionLink.tsx": {
+    "mtime": 1780739180.5655158,
+    "ast_hash": "f1dbd8cd4938f6e99bfedbc3e26228e6",
+    "semantic_hash": "f1dbd8cd4938f6e99bfedbc3e26228e6"
+  },
+  "/Users/shady/Desktop/sarath_menon/src/components/navigation/SiteNav.tsx": {
     "mtime": 1780733019.079787,
     "ast_hash": "40b879e880255aa4f5bb0cab177f9087",
     "semantic_hash": "40b879e880255aa4f5bb0cab177f9087"
   },
-  "src/components/providers/GSAPProvider.tsx": {
+  "/Users/shady/Desktop/sarath_menon/src/components/navigation/TransitionLink.tsx": {
+    "mtime": 1780739497.2455578,
+    "ast_hash": "38afc7c2c5d79f335476b4ebb6823d52",
+    "semantic_hash": "38afc7c2c5d79f335476b4ebb6823d52"
+  },
+  "/Users/shady/Desktop/sarath_menon/src/components/providers/GSAPProvider.tsx": {
     "mtime": 1780726790.1194205,
     "ast_hash": "5bcb99201dc0035822670791e5de1a56",
     "semantic_hash": "5bcb99201dc0035822670791e5de1a56"
   },
-  "src/components/providers/LenisProvider.tsx": {
+  "/Users/shady/Desktop/sarath_menon/src/components/providers/LenisProvider.tsx": {
     "mtime": 1780726801.5047565,
     "ast_hash": "80c4525958fd8f0f4ce34e07b57eedef",
     "semantic_hash": "80c4525958fd8f0f4ce34e07b57eedef"
   },
-  "src/components/studio/StudioSetup.tsx": {
+  "/Users/shady/Desktop/sarath_menon/src/components/studio/StudioSetup.tsx": {
     "mtime": 1780727033.6383076,
     "ast_hash": "1652c8869827ae4e9929c952fc3cc9ef",
     "semantic_hash": "1652c8869827ae4e9929c952fc3cc9ef"
   },
-  "src/hooks/useMedia.ts": {
+  "/Users/shady/Desktop/sarath_menon/src/components/work/WorkHero.tsx": {
+    "mtime": 1780739496.78667,
+    "ast_hash": "b41797d6c39e2d90314f98dbb442a9d9",
+    "semantic_hash": "b41797d6c39e2d90314f98dbb442a9d9"
+  },
+  "/Users/shady/Desktop/sarath_menon/src/hooks/useMedia.ts": {
     "mtime": 1780726666.2654626,
     "ast_hash": "9e7692bcab08cbc6858db10d6f46e1e4",
     "semantic_hash": "9e7692bcab08cbc6858db10d6f46e1e4"
   },
-  "src/hooks/useNavObserver.ts": {
+  "/Users/shady/Desktop/sarath_menon/src/hooks/useNavObserver.ts": {
     "mtime": 1780734387.5670571,
     "ast_hash": "59169122f69554570afe7be2162d76cd",
     "semantic_hash": "59169122f69554570afe7be2162d76cd"
   },
-  "src/lib/fonts.ts": {
+  "/Users/shady/Desktop/sarath_menon/src/lib/animationMode.ts": {
+    "mtime": 1780735003.9312468,
+    "ast_hash": "a6875f8d36b74249be34cc7e7fa815a4",
+    "semantic_hash": "a6875f8d36b74249be34cc7e7fa815a4"
+  },
+  "/Users/shady/Desktop/sarath_menon/src/lib/featuredSeries.ts": {
+    "mtime": 1780735003.154564,
+    "ast_hash": "ab4393227820cc060614094df4f3dafd",
+    "semantic_hash": "ab4393227820cc060614094df4f3dafd"
+  },
+  "/Users/shady/Desktop/sarath_menon/src/lib/fonts.ts": {
     "mtime": 1780729259.826379,
     "ast_hash": "da61a4edfb9ce4eec793f1099c12d004",
     "semantic_hash": "da61a4edfb9ce4eec793f1099c12d004"
   },
-  "src/lib/video.ts": {
+  "/Users/shady/Desktop/sarath_menon/src/lib/home-scroll.ts": {
+    "mtime": 1780739477.3960629,
+    "ast_hash": "f901f63f9ce73919b795704f3b936a0e",
+    "semantic_hash": "f901f63f9ce73919b795704f3b936a0e"
+  },
+  "/Users/shady/Desktop/sarath_menon/src/lib/photoSeries.ts": {
+    "mtime": 1780738944.9359524,
+    "ast_hash": "438846ab9f86de54f838d3484c5fd989",
+    "semantic_hash": "438846ab9f86de54f838d3484c5fd989"
+  },
+  "/Users/shady/Desktop/sarath_menon/src/lib/video.ts": {
     "mtime": 1780730374.2291055,
     "ast_hash": "70e11e2765a0334e34d084fee775d613",
     "semantic_hash": "70e11e2765a0334e34d084fee775d613"
   },
-  "src/sanity/env.ts": {
+  "/Users/shady/Desktop/sarath_menon/src/lib/view-transition-nav.ts": {
+    "mtime": 1780739509.7862773,
+    "ast_hash": "dafb643e014af5ebb588c489b12eb8d2",
+    "semantic_hash": "dafb643e014af5ebb588c489b12eb8d2"
+  },
+  "/Users/shady/Desktop/sarath_menon/src/lib/view-transition.ts": {
+    "mtime": 1780739481.2285924,
+    "ast_hash": "1a80122eac07beea31d3b6b6c2d8ff20",
+    "semantic_hash": "1a80122eac07beea31d3b6b6c2d8ff20"
+  },
+  "/Users/shady/Desktop/sarath_menon/src/sanity/env.ts": {
     "mtime": 1780727289.0258074,
     "ast_hash": "9a08a82cc5dee5d7d5f34a352a88103b",
     "semantic_hash": "9a08a82cc5dee5d7d5f34a352a88103b"
   },
-  "src/sanity/lib/client.ts": {
+  "/Users/shady/Desktop/sarath_menon/src/sanity/lib/client.ts": {
     "mtime": 1780727034.0671523,
     "ast_hash": "0fe22622db1a2c48ff84f1231e0a7c3c",
     "semantic_hash": "0fe22622db1a2c48ff84f1231e0a7c3c"
   },
-  "src/sanity/lib/image.ts": {
+  "/Users/shady/Desktop/sarath_menon/src/sanity/lib/image.ts": {
     "mtime": 1780727067.4866967,
     "ast_hash": "6a50dad1bb33404947b7330603021946",
     "semantic_hash": "6a50dad1bb33404947b7330603021946"
   },
-  "src/sanity/lib/live.ts": {
+  "/Users/shady/Desktop/sarath_menon/src/sanity/lib/live.ts": {
     "mtime": 1780727177.1627066,
     "ast_hash": "23a060414de984b25bad60297d09b8cb",
     "semantic_hash": "23a060414de984b25bad60297d09b8cb"
   },
-  "src/sanity/lib/queries.ts": {
-    "mtime": 1781404947.2230508,
-    "ast_hash": "2474389f305c314de1c1c57b01b0f54a",
-    "semantic_hash": ""
+  "/Users/shady/Desktop/sarath_menon/src/sanity/lib/queries.ts": {
+    "mtime": 1780738890.5869143,
+    "ast_hash": "b06e439a8cd40464a2a1501a23e88484",
+    "semantic_hash": "b06e439a8cd40464a2a1501a23e88484"
   },
-  "src/sanity/schemaTypes/documents/aboutTeaser.ts": {
+  "/Users/shady/Desktop/sarath_menon/src/sanity/schemaTypes/documents/aboutTeaser.ts": {
     "mtime": 1780726777.0014174,
     "ast_hash": "eb18e481183f53b8d70087167bd672dd",
     "semantic_hash": "eb18e481183f53b8d70087167bd672dd"
   },
-  "src/sanity/schemaTypes/documents/film.ts": {
+  "/Users/shady/Desktop/sarath_menon/src/sanity/schemaTypes/documents/film.ts": {
     "mtime": 1780728671.9571831,
     "ast_hash": "908d27c27f13541f3501bf1eb8797538",
     "semantic_hash": "908d27c27f13541f3501bf1eb8797538"
   },
-  "src/sanity/schemaTypes/documents/photoSeries.ts": {
+  "/Users/shady/Desktop/sarath_menon/src/sanity/schemaTypes/documents/photoSeries.ts": {
     "mtime": 1780726778.5624957,
     "ast_hash": "4bd02270c1569483e45a1c0f30d0c261",
     "semantic_hash": "4bd02270c1569483e45a1c0f30d0c261"
   },
-  "src/sanity/schemaTypes/documents/poem.ts": {
+  "/Users/shady/Desktop/sarath_menon/src/sanity/schemaTypes/documents/poem.ts": {
     "mtime": 1780726780.9330587,
     "ast_hash": "dbfc228c435e509ba517c33b9fcb855d",
     "semantic_hash": "dbfc228c435e509ba517c33b9fcb855d"
   },
-  "src/sanity/schemaTypes/documents/poetryTeaser.ts": {
+  "/Users/shady/Desktop/sarath_menon/src/sanity/schemaTypes/documents/poetryTeaser.ts": {
     "mtime": 1780726777.273828,
     "ast_hash": "40346764acf466289f3eb1626a6abf52",
     "semantic_hash": "40346764acf466289f3eb1626a6abf52"
   },
-  "src/sanity/schemaTypes/documents/siteSettings.ts": {
+  "/Users/shady/Desktop/sarath_menon/src/sanity/schemaTypes/documents/siteSettings.ts": {
     "mtime": 1780728671.9700575,
     "ast_hash": "269505703922e3d7a95b93bfe7d7d70d",
     "semantic_hash": "269505703922e3d7a95b93bfe7d7d70d"
   },
-  "src/sanity/schemaTypes/index.ts": {
+  "/Users/shady/Desktop/sarath_menon/src/sanity/schemaTypes/index.ts": {
     "mtime": 1780726782.0598164,
     "ast_hash": "05aae6e369f42abc4dd343aab48f9436",
     "semantic_hash": "05aae6e369f42abc4dd343aab48f9436"
   },
-  "src/sanity/structure.ts": {
+  "/Users/shady/Desktop/sarath_menon/src/sanity/structure.ts": {
     "mtime": 1780726781.77735,
     "ast_hash": "2941939af1b5a0f07d1defcdef4810d9",
     "semantic_hash": "2941939af1b5a0f07d1defcdef4810d9"
   },
-  "tsconfig.json": {
+  "/Users/shady/Desktop/sarath_menon/src/store/transitionStore.ts": {
+    "mtime": 1780735001.0164237,
+    "ast_hash": "1570bdbb181fa997fd71a4aa66bc50f4",
+    "semantic_hash": "1570bdbb181fa997fd71a4aa66bc50f4"
+  },
+  "/Users/shady/Desktop/sarath_menon/src/types/photoSeries.ts": {
+    "mtime": 1780735001.5657487,
+    "ast_hash": "5307645fa8723db94f7af483c1604db1",
+    "semantic_hash": "5307645fa8723db94f7af483c1604db1"
+  },
+  "/Users/shady/Desktop/sarath_menon/tsconfig.json": {
     "mtime": 1780726470.5175893,
     "ast_hash": "f2b2e16598b11ac6ec318d17e465647d",
     "semantic_hash": "f2b2e16598b11ac6ec318d17e465647d"
   },
-  ".firecrawl/home.md": {
+  "/Users/shady/Desktop/sarath_menon/.firecrawl/home.md": {
     "mtime": 1780727893.1617327,
     "ast_hash": "fb6341fc12b81d6e955c39217deec0c1",
     "semantic_hash": "fb6341fc12b81d6e955c39217deec0c1"
   },
-  ".firecrawl/poems.md": {
+  "/Users/shady/Desktop/sarath_menon/.firecrawl/poems.md": {
     "mtime": 1780727834.0886073,
     "ast_hash": "0e3ca0206b53d1460eac0118b48c2f26",
     "semantic_hash": "0e3ca0206b53d1460eac0118b48c2f26"
   },
-  ".firecrawl/rajasthan.md": {
+  "/Users/shady/Desktop/sarath_menon/.firecrawl/rajasthan.md": {
     "mtime": 1780727833.5202508,
     "ast_hash": "0a2a0afceac4ecdff95caee4e053d2f7",
     "semantic_hash": "0a2a0afceac4ecdff95caee4e053d2f7"
   },
-  "AGENTS.md": {
+  "/Users/shady/Desktop/sarath_menon/AGENTS.md": {
     "mtime": 1780726091.1043117,
     "ast_hash": "9e09241799026ac05be315a2f0b50055",
     "semantic_hash": "9e09241799026ac05be315a2f0b50055"
   },
-  "CLAUDE.md": {
+  "/Users/shady/Desktop/sarath_menon/CLAUDE.md": {
     "mtime": 1780811462.6221168,
     "ast_hash": "13cc89175bcceda86bc2a82d39b0e166",
     "semantic_hash": "13cc89175bcceda86bc2a82d39b0e166"
   },
-  "README.md": {
-    "mtime": 1781405668.9586987,
-    "ast_hash": "989f3b6602cdc85eb20b2efb4f120480",
-    "semantic_hash": ""
+  "/Users/shady/Desktop/sarath_menon/README.md": {
+    "mtime": 1780726414.0925248,
+    "ast_hash": "3c3e8ae94eca38a01526bc986da0f3c8",
+    "semantic_hash": "3c3e8ae94eca38a01526bc986da0f3c8"
   },
-  "reference files/about-teaser-build-prompt.md": {
+  "/Users/shady/Desktop/sarath_menon/reference files/about-teaser-build-prompt.md": {
     "mtime": 1780724153.2945843,
     "ast_hash": "962f572b5bf8a84a71220595decabb09",
     "semantic_hash": "962f572b5bf8a84a71220595decabb09"
   },
-  "reference files/contact-section-build-prompt.md": {
+  "/Users/shady/Desktop/sarath_menon/reference files/contact-section-build-prompt.md": {
     "mtime": 1780724153.2954705,
     "ast_hash": "a0ef665ba6c7f2346f029f53e4e40808",
     "semantic_hash": "a0ef665ba6c7f2346f029f53e4e40808"
   },
-  "reference files/films-section-build-prompt.md": {
+  "/Users/shady/Desktop/sarath_menon/reference files/films-section-build-prompt.md": {
     "mtime": 1780724153.2975392,
     "ast_hash": "fab6f7d3092fbf123e5afe64df37d0aa",
     "semantic_hash": "fab6f7d3092fbf123e5afe64df37d0aa"
   },
-  "reference files/hero-section-build-prompt.md": {
+  "/Users/shady/Desktop/sarath_menon/reference files/hero-section-build-prompt.md": {
     "mtime": 1780724153.2985818,
     "ast_hash": "49f4cec4443427b9a4bf1b19cfc4b051",
     "semantic_hash": "49f4cec4443427b9a4bf1b19cfc4b051"
   },
-  "reference files/navbar-build-prompt.md": {
+  "/Users/shady/Desktop/sarath_menon/reference files/navbar-build-prompt.md": {
     "mtime": 1780724153.29952,
     "ast_hash": "932f1d80861bb9ed80ad76d80b2a7898",
     "semantic_hash": "932f1d80861bb9ed80ad76d80b2a7898"
   },
-  "reference files/photography-section-build-prompt.md": {
+  "/Users/shady/Desktop/sarath_menon/reference files/photography-section-build-prompt.md": {
     "mtime": 1780724153.3004558,
     "ast_hash": "27ddd7712f9d95bc9b2707f056356650",
     "semantic_hash": "27ddd7712f9d95bc9b2707f056356650"
   },
-  "reference files/poetry-section-build-prompt.md": {
+  "/Users/shady/Desktop/sarath_menon/reference files/poetry-section-build-prompt.md": {
     "mtime": 1780724153.301485,
     "ast_hash": "273fb64d4f5f36b1e8353f68a83dcca6",
     "semantic_hash": "273fb64d4f5f36b1e8353f68a83dcca6"
   },
-  "reference files/preloader-build-prompt.md": {
+  "/Users/shady/Desktop/sarath_menon/reference files/preloader-build-prompt.md": {
     "mtime": 1780724153.3027134,
     "ast_hash": "98369818dcb85c457ffc8bc5f16c7b6c",
     "semantic_hash": "98369818dcb85c457ffc8bc5f16c7b6c"
   },
-  "public/file.svg": {
+  "/Users/shady/Desktop/sarath_menon/public/file.svg": {
     "mtime": 1780726045.6330333,
     "ast_hash": "d09f95206c3fa0bb9bd9fefabfd0ea71",
     "semantic_hash": "d09f95206c3fa0bb9bd9fefabfd0ea71"
   },
-  "public/globe.svg": {
+  "/Users/shady/Desktop/sarath_menon/public/globe.svg": {
     "mtime": 1780726045.634349,
     "ast_hash": "2aaafa6a49b6563925fe440891e32717",
     "semantic_hash": "2aaafa6a49b6563925fe440891e32717"
   },
-  "public/logo.png": {
+  "/Users/shady/Desktop/sarath_menon/public/logo.png": {
     "mtime": 1780733324.5069854,
     "ast_hash": "0b9cf7ea49f177950a3293dc7d46276e",
     "semantic_hash": "0b9cf7ea49f177950a3293dc7d46276e"
   },
-  "public/next.svg": {
+  "/Users/shady/Desktop/sarath_menon/public/next.svg": {
     "mtime": 1780726045.6335695,
     "ast_hash": "8e061864f388b47f33a1c3780831193e",
     "semantic_hash": "8e061864f388b47f33a1c3780831193e"
   },
-  "public/vercel.svg": {
+  "/Users/shady/Desktop/sarath_menon/public/vercel.svg": {
     "mtime": 1780726045.6342235,
     "ast_hash": "c0af2f507b369b085b35ef4bbe3bcf1e",
     "semantic_hash": "c0af2f507b369b085b35ef4bbe3bcf1e"
   },
-  "public/window.svg": {
+  "/Users/shady/Desktop/sarath_menon/public/window.svg": {
     "mtime": 1780726045.6334896,
     "ast_hash": "a2760511c65806022ad20adf74370ff3",
     "semantic_hash": "a2760511c65806022ad20adf74370ff3"
   },
-  "reference files/logo.png": {
+  "/Users/shady/Desktop/sarath_menon/reference files/logo.png": {
     "mtime": 1780724607.9524338,
     "ast_hash": "0b9cf7ea49f177950a3293dc7d46276e",
     "semantic_hash": "0b9cf7ea49f177950a3293dc7d46276e"
   },
-  "public/assets/reel.mp4": {
+  "/Users/shady/Desktop/sarath_menon/public/assets/reel.mp4": {
     "mtime": 1780730054.8252797,
     "ast_hash": "4a990b0f77551433d6bdef80594cfde7",
     "semantic_hash": "4a990b0f77551433d6bdef80594cfde7"
-  },
-  ".claude/settings.json": {
-    "mtime": 1780811462.6226766,
-    "ast_hash": "bfee062c3962c14264fd704e975a6b38",
-    "semantic_hash": ""
-  },
-  "reference files/custom-link.tsx": {
-    "mtime": 1779718479.7512124,
-    "ast_hash": "ee9aeeccd97dc2514e2ad721d4e326da",
-    "semantic_hash": ""
-  },
-  "docs/superpowers/plans/2026-06-07-native-view-transitions.md": {
-    "mtime": 1780813957.3672523,
-    "ast_hash": "56d0d12a5e53893e2b6f3b3aa9ffcad1",
-    "semantic_hash": ""
-  },
-  "docs/superpowers/plans/2026-06-07-selected-work-redesign.md": {
-    "mtime": 1780843766.8594065,
-    "ast_hash": "bc97b49bddc63e4361ff1991be3555c0",
-    "semantic_hash": ""
-  },
-  "docs/superpowers/specs/2026-06-07-nextjs-view-transitions-design.md": {
-    "mtime": 1780812715.261034,
-    "ast_hash": "a740d41f82400480996f15c8cca47ea4",
-    "semantic_hash": ""
-  },
-  "docs/superpowers/specs/2026-06-07-selected-work-redesign-design.md": {
-    "mtime": 1780843449.4816716,
-    "ast_hash": "cae05ae99607bf64c73831aaf15898c4",
-    "semantic_hash": ""
   }
 }

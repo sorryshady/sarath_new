@@ -1,0 +1,67 @@
+/* ============================================================
+   PAGE TRANSITION — two-strip camera shutter
+   Two cinema-dark strips (top / bottom) snap shut to cover, then
+   crack open to a faded sliver and fly apart while the scrim fades,
+   so the new page resolves soft → sharp. GSAP drives yPercent on
+   the strips and opacity on the scrim/slate. Hidden when idle so it
+   never blocks pointer events.
+   ============================================================ */
+
+.page-transition {
+  position: fixed;
+  inset: 0;
+  z-index: var(--z-transition);
+  display: none;
+  pointer-events: none;
+}
+
+.page-transition[data-active] {
+  display: block;
+  /* Swallow clicks while the shutter is on screen. */
+  pointer-events: auto;
+}
+
+/* Blur layer behind the strips — fades from full blur → 0 during the split,
+   giving the revealed page a soft-to-sharp focus-pull. Transparent with
+   backdrop-filter so only the page content blurs, not a color overlay. */
+.pt-scrim {
+  position: absolute;
+  inset: 0;
+  background: transparent;
+  backdrop-filter: blur(8px);
+  opacity: 1;
+  will-change: opacity;
+}
+
+.pt-strip {
+  position: absolute;
+  left: 0;
+  right: 0;
+  height: 50%;
+  background: var(--color-crimson);
+  will-change: transform;
+}
+
+.pt-strip-top {
+  top: 0;
+}
+
+.pt-strip-bot {
+  bottom: 0;
+}
+
+/* Destination name on the closed shutter during the held beat. */
+.pt-slate {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--font-display);
+  font-size: var(--size-section-title);
+  letter-spacing: var(--tracking-widest);
+  text-transform: uppercase;
+  color: var(--color-parchment-text);
+  opacity: 0;
+  will-change: opacity;
+}

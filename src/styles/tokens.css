@@ -395,6 +395,23 @@
   --duration-crawl:     1.2s;    /* Ink bleed spread */
 
 
+  /* --- Page transition (two-strip camera shutter) ---
+     Cinema-dark strips snap shut (cover), slate holds, then the reveal
+     plays a focus-pull: a slow crack to a faded sliver, a flash, then the
+     strips fly apart (power4.inOut) while a scrim fades so the page
+     resolves soft → sharp. Back-nav is faster, slate-less, no crack.
+     GSAP reads matching numeric seconds (see TransitionProvider). */
+
+  --shutter-cover:      0.5s;    /* strips snap shut to cover (forward) */
+  --shutter-hold:       0.5s;    /* slate held on the closed shutter */
+  --shutter-crack:      0.5s;    /* reluctant crack to a faded sliver */
+  --shutter-flash:      0.16s;   /* held sliver before the full split */
+  --shutter-split:      0.85s;   /* strips fly apart, page resolves sharp */
+  --shutter-back:       0.3s;    /* back-nav cover (faster, no slate/crack) */
+  --shutter-back-split: 0.5s;    /* back-nav split */
+  --shutter-nudge:      0.28s;   /* clicked label nudge-up */
+
+
   /* --- GSAP ease reference (not CSS variables, use as strings) ---
 
   Scroll-linked animations:    ease: 'none'         (direct scroll proportion)

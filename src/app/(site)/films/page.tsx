@@ -1,21 +1,12 @@
-import {
-  PlaceholderPage,
-  placeholderMetadata,
-} from '@/components/global/PlaceholderPage';
+import type { Metadata } from 'next';
 
-export const metadata = placeholderMetadata(
-  'Films',
-  'Filmography with Vimeo lightbox — full build coming soon.',
-);
+import { CraftStub } from '@/components/dev/CraftStub';
+
+export const metadata: Metadata = {
+  title: 'Films',
+  description: 'Filmography with cinema lightbox — full build coming soon.',
+};
 
 export default function FilmsPage() {
-  return (
-    <PlaceholderPage
-      title="Films"
-      description="Filmography section — full GSAP build coming soon."
-      background="var(--color-cinema-dark)"
-      foreground="var(--color-parchment-text)"
-      navTheme="dark"
-    />
-  );
+  return <CraftStub name="Films" />;
 }

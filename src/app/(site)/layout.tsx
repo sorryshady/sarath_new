@@ -3,6 +3,7 @@ import type { Metadata } from 'next';
 import { PaperGrain } from '@/components/global/PaperGrain';
 import { GSAPProvider } from '@/components/providers/GSAPProvider';
 import { LenisProvider } from '@/components/providers/LenisProvider';
+import { TransitionProvider } from '@/components/transitions/TransitionProvider';
 
 import '../globals.css';
 
@@ -23,7 +24,9 @@ export default function SiteLayout({
   return (
     <div className="site-root min-h-full flex flex-col relative">
       <GSAPProvider>
-        <LenisProvider>{children}</LenisProvider>
+        <LenisProvider>
+          <TransitionProvider>{children}</TransitionProvider>
+        </LenisProvider>
       </GSAPProvider>
       {/* Global paper grain — last child, fixed full-viewport, multiply blend.
           Sits outside the smooth-scroll/GSAP providers so nothing can create a

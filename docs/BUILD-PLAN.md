@@ -10,6 +10,20 @@
 
 ---
 
+## 0. Design constraint — Hero images on every page
+
+**The crimson shutter + transparent blur transition is cinematic only when there's visual richness behind it.** Every page (Films, Photography series, Poetry, About, Contact) **must open with a hero image** — a visual moment that justifies the transition. Text-only pages would make the shutter feel hollow.
+
+- Films detail: featured film still (letterboxed, cinema-dark tone)
+- Photography series: the series cover image (large, full-bleed)
+- Poetry page: a companion image for the poem (portrait or thematic)
+- About: Sarath's portrait (rack-focus hero, crimson bg)
+- Contact: a visual finale (could be a detail shot, graphic, or final image)
+
+This is non-negotiable — plan each section around a visual anchor first, then write the content around it.
+
+---
+
 ## 1. Architecture — Hybrid (teaser → page)
 
 The **home** is a vertical scroll of cinematic, full-viewport teaser panels. The three
