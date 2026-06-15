@@ -20,10 +20,28 @@ export const featuredPhotoSeriesQuery = defineQuery(`
   }
 `);
 
+export const allPhotoSeriesQuery = defineQuery(`
+  *[_type == "photoSeries"] | order(order asc) {
+    _id,
+    title,
+    "slug": slug.current,
+    coverImage,
+    "coverAspectRatio": coverImage.asset->metadata.dimensions.aspectRatio,
+    category,
+    year,
+    frameCount,
+    order
+  }
+`);
+
 export const photoSeriesBySlugQuery = defineQuery(`
   *[_type == "photoSeries" && slug.current == $slug][0] {
     ...,
-    "coverAspectRatio": coverImage.asset->metadata.dimensions.aspectRatio
+    "coverAspectRatio": coverImage.asset->metadata.dimensions.aspectRatio,
+    "gallery": gallery[]{
+      ...,
+      "aspectRatio": asset->metadata.dimensions.aspectRatio
+    }
   }
 `);
 

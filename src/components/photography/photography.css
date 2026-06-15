@@ -1,0 +1,344 @@
+/* ============================================================
+   PHOTOGRAPHY INDEX — Dispatch layout
+   Left 62%: full-bleed image with centre-seam reveal.
+   Right 38%: editorial column — title, meta, nav.
+   ============================================================ */
+
+.ph-hero {
+  position: relative;
+  height: 100svh;
+  overflow: hidden;
+  background: var(--color-cinema-dark);
+  color: var(--color-parchment-text);
+  user-select: none;
+}
+
+/* ─── Shared image stack ─────────────────────────────────── */
+
+.ph-bg {
+  position: absolute;
+  inset: 0;
+  background-size: cover;
+  background-position: center;
+  clip-path: polygon(50% 0%, 50% 0%, 50% 100%, 50% 100%);
+  will-change: clip-path;
+}
+
+/* ─── Dispatch layout ────────────────────────────────────── */
+
+.ph-dispatch-img {
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  width: 62%;
+  overflow: hidden;
+  /* Own stacking context so the GSAP zIndex on .ph-bg (0–2) stays contained
+     below the column — otherwise the active image paints over the column. */
+  z-index: 1;
+}
+
+.ph-dispatch-img-scrim {
+  position: absolute;
+  inset: 0;
+  z-index: 6;
+  background: linear-gradient(
+    90deg,
+    transparent 0%,
+    rgba(18, 15, 10, 0.08) 65%,
+    rgba(18, 15, 10, 0.5) 100%
+  );
+}
+
+.ph-dispatch-col {
+  position: absolute;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  width: 38%;
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  padding: var(--space-2xl) var(--space-3xl);
+  background: rgba(18, 15, 10, 0.9);
+  border-left: 1px solid rgba(239, 217, 182, 0.08);
+}
+
+/* ─── Column header ──────────────────────────────────────── */
+
+.ph-dispatch-hd {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-shrink: 0;
+  font-family: var(--font-data);
+  font-size: var(--size-nav);
+  font-weight: var(--weight-bold);
+  letter-spacing: var(--tracking-label);
+  text-transform: uppercase;
+}
+
+.ph-hero-home {
+  color: var(--color-parchment-text);
+  transition: opacity 0.3s ease;
+}
+
+.ph-hero-home:hover {
+  opacity: 0.65;
+}
+
+.ph-hero-eyebrow {
+  color: var(--color-parchment-60);
+}
+
+/* ─── Column body ────────────────────────────────────────── */
+
+/* Body centres the text + CTA together as one connected group */
+.ph-dispatch-body {
+  flex: 1;
+  min-height: 0;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: var(--space-xl);
+}
+
+/* Text group — eyebrow + title + meta stay together */
+.ph-dispatch-text {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-md);
+}
+
+/* SplitText adds padding: 0.35rem 0 to each .line, which causes the text
+   block height to change when Copy remounts and jitters the CTA button.
+   Zero it out here — the mask height is sufficient without extra breathing room. */
+.ph-dispatch-text .line {
+  padding-top: 0;
+  padding-bottom: 0;
+  margin-bottom: 0;
+}
+
+.ph-dispatch-eyebrow {
+  font-family: var(--font-data);
+  font-size: var(--size-nav);
+  letter-spacing: var(--tracking-wide);
+  text-transform: uppercase;
+  color: var(--color-parchment-60);
+}
+
+.ph-dispatch-title-mask {
+  overflow: hidden;
+  display: flex;
+  align-items: flex-start;
+}
+
+.ph-dispatch-title {
+  font-family: var(--font-editorial);
+  font-style: italic;
+  font-weight: var(--weight-regular);
+  font-size: clamp(32px, 3.4vw, 56px);
+  line-height: 1.05;
+  color: var(--color-parchment-text);
+  will-change: transform;
+  /* Reserve ~2 lines (em tracks this element's size) so a 1- vs 2-line
+     title doesn't shift the CTA below it. */
+  min-height: 2.1em;
+}
+
+.ph-dispatch-meta {
+  font-family: var(--font-data);
+  font-size: var(--size-about-bio);
+  letter-spacing: var(--tracking-wide);
+  text-transform: uppercase;
+  color: var(--color-parchment-70);
+}
+
+/* CTA — sits just below the meta, connected to the text group */
+.ph-dispatch-enter {
+  align-self: flex-start;
+  font-family: var(--font-data);
+  font-size: var(--size-nav);
+  font-weight: var(--weight-bold);
+  letter-spacing: var(--tracking-label);
+  text-transform: uppercase;
+  color: var(--color-parchment-text);
+  background: none;
+  border: 1px solid rgba(239, 217, 182, 0.3);
+  padding: var(--space-sm) var(--space-xl);
+  cursor: pointer;
+  transition: background 0.25s ease, color 0.25s ease;
+}
+
+.ph-dispatch-enter:hover {
+  background: var(--color-parchment-text);
+  color: var(--color-cinema-dark);
+}
+
+/* ─── Column nav ─────────────────────────────────────────── */
+
+.ph-dispatch-nav {
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  gap: var(--space-md);
+}
+
+.ph-dispatch-nav-btn {
+  font-family: var(--font-data);
+  font-size: 22px;
+  font-weight: var(--weight-bold);
+  -webkit-text-stroke: 0.75px currentColor;
+  color: var(--color-parchment-50);
+  background: none;
+  border: none;
+  cursor: pointer;
+  transition: color 0.2s ease;
+  padding: 0 var(--space-xs);
+  flex-shrink: 0;
+}
+
+.ph-dispatch-nav-btn:hover {
+  color: var(--color-parchment-text);
+}
+
+.ph-dispatch-thumbs {
+  display: flex;
+  gap: var(--space-sm);
+  flex: 1;
+  min-width: 0;
+}
+
+/* Column wrapping label + thumbnail */
+.ph-dispatch-thumb-col {
+  flex: 1;
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-xs);
+}
+
+.ph-dispatch-thumb-label {
+  font-family: var(--font-data);
+  font-size: var(--size-caption);
+  letter-spacing: var(--tracking-wide);
+  text-transform: uppercase;
+  color: var(--color-parchment-50);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+/* Thumbnail slot — relative container holds the two stacked layers */
+.ph-dispatch-thumb-wrap {
+  width: 100%;
+  height: 120px;
+  position: relative;
+  border: 1px solid rgba(239, 217, 182, 0.15);
+  opacity: 0.6;
+}
+
+/* Base (old image) and overlay (new image) both fill the slot */
+.ph-dispatch-thumb {
+  display: block;
+  position: absolute;
+  inset: 0;
+  background-size: cover;
+  background-position: center;
+  will-change: clip-path;
+}
+
+/* Overlay sits on top so the wipe reveals the new image over the old */
+.ph-dispatch-thumb-over {
+  z-index: 1;
+}
+
+/* ─── Empty state ────────────────────────────────────────── */
+
+.ph-empty {
+  min-height: 100svh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-lg);
+  padding: var(--space-3xl);
+  text-align: center;
+  background: var(--color-cinema-dark);
+  color: var(--color-parchment-text);
+}
+
+.ph-eyebrow {
+  font-family: var(--font-data);
+  font-size: var(--size-label);
+  letter-spacing: var(--tracking-widest);
+  text-transform: uppercase;
+  color: var(--color-parchment-50);
+}
+
+.ph-empty h1 {
+  font-family: var(--font-display);
+  font-size: var(--size-series-title);
+}
+
+.ph-home-link {
+  font-family: var(--font-data);
+  font-size: var(--size-nav);
+  letter-spacing: var(--tracking-label);
+  text-transform: uppercase;
+  color: var(--color-parchment-text);
+}
+
+/* ─── Mobile ─────────────────────────────────────────────── */
+
+@media (max-width: 768px) {
+  /* Image takes the top portion of the screen */
+  .ph-dispatch-img {
+    width: 100%;
+    bottom: auto;
+    height: 45svh;
+  }
+
+  /* Column is a solid panel filling the lower portion (sits above image) */
+  .ph-dispatch-col {
+    width: 100%;
+    top: 45svh;
+    bottom: 0;
+    height: auto;
+    background: var(--color-cinema-dark);
+    border-left: none;
+    border-top: 1px solid rgba(239, 217, 182, 0.08);
+    padding: var(--space-lg) var(--space-xl) var(--space-xl);
+  }
+
+  /* Fade the image into the panel at the seam */
+  .ph-dispatch-img-scrim {
+    background: linear-gradient(
+      180deg,
+      transparent 55%,
+      rgba(18, 15, 10, 0.55) 100%
+    );
+  }
+
+  .ph-dispatch-body {
+    gap: var(--space-lg);
+  }
+
+  .ph-dispatch-title {
+    font-size: clamp(26px, 7vw, 44px);
+    min-height: 2.1em;
+  }
+
+  .ph-dispatch-thumb-wrap {
+    height: 72px;
+  }
+}
+
+/* ─── Reduced motion ─────────────────────────────────────── */
+
+@media (prefers-reduced-motion: reduce) {
+  .ph-bg {
+    transition: opacity 0.2s ease;
+  }
+}

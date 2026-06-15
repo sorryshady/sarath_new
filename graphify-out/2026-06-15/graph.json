@@ -1209,7 +1209,7 @@
       "source_file": "src/app/(site)/page.tsx",
       "source_location": "L1",
       "id": "site_page",
-      "community": 0,
+      "community": 1,
       "norm_label": "page.tsx"
     },
     {
@@ -1218,53 +1218,8 @@
       "source_file": "src/app/(site)/page.tsx",
       "source_location": "L3",
       "id": "site_page_page",
-      "community": 0,
+      "community": 1,
       "norm_label": "page()"
-    },
-    {
-      "label": "page.tsx",
-      "file_type": "code",
-      "source_file": "src/app/(site)/photography/[slug]/page.tsx",
-      "source_location": "L1",
-      "id": "slug_page",
-      "community": 1,
-      "norm_label": "page.tsx"
-    },
-    {
-      "label": "PageProps",
-      "file_type": "code",
-      "source_file": "src/app/(site)/photography/[slug]/page.tsx",
-      "source_location": "L7",
-      "id": "slug_page_pageprops",
-      "community": 1,
-      "norm_label": "pageprops"
-    },
-    {
-      "label": "generateStaticParams()",
-      "file_type": "code",
-      "source_file": "src/app/(site)/photography/[slug]/page.tsx",
-      "source_location": "L11",
-      "id": "slug_page_generatestaticparams",
-      "community": 1,
-      "norm_label": "generatestaticparams()"
-    },
-    {
-      "label": "generateMetadata()",
-      "file_type": "code",
-      "source_file": "src/app/(site)/photography/[slug]/page.tsx",
-      "source_location": "L16",
-      "id": "slug_page_generatemetadata",
-      "community": 1,
-      "norm_label": "generatemetadata()"
-    },
-    {
-      "label": "PhotoSeriesPage()",
-      "file_type": "code",
-      "source_file": "src/app/(site)/photography/[slug]/page.tsx",
-      "source_location": "L30",
-      "id": "slug_page_photoseriespage",
-      "community": 1,
-      "norm_label": "photoseriespage()"
     },
     {
       "label": "page.tsx",
@@ -1272,25 +1227,25 @@
       "source_file": "src/app/(site)/photography/page.tsx",
       "source_location": "L1",
       "id": "photography_page",
-      "community": 1,
+      "community": 41,
       "norm_label": "page.tsx"
     },
     {
       "label": "metadata",
       "file_type": "code",
       "source_file": "src/app/(site)/photography/page.tsx",
-      "source_location": "L6",
+      "source_location": "L5",
       "id": "photography_page_metadata",
-      "community": 1,
+      "community": 41,
       "norm_label": "metadata"
     },
     {
       "label": "PhotographyPage()",
       "file_type": "code",
       "source_file": "src/app/(site)/photography/page.tsx",
-      "source_location": "L11",
+      "source_location": "L10",
       "id": "photography_page_photographypage",
-      "community": 1,
+      "community": 41,
       "norm_label": "photographypage()"
     },
     {
@@ -1515,7 +1470,7 @@
       "source_file": "src/components/dev/CraftStub.tsx",
       "source_location": "L1",
       "id": "dev_craftstub",
-      "community": 1,
+      "community": 41,
       "norm_label": "craftstub.tsx"
     },
     {
@@ -1524,7 +1479,7 @@
       "source_file": "src/components/dev/CraftStub.tsx",
       "source_location": "L9",
       "id": "dev_craftstub_crafts",
-      "community": 1,
+      "community": 41,
       "norm_label": "crafts"
     },
     {
@@ -1533,7 +1488,7 @@
       "source_file": "src/components/dev/CraftStub.tsx",
       "source_location": "L15",
       "id": "dev_craftstub_craftstubprops",
-      "community": 1,
+      "community": 41,
       "norm_label": "craftstubprops"
     },
     {
@@ -1542,7 +1497,7 @@
       "source_file": "src/components/dev/CraftStub.tsx",
       "source_location": "L21",
       "id": "dev_craftstub_craftstub",
-      "community": 1,
+      "community": 41,
       "norm_label": "craftstub()"
     },
     {
@@ -1722,7 +1677,7 @@
       "source_file": "src/components/home/HomePage.tsx",
       "source_location": "L1",
       "id": "home_homepage",
-      "community": 0,
+      "community": 1,
       "norm_label": "homepage.tsx"
     },
     {
@@ -1731,7 +1686,7 @@
       "source_file": "src/components/home/HomePage.tsx",
       "source_location": "L9",
       "id": "home_homepage_homepage",
-      "community": 0,
+      "community": 1,
       "norm_label": "homepage()"
     },
     {
@@ -1740,7 +1695,7 @@
       "source_file": "src/components/home/Preloader.tsx",
       "source_location": "L1",
       "id": "home_preloader",
-      "community": 0,
+      "community": 1,
       "norm_label": "preloader.tsx"
     },
     {
@@ -1749,7 +1704,7 @@
       "source_file": "src/components/home/Preloader.tsx",
       "source_location": "L16",
       "id": "home_preloader_preloaderprops",
-      "community": 0,
+      "community": 1,
       "norm_label": "preloaderprops"
     },
     {
@@ -1758,7 +1713,7 @@
       "source_file": "src/components/home/Preloader.tsx",
       "source_location": "L21",
       "id": "home_preloader_usesprocketcount",
-      "community": 0,
+      "community": 1,
       "norm_label": "usesprocketcount()"
     },
     {
@@ -1767,44 +1722,8 @@
       "source_file": "src/components/home/Preloader.tsx",
       "source_location": "L41",
       "id": "home_preloader_preloader",
-      "community": 0,
+      "community": 1,
       "norm_label": "preloader()"
-    },
-    {
-      "label": "RevealImage.tsx",
-      "file_type": "code",
-      "source_file": "src/components/media/RevealImage.tsx",
-      "source_location": "L1",
-      "id": "media_revealimage",
-      "community": 1,
-      "norm_label": "revealimage.tsx"
-    },
-    {
-      "label": "RevealVariant",
-      "file_type": "code",
-      "source_file": "src/components/media/RevealImage.tsx",
-      "source_location": "L10",
-      "id": "media_revealimage_revealvariant",
-      "community": 1,
-      "norm_label": "revealvariant"
-    },
-    {
-      "label": "RevealImageProps",
-      "file_type": "code",
-      "source_file": "src/components/media/RevealImage.tsx",
-      "source_location": "L12",
-      "id": "media_revealimage_revealimageprops",
-      "community": 1,
-      "norm_label": "revealimageprops"
-    },
-    {
-      "label": "RevealImage()",
-      "file_type": "code",
-      "source_file": "src/components/media/RevealImage.tsx",
-      "source_location": "L31",
-      "id": "media_revealimage_revealimage",
-      "community": 1,
-      "norm_label": "revealimage()"
     },
     {
       "label": "GhostBar.tsx",
@@ -1812,7 +1731,7 @@
       "source_file": "src/components/navigation/GhostBar.tsx",
       "source_location": "L1",
       "id": "navigation_ghostbar",
-      "community": 6,
+      "community": 1,
       "norm_label": "ghostbar.tsx"
     },
     {
@@ -1821,7 +1740,7 @@
       "source_file": "src/components/navigation/GhostBar.tsx",
       "source_location": "L19",
       "id": "navigation_ghostbar_getsectionscrolltop",
-      "community": 6,
+      "community": 1,
       "norm_label": "getsectionscrolltop()"
     },
     {
@@ -1830,7 +1749,7 @@
       "source_file": "src/components/navigation/GhostBar.tsx",
       "source_location": "L34",
       "id": "navigation_ghostbar_ghostbarprops",
-      "community": 6,
+      "community": 1,
       "norm_label": "ghostbarprops"
     },
     {
@@ -1839,7 +1758,7 @@
       "source_file": "src/components/navigation/GhostBar.tsx",
       "source_location": "L41",
       "id": "navigation_ghostbar_navitem",
-      "community": 6,
+      "community": 1,
       "norm_label": "navitem"
     },
     {
@@ -1848,7 +1767,7 @@
       "source_file": "src/components/navigation/GhostBar.tsx",
       "source_location": "L48",
       "id": "navigation_ghostbar_nav_items",
-      "community": 6,
+      "community": 1,
       "norm_label": "nav_items"
     },
     {
@@ -1857,7 +1776,7 @@
       "source_file": "src/components/navigation/GhostBar.tsx",
       "source_location": "L56",
       "id": "navigation_ghostbar_navlogo",
-      "community": 6,
+      "community": 1,
       "norm_label": "navlogo()"
     },
     {
@@ -1866,7 +1785,7 @@
       "source_file": "src/components/navigation/GhostBar.tsx",
       "source_location": "L70",
       "id": "navigation_ghostbar_navbrand",
-      "community": 6,
+      "community": 1,
       "norm_label": "navbrand()"
     },
     {
@@ -1875,7 +1794,7 @@
       "source_file": "src/components/navigation/GhostBar.tsx",
       "source_location": "L95",
       "id": "navigation_ghostbar_ghostbar",
-      "community": 6,
+      "community": 1,
       "norm_label": "ghostbar()"
     },
     {
@@ -1884,53 +1803,8 @@
       "source_file": "src/components/navigation/SiteNav.tsx",
       "source_location": "L1",
       "id": "navigation_sitenav",
-      "community": 6,
+      "community": 1,
       "norm_label": "sitenav.tsx"
-    },
-    {
-      "label": "PhotoSeriesDetail.tsx",
-      "file_type": "code",
-      "source_file": "src/components/photography/PhotoSeriesDetail.tsx",
-      "source_location": "L1",
-      "id": "photography_photoseriesdetail",
-      "community": 1,
-      "norm_label": "photoseriesdetail.tsx"
-    },
-    {
-      "label": "isWide()",
-      "file_type": "code",
-      "source_file": "src/components/photography/PhotoSeriesDetail.tsx",
-      "source_location": "L14",
-      "id": "photography_photoseriesdetail_iswide",
-      "community": 1,
-      "norm_label": "iswide()"
-    },
-    {
-      "label": "PhotoSeriesDetail()",
-      "file_type": "code",
-      "source_file": "src/components/photography/PhotoSeriesDetail.tsx",
-      "source_location": "L18",
-      "id": "photography_photoseriesdetail_photoseriesdetail",
-      "community": 1,
-      "norm_label": "photoseriesdetail()"
-    },
-    {
-      "label": "PhotographyExperience.tsx",
-      "file_type": "code",
-      "source_file": "src/components/photography/PhotographyExperience.tsx",
-      "source_location": "L1",
-      "id": "photography_photographyexperience",
-      "community": 1,
-      "norm_label": "photographyexperience.tsx"
-    },
-    {
-      "label": "PhotographyExperience()",
-      "file_type": "code",
-      "source_file": "src/components/photography/PhotographyExperience.tsx",
-      "source_location": "L23",
-      "id": "photography_photographyexperience_photographyexperience",
-      "community": 1,
-      "norm_label": "photographyexperience()"
     },
     {
       "label": "GSAPProvider.tsx",
@@ -1992,7 +1866,7 @@
       "source_file": "src/components/transitions/TransitionLink.tsx",
       "source_location": "L1",
       "id": "transitions_transitionlink",
-      "community": 1,
+      "community": 6,
       "norm_label": "transitionlink.tsx"
     },
     {
@@ -2001,7 +1875,7 @@
       "source_file": "src/components/transitions/TransitionLink.tsx",
       "source_location": "L9",
       "id": "transitions_transitionlink_transitionlinkprops",
-      "community": 1,
+      "community": 6,
       "norm_label": "transitionlinkprops"
     },
     {
@@ -2010,7 +1884,7 @@
       "source_file": "src/components/transitions/TransitionLink.tsx",
       "source_location": "L19",
       "id": "transitions_transitionlink_transitionlink",
-      "community": 1,
+      "community": 6,
       "norm_label": "transitionlink()"
     },
     {
@@ -2026,7 +1900,7 @@
       "label": "NavigateOptions",
       "file_type": "code",
       "source_file": "src/components/transitions/TransitionProvider.tsx",
-      "source_location": "L34",
+      "source_location": "L31",
       "id": "transitions_transitionprovider_navigateoptions",
       "community": 6,
       "norm_label": "navigateoptions"
@@ -2035,7 +1909,7 @@
       "label": "TransitionContextValue",
       "file_type": "code",
       "source_file": "src/components/transitions/TransitionProvider.tsx",
-      "source_location": "L41",
+      "source_location": "L38",
       "id": "transitions_transitionprovider_transitioncontextvalue",
       "community": 6,
       "norm_label": "transitioncontextvalue"
@@ -2044,7 +1918,7 @@
       "label": "TransitionContext",
       "file_type": "code",
       "source_file": "src/components/transitions/TransitionProvider.tsx",
-      "source_location": "L47",
+      "source_location": "L44",
       "id": "transitions_transitionprovider_transitioncontext",
       "community": 6,
       "norm_label": "transitioncontext"
@@ -2053,16 +1927,16 @@
       "label": "useTransition()",
       "file_type": "code",
       "source_file": "src/components/transitions/TransitionProvider.tsx",
-      "source_location": "L49",
+      "source_location": "L46",
       "id": "transitions_transitionprovider_usetransition",
-      "community": 1,
+      "community": 6,
       "norm_label": "usetransition()"
     },
     {
       "label": "TransitionProvider()",
       "file_type": "code",
       "source_file": "src/components/transitions/TransitionProvider.tsx",
-      "source_location": "L57",
+      "source_location": "L54",
       "id": "transitions_transitionprovider_transitionprovider",
       "community": 6,
       "norm_label": "transitionprovider()"
@@ -2100,7 +1974,7 @@
       "source_file": "src/hooks/useNavObserver.ts",
       "source_location": "L1",
       "id": "hooks_usenavobserver",
-      "community": 6,
+      "community": 1,
       "norm_label": "usenavobserver.ts"
     },
     {
@@ -2109,7 +1983,7 @@
       "source_file": "src/hooks/useNavObserver.ts",
       "source_location": "L6",
       "id": "hooks_usenavobserver_navtheme",
-      "community": 6,
+      "community": 1,
       "norm_label": "navtheme"
     },
     {
@@ -2118,7 +1992,7 @@
       "source_file": "src/hooks/useNavObserver.ts",
       "source_location": "L8",
       "id": "hooks_usenavobserver_section_to_link",
-      "community": 6,
+      "community": 1,
       "norm_label": "section_to_link"
     },
     {
@@ -2127,7 +2001,7 @@
       "source_file": "src/hooks/useNavObserver.ts",
       "source_location": "L15",
       "id": "hooks_usenavobserver_route_to_link",
-      "community": 6,
+      "community": 1,
       "norm_label": "route_to_link"
     },
     {
@@ -2136,7 +2010,7 @@
       "source_file": "src/hooks/useNavObserver.ts",
       "source_location": "L22",
       "id": "hooks_usenavobserver_route_theme",
-      "community": 6,
+      "community": 1,
       "norm_label": "route_theme"
     },
     {
@@ -2145,7 +2019,7 @@
       "source_file": "src/hooks/useNavObserver.ts",
       "source_location": "L29",
       "id": "hooks_usenavobserver_observer_thresholds",
-      "community": 6,
+      "community": 1,
       "norm_label": "observer_thresholds"
     },
     {
@@ -2154,7 +2028,7 @@
       "source_file": "src/hooks/useNavObserver.ts",
       "source_location": "L31",
       "id": "hooks_usenavobserver_resolveroutelink",
-      "community": 6,
+      "community": 1,
       "norm_label": "resolveroutelink()"
     },
     {
@@ -2163,7 +2037,7 @@
       "source_file": "src/hooks/useNavObserver.ts",
       "source_location": "L37",
       "id": "hooks_usenavobserver_resolveroutetheme",
-      "community": 6,
+      "community": 1,
       "norm_label": "resolveroutetheme()"
     },
     {
@@ -2172,7 +2046,7 @@
       "source_file": "src/hooks/useNavObserver.ts",
       "source_location": "L43",
       "id": "hooks_usenavobserver_getnavheight",
-      "community": 6,
+      "community": 1,
       "norm_label": "getnavheight()"
     },
     {
@@ -2181,7 +2055,7 @@
       "source_file": "src/hooks/useNavObserver.ts",
       "source_location": "L50",
       "id": "hooks_usenavobserver_getthemeswitchratiodown",
-      "community": 6,
+      "community": 1,
       "norm_label": "getthemeswitchratiodown()"
     },
     {
@@ -2190,7 +2064,7 @@
       "source_file": "src/hooks/useNavObserver.ts",
       "source_location": "L59",
       "id": "hooks_usenavobserver_getsectionbehindnav",
-      "community": 6,
+      "community": 1,
       "norm_label": "getsectionbehindnav()"
     },
     {
@@ -2199,7 +2073,7 @@
       "source_file": "src/hooks/useNavObserver.ts",
       "source_location": "L76",
       "id": "hooks_usenavobserver_applysection",
-      "community": 6,
+      "community": 1,
       "norm_label": "applysection()"
     },
     {
@@ -2208,7 +2082,7 @@
       "source_file": "src/hooks/useNavObserver.ts",
       "source_location": "L92",
       "id": "hooks_usenavobserver_usenavobserver",
-      "community": 6,
+      "community": 1,
       "norm_label": "usenavobserver()"
     },
     {
@@ -2264,51 +2138,6 @@
       "id": "lib_fonts_cormorant",
       "community": 17,
       "norm_label": "cormorant"
-    },
-    {
-      "label": "photoSeries.ts",
-      "file_type": "code",
-      "source_file": "src/lib/photoSeries.ts",
-      "source_location": "L1",
-      "id": "lib_photoseries",
-      "community": 1,
-      "norm_label": "photoseries.ts"
-    },
-    {
-      "label": "getAllPhotoSeries()",
-      "file_type": "code",
-      "source_file": "src/lib/photoSeries.ts",
-      "source_location": "L12",
-      "id": "lib_photoseries_getallphotoseries",
-      "community": 1,
-      "norm_label": "getallphotoseries()"
-    },
-    {
-      "label": "getPhotoSeries()",
-      "file_type": "code",
-      "source_file": "src/lib/photoSeries.ts",
-      "source_location": "L21",
-      "id": "lib_photoseries_getphotoseries",
-      "community": 1,
-      "norm_label": "getphotoseries()"
-    },
-    {
-      "label": "getAllPhotoSeriesSlugs()",
-      "file_type": "code",
-      "source_file": "src/lib/photoSeries.ts",
-      "source_location": "L30",
-      "id": "lib_photoseries_getallphotoseriesslugs",
-      "community": 1,
-      "norm_label": "getallphotoseriesslugs()"
-    },
-    {
-      "label": "seriesImageUrl()",
-      "file_type": "code",
-      "source_file": "src/lib/photoSeries.ts",
-      "source_location": "L41",
-      "id": "lib_photoseries_seriesimageurl",
-      "community": 1,
-      "norm_label": "seriesimageurl()"
     },
     {
       "label": "video.ts",
@@ -2496,7 +2325,7 @@
       "source_file": "src/sanity/lib/queries.ts",
       "source_location": "L1",
       "id": "lib_queries",
-      "community": 1,
+      "community": 0,
       "norm_label": "queries.ts"
     },
     {
@@ -2505,7 +2334,7 @@
       "source_file": "src/sanity/lib/queries.ts",
       "source_location": "L3",
       "id": "lib_queries_sitesettingsquery",
-      "community": 1,
+      "community": 0,
       "norm_label": "sitesettingsquery"
     },
     {
@@ -2514,7 +2343,7 @@
       "source_file": "src/sanity/lib/queries.ts",
       "source_location": "L5",
       "id": "lib_queries_aboutteaserquery",
-      "community": 1,
+      "community": 0,
       "norm_label": "aboutteaserquery"
     },
     {
@@ -2523,7 +2352,7 @@
       "source_file": "src/sanity/lib/queries.ts",
       "source_location": "L7",
       "id": "lib_queries_poetryteaserquery",
-      "community": 1,
+      "community": 0,
       "norm_label": "poetryteaserquery"
     },
     {
@@ -2532,70 +2361,61 @@
       "source_file": "src/sanity/lib/queries.ts",
       "source_location": "L9",
       "id": "lib_queries_featuredphotoseriesquery",
-      "community": 1,
+      "community": 0,
       "norm_label": "featuredphotoseriesquery"
-    },
-    {
-      "label": "allPhotoSeriesQuery",
-      "file_type": "code",
-      "source_file": "src/sanity/lib/queries.ts",
-      "source_location": "L23",
-      "id": "lib_queries_allphotoseriesquery",
-      "community": 1,
-      "norm_label": "allphotoseriesquery"
     },
     {
       "label": "photoSeriesBySlugQuery",
       "file_type": "code",
       "source_file": "src/sanity/lib/queries.ts",
-      "source_location": "L37",
+      "source_location": "L23",
       "id": "lib_queries_photoseriesbyslugquery",
-      "community": 1,
+      "community": 0,
       "norm_label": "photoseriesbyslugquery"
     },
     {
       "label": "allPhotoSeriesSlugsQuery",
       "file_type": "code",
       "source_file": "src/sanity/lib/queries.ts",
-      "source_location": "L48",
+      "source_location": "L30",
       "id": "lib_queries_allphotoseriesslugsquery",
-      "community": 1,
+      "community": 0,
       "norm_label": "allphotoseriesslugsquery"
     },
     {
       "label": "featuredFilmsQuery",
       "file_type": "code",
       "source_file": "src/sanity/lib/queries.ts",
-      "source_location": "L52",
+      "source_location": "L34",
       "id": "lib_queries_featuredfilmsquery",
-      "community": 1,
+      "community": 0,
       "norm_label": "featuredfilmsquery"
     },
     {
       "label": "allFilmsQuery",
       "file_type": "code",
       "source_file": "src/sanity/lib/queries.ts",
-      "source_location": "L56",
+      "source_location": "L38",
       "id": "lib_queries_allfilmsquery",
-      "community": 1,
+      "community": 0,
       "norm_label": "allfilmsquery"
     },
     {
       "label": "featuredPoemsQuery",
       "file_type": "code",
       "source_file": "src/sanity/lib/queries.ts",
-      "source_location": "L75",
+      "source_location": "L57",
       "id": "lib_queries_featuredpoemsquery",
-      "community": 1,
+      "community": 0,
       "norm_label": "featuredpoemsquery"
     },
     {
       "label": "allPoemsQuery",
       "file_type": "code",
       "source_file": "src/sanity/lib/queries.ts",
-      "source_location": "L79",
+      "source_location": "L61",
       "id": "lib_queries_allpoemsquery",
-      "community": 1,
+      "community": 0,
       "norm_label": "allpoemsquery"
     },
     {
@@ -2795,33 +2615,6 @@
       "id": "types_film_filmrolelabel",
       "community": 0,
       "norm_label": "filmrolelabel()"
-    },
-    {
-      "label": "photoSeries.ts",
-      "file_type": "code",
-      "source_file": "src/types/photoSeries.ts",
-      "source_location": "L1",
-      "id": "types_photoseries",
-      "community": 1,
-      "norm_label": "photoseries.ts"
-    },
-    {
-      "label": "SeriesImage",
-      "file_type": "code",
-      "source_file": "src/types/photoSeries.ts",
-      "source_location": "L2",
-      "id": "types_photoseries_seriesimage",
-      "community": 1,
-      "norm_label": "seriesimage"
-    },
-    {
-      "label": "PhotoSeries",
-      "file_type": "code",
-      "source_file": "src/types/photoSeries.ts",
-      "source_location": "L12",
-      "id": "types_photoseries_photoseries",
-      "community": 1,
-      "norm_label": "photoseries"
     },
     {
       "label": "tsconfig.json",
@@ -6397,74 +6190,11 @@
       "norm_label": "acceptance criteria"
     },
     {
-      "label": "reference.md",
-      "file_type": "document",
-      "source_file": "reference.md",
-      "source_location": "L1",
-      "id": "reference",
-      "community": 45,
-      "norm_label": "reference.md"
-    },
-    {
-      "label": "2026-06-14-jasonbergh-teardown.md",
-      "file_type": "document",
-      "source_file": "research/2026-06-14-jasonbergh-teardown.md",
-      "source_location": "L1",
-      "id": "research_2026_06_14_jasonbergh_teardown",
-      "community": 44,
-      "norm_label": "2026-06-14-jasonbergh-teardown.md"
-    },
-    {
-      "label": "Site Teardown: Jason Bergh (hero slider)",
-      "file_type": "document",
-      "source_file": "research/2026-06-14-jasonbergh-teardown.md",
-      "source_location": "L1",
-      "id": "research_2026_06_14_jasonbergh_teardown_site_teardown_jason_bergh_hero_slider",
-      "community": 44,
-      "norm_label": "site teardown: jason bergh (hero slider)"
-    },
-    {
-      "label": "The effect, deconstructed",
-      "file_type": "document",
-      "source_file": "research/2026-06-14-jasonbergh-teardown.md",
-      "source_location": "L9",
-      "id": "research_2026_06_14_jasonbergh_teardown_the_effect_deconstructed",
-      "community": 44,
-      "norm_label": "the effect, deconstructed"
-    },
-    {
-      "label": "THE REVEAL \u2014 the viewfinder alignment trick",
-      "file_type": "document",
-      "source_file": "research/2026-06-14-jasonbergh-teardown.md",
-      "source_location": "L20",
-      "id": "research_2026_06_14_jasonbergh_teardown_the_reveal_the_viewfinder_alignment_trick",
-      "community": 44,
-      "norm_label": "the reveal \u2014 the viewfinder alignment trick"
-    },
-    {
-      "label": "Adaptation for our Photography index",
-      "file_type": "document",
-      "source_file": "research/2026-06-14-jasonbergh-teardown.md",
-      "source_location": "L30",
-      "id": "research_2026_06_14_jasonbergh_teardown_adaptation_for_our_photography_index",
-      "community": 44,
-      "norm_label": "adaptation for our photography index"
-    },
-    {
-      "label": "Build notes",
-      "file_type": "document",
-      "source_file": "research/2026-06-14-jasonbergh-teardown.md",
-      "source_location": "L39",
-      "id": "research_2026_06_14_jasonbergh_teardown_build_notes",
-      "community": 44,
-      "norm_label": "build notes"
-    },
-    {
       "label": "HomePageProps",
       "file_type": "code",
       "source_file": "src/components/home/HomePage.tsx",
       "source_location": "L16",
-      "community": 0,
+      "community": 1,
       "norm_label": "homepageprops",
       "id": "home_homepage_homepageprops"
     },
@@ -7100,9 +6830,9 @@
       "source_file": ".claude/launch.json",
       "source_location": "L3",
       "weight": 1.0,
-      "confidence_score": 1.0,
       "source": "claude_launch",
-      "target": "claude_launch_configurations"
+      "target": "claude_launch_configurations",
+      "confidence_score": 1.0
     },
     {
       "relation": "contains",
@@ -7110,9 +6840,9 @@
       "source_file": ".claude/launch.json",
       "source_location": "L2",
       "weight": 1.0,
-      "confidence_score": 1.0,
       "source": "claude_launch",
-      "target": "claude_launch_version"
+      "target": "claude_launch_version",
+      "confidence_score": 1.0
     },
     {
       "relation": "contains",
@@ -8780,9 +8510,9 @@
       "source_file": "src/app/(site)/films/page.tsx",
       "source_location": "L3",
       "weight": 1.0,
-      "confidence_score": 1.0,
       "source": "films_page",
-      "target": "films_filmsexperience"
+      "target": "films_filmsexperience",
+      "confidence_score": 1.0
     },
     {
       "relation": "imports",
@@ -8791,9 +8521,9 @@
       "source_file": "src/app/(site)/films/page.tsx",
       "source_location": "L3",
       "weight": 1.0,
-      "confidence_score": 1.0,
       "source": "films_page",
-      "target": "films_filmsexperience_filmsexperience"
+      "target": "films_filmsexperience_filmsexperience",
+      "confidence_score": 1.0
     },
     {
       "relation": "contains",
@@ -8855,9 +8585,9 @@
       "source_file": "src/app/(site)/films/page.tsx",
       "source_location": "L4",
       "weight": 1.0,
-      "confidence_score": 1.0,
       "source": "films_page",
-      "target": "lib_films"
+      "target": "lib_films",
+      "confidence_score": 1.0
     },
     {
       "relation": "imports",
@@ -8866,9 +8596,9 @@
       "source_file": "src/app/(site)/films/page.tsx",
       "source_location": "L4",
       "weight": 1.0,
-      "confidence_score": 1.0,
       "source": "films_page",
-      "target": "lib_films_getallfilms"
+      "target": "lib_films_getallfilms",
+      "confidence_score": 1.0
     },
     {
       "relation": "calls",
@@ -8974,9 +8704,9 @@
       "source_file": "src/app/(site)/layout.tsx",
       "source_location": "L6",
       "weight": 1.0,
-      "confidence_score": 1.0,
       "source": "site_layout",
-      "target": "transitions_transitionprovider"
+      "target": "transitions_transitionprovider",
+      "confidence_score": 1.0
     },
     {
       "relation": "imports",
@@ -8985,9 +8715,9 @@
       "source_file": "src/app/(site)/layout.tsx",
       "source_location": "L6",
       "weight": 1.0,
-      "confidence_score": 1.0,
       "source": "site_layout",
-      "target": "transitions_transitionprovider_transitionprovider"
+      "target": "transitions_transitionprovider_transitionprovider",
+      "confidence_score": 1.0
     },
     {
       "relation": "imports_from",
@@ -9025,140 +8755,12 @@
       "relation": "imports_from",
       "context": "import",
       "confidence": "EXTRACTED",
-      "source_file": "src/app/(site)/photography/[slug]/page.tsx",
-      "source_location": "L5",
-      "weight": 1.0,
-      "source": "slug_page",
-      "target": "lib_photoseries",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "imports",
-      "context": "import",
-      "confidence": "EXTRACTED",
-      "source_file": "src/app/(site)/photography/[slug]/page.tsx",
-      "source_location": "L5",
-      "weight": 1.0,
-      "source": "slug_page",
-      "target": "lib_photoseries_getallphotoseriesslugs",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "imports",
-      "context": "import",
-      "confidence": "EXTRACTED",
-      "source_file": "src/app/(site)/photography/[slug]/page.tsx",
-      "source_location": "L5",
-      "weight": 1.0,
-      "source": "slug_page",
-      "target": "lib_photoseries_getphotoseries",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "imports_from",
-      "context": "import",
-      "confidence": "EXTRACTED",
-      "source_file": "src/app/(site)/photography/[slug]/page.tsx",
-      "source_location": "L4",
-      "weight": 1.0,
-      "source": "slug_page",
-      "target": "photography_photoseriesdetail",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "imports",
-      "context": "import",
-      "confidence": "EXTRACTED",
-      "source_file": "src/app/(site)/photography/[slug]/page.tsx",
-      "source_location": "L4",
-      "weight": 1.0,
-      "source": "slug_page",
-      "target": "photography_photoseriesdetail_photoseriesdetail",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "src/app/(site)/photography/[slug]/page.tsx",
-      "source_location": "L16",
-      "weight": 1.0,
-      "source": "slug_page",
-      "target": "slug_page_generatemetadata",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "src/app/(site)/photography/[slug]/page.tsx",
-      "source_location": "L11",
-      "weight": 1.0,
-      "source": "slug_page",
-      "target": "slug_page_generatestaticparams",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "src/app/(site)/photography/[slug]/page.tsx",
-      "source_location": "L7",
-      "weight": 1.0,
-      "source": "slug_page",
-      "target": "slug_page_pageprops",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "src/app/(site)/photography/[slug]/page.tsx",
-      "source_location": "L30",
-      "weight": 1.0,
-      "source": "slug_page",
-      "target": "slug_page_photoseriespage",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "calls",
-      "context": "call",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "src/app/(site)/photography/[slug]/page.tsx",
-      "source_location": "L12",
-      "weight": 1.0,
-      "source": "slug_page_generatestaticparams",
-      "target": "lib_photoseries_getallphotoseriesslugs"
-    },
-    {
-      "relation": "calls",
-      "context": "call",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "src/app/(site)/photography/[slug]/page.tsx",
-      "source_location": "L20",
-      "weight": 1.0,
-      "source": "slug_page_generatemetadata",
-      "target": "lib_photoseries_getphotoseries"
-    },
-    {
-      "relation": "calls",
-      "context": "call",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "src/app/(site)/photography/[slug]/page.tsx",
-      "source_location": "L32",
-      "weight": 1.0,
-      "source": "slug_page_photoseriespage",
-      "target": "lib_photoseries_getphotoseries"
-    },
-    {
-      "relation": "imports_from",
-      "context": "import",
-      "confidence": "EXTRACTED",
       "source_file": "src/app/(site)/photography/page.tsx",
       "source_location": "L3",
       "weight": 1.0,
-      "confidence_score": 1.0,
       "source": "photography_page",
-      "target": "dev_craftstub"
+      "target": "dev_craftstub",
+      "confidence_score": 1.0
     },
     {
       "relation": "imports",
@@ -9167,30 +8769,8 @@
       "source_file": "src/app/(site)/photography/page.tsx",
       "source_location": "L3",
       "weight": 1.0,
-      "confidence_score": 1.0,
       "source": "photography_page",
-      "target": "dev_craftstub_craftstub"
-    },
-    {
-      "relation": "imports_from",
-      "context": "import",
-      "confidence": "EXTRACTED",
-      "source_file": "src/app/(site)/photography/page.tsx",
-      "source_location": "L4",
-      "weight": 1.0,
-      "source": "photography_page",
-      "target": "lib_photoseries",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "imports",
-      "context": "import",
-      "confidence": "EXTRACTED",
-      "source_file": "src/app/(site)/photography/page.tsx",
-      "source_location": "L4",
-      "weight": 1.0,
-      "source": "photography_page",
-      "target": "lib_photoseries_getallphotoseries",
+      "target": "dev_craftstub_craftstub",
       "confidence_score": 1.0
     },
     {
@@ -9199,9 +8779,9 @@
       "source_file": "src/app/(site)/photography/page.tsx",
       "source_location": "L5",
       "weight": 1.0,
-      "confidence_score": 1.0,
       "source": "photography_page",
-      "target": "photography_page_metadata"
+      "target": "photography_page_metadata",
+      "confidence_score": 1.0
     },
     {
       "relation": "contains",
@@ -9209,42 +8789,9 @@
       "source_file": "src/app/(site)/photography/page.tsx",
       "source_location": "L10",
       "weight": 1.0,
-      "confidence_score": 1.0,
       "source": "photography_page",
-      "target": "photography_page_photographypage"
-    },
-    {
-      "relation": "imports_from",
-      "context": "import",
-      "confidence": "EXTRACTED",
-      "source_file": "src/app/(site)/photography/page.tsx",
-      "source_location": "L3",
-      "weight": 1.0,
-      "source": "photography_page",
-      "target": "photography_photographyexperience",
+      "target": "photography_page_photographypage",
       "confidence_score": 1.0
-    },
-    {
-      "relation": "imports",
-      "context": "import",
-      "confidence": "EXTRACTED",
-      "source_file": "src/app/(site)/photography/page.tsx",
-      "source_location": "L3",
-      "weight": 1.0,
-      "source": "photography_page",
-      "target": "photography_photographyexperience_photographyexperience",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "calls",
-      "context": "call",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "src/app/(site)/photography/page.tsx",
-      "source_location": "L12",
-      "weight": 1.0,
-      "source": "photography_page_photographypage",
-      "target": "lib_photoseries_getallphotoseries"
     },
     {
       "relation": "imports_from",
@@ -9253,9 +8800,9 @@
       "source_file": "src/app/(site)/poetry/page.tsx",
       "source_location": "L3",
       "weight": 1.0,
-      "confidence_score": 1.0,
       "source": "poetry_page",
-      "target": "dev_craftstub"
+      "target": "dev_craftstub",
+      "confidence_score": 1.0
     },
     {
       "relation": "imports",
@@ -9264,9 +8811,9 @@
       "source_file": "src/app/(site)/poetry/page.tsx",
       "source_location": "L3",
       "weight": 1.0,
-      "confidence_score": 1.0,
       "source": "poetry_page",
-      "target": "dev_craftstub_craftstub"
+      "target": "dev_craftstub_craftstub",
+      "confidence_score": 1.0
     },
     {
       "relation": "imports_from",
@@ -9578,9 +9125,9 @@
       "source_file": "src/components/dev/CraftStub.tsx",
       "source_location": "L9",
       "weight": 1.0,
-      "confidence_score": 1.0,
       "source": "dev_craftstub",
-      "target": "dev_craftstub_crafts"
+      "target": "dev_craftstub_crafts",
+      "confidence_score": 1.0
     },
     {
       "relation": "contains",
@@ -9588,9 +9135,9 @@
       "source_file": "src/components/dev/CraftStub.tsx",
       "source_location": "L21",
       "weight": 1.0,
-      "confidence_score": 1.0,
       "source": "dev_craftstub",
-      "target": "dev_craftstub_craftstub"
+      "target": "dev_craftstub_craftstub",
+      "confidence_score": 1.0
     },
     {
       "relation": "contains",
@@ -9598,9 +9145,9 @@
       "source_file": "src/components/dev/CraftStub.tsx",
       "source_location": "L15",
       "weight": 1.0,
-      "confidence_score": 1.0,
       "source": "dev_craftstub",
-      "target": "dev_craftstub_craftstubprops"
+      "target": "dev_craftstub_craftstubprops",
+      "confidence_score": 1.0
     },
     {
       "relation": "imports_from",
@@ -9609,9 +9156,9 @@
       "source_file": "src/components/dev/CraftStub.tsx",
       "source_location": "L7",
       "weight": 1.0,
-      "confidence_score": 1.0,
       "source": "dev_craftstub",
-      "target": "transitions_transitionlink"
+      "target": "transitions_transitionlink",
+      "confidence_score": 1.0
     },
     {
       "relation": "imports",
@@ -9620,9 +9167,9 @@
       "source_file": "src/components/dev/CraftStub.tsx",
       "source_location": "L7",
       "weight": 1.0,
-      "confidence_score": 1.0,
       "source": "dev_craftstub",
-      "target": "transitions_transitionlink_transitionlink"
+      "target": "transitions_transitionlink_transitionlink",
+      "confidence_score": 1.0
     },
     {
       "relation": "contains",
@@ -9630,9 +9177,9 @@
       "source_file": "src/components/films/FilmLightbox.tsx",
       "source_location": "L13",
       "weight": 1.0,
-      "confidence_score": 1.0,
       "source": "films_filmlightbox",
-      "target": "films_filmlightbox_filmlightbox"
+      "target": "films_filmlightbox_filmlightbox",
+      "confidence_score": 1.0
     },
     {
       "relation": "contains",
@@ -9640,9 +9187,9 @@
       "source_file": "src/components/films/FilmLightbox.tsx",
       "source_location": "L8",
       "weight": 1.0,
-      "confidence_score": 1.0,
       "source": "films_filmlightbox",
-      "target": "films_filmlightbox_filmlightboxprops"
+      "target": "films_filmlightbox_filmlightboxprops",
+      "confidence_score": 1.0
     },
     {
       "relation": "imports_from",
@@ -9651,9 +9198,9 @@
       "source_file": "src/components/films/FilmLightbox.tsx",
       "source_location": "L5",
       "weight": 1.0,
-      "confidence_score": 1.0,
       "source": "films_filmlightbox",
-      "target": "lib_films"
+      "target": "lib_films",
+      "confidence_score": 1.0
     },
     {
       "relation": "imports",
@@ -9662,9 +9209,9 @@
       "source_file": "src/components/films/FilmLightbox.tsx",
       "source_location": "L5",
       "weight": 1.0,
-      "confidence_score": 1.0,
       "source": "films_filmlightbox",
-      "target": "lib_films_filmplayerurl"
+      "target": "lib_films_filmplayerurl",
+      "confidence_score": 1.0
     },
     {
       "relation": "imports_from",
@@ -9673,9 +9220,9 @@
       "source_file": "src/components/films/FilmLightbox.tsx",
       "source_location": "L6",
       "weight": 1.0,
-      "confidence_score": 1.0,
       "source": "films_filmlightbox",
-      "target": "types_film"
+      "target": "types_film",
+      "confidence_score": 1.0
     },
     {
       "relation": "imports",
@@ -9684,9 +9231,9 @@
       "source_file": "src/components/films/FilmLightbox.tsx",
       "source_location": "L6",
       "weight": 1.0,
-      "confidence_score": 1.0,
       "source": "films_filmlightbox",
-      "target": "types_film_film"
+      "target": "types_film_film",
+      "confidence_score": 1.0
     },
     {
       "relation": "imports",
@@ -9695,9 +9242,9 @@
       "source_file": "src/components/films/FilmLightbox.tsx",
       "source_location": "L6",
       "weight": 1.0,
-      "confidence_score": 1.0,
       "source": "films_filmlightbox",
-      "target": "types_film_filmrolelabel"
+      "target": "types_film_filmrolelabel",
+      "confidence_score": 1.0
     },
     {
       "relation": "imports_from",
@@ -9706,9 +9253,9 @@
       "source_file": "src/components/films/FilmsExperience.tsx",
       "source_location": "L10",
       "weight": 1.0,
-      "confidence_score": 1.0,
       "source": "films_filmsexperience",
-      "target": "films_filmlightbox"
+      "target": "films_filmlightbox",
+      "confidence_score": 1.0
     },
     {
       "relation": "calls",
@@ -9739,9 +9286,9 @@
       "source_file": "src/components/films/FilmsExperience.tsx",
       "source_location": "L10",
       "weight": 1.0,
-      "confidence_score": 1.0,
       "source": "films_filmsexperience",
-      "target": "films_filmlightbox_filmlightbox"
+      "target": "films_filmlightbox_filmlightbox",
+      "confidence_score": 1.0
     },
     {
       "relation": "contains",
@@ -9749,9 +9296,9 @@
       "source_file": "src/components/films/FilmsExperience.tsx",
       "source_location": "L20",
       "weight": 1.0,
-      "confidence_score": 1.0,
       "source": "films_filmsexperience",
-      "target": "films_filmsexperience_filmsexperience"
+      "target": "films_filmsexperience_filmsexperience",
+      "confidence_score": 1.0
     },
     {
       "relation": "contains",
@@ -9759,9 +9306,9 @@
       "source_file": "src/components/films/FilmsExperience.tsx",
       "source_location": "L14",
       "weight": 1.0,
-      "confidence_score": 1.0,
       "source": "films_filmsexperience",
-      "target": "films_filmsexperience_filmstill"
+      "target": "films_filmsexperience_filmstill",
+      "confidence_score": 1.0
     },
     {
       "relation": "imports_from",
@@ -9770,9 +9317,9 @@
       "source_file": "src/components/films/FilmsExperience.tsx",
       "source_location": "L7",
       "weight": 1.0,
-      "confidence_score": 1.0,
       "source": "films_filmsexperience",
-      "target": "lib_image"
+      "target": "lib_image",
+      "confidence_score": 1.0
     },
     {
       "relation": "imports",
@@ -9781,9 +9328,9 @@
       "source_file": "src/components/films/FilmsExperience.tsx",
       "source_location": "L7",
       "weight": 1.0,
-      "confidence_score": 1.0,
       "source": "films_filmsexperience",
-      "target": "lib_image_urlfor"
+      "target": "lib_image_urlfor",
+      "confidence_score": 1.0
     },
     {
       "relation": "imports_from",
@@ -9792,9 +9339,9 @@
       "source_file": "src/components/films/FilmsExperience.tsx",
       "source_location": "L6",
       "weight": 1.0,
-      "confidence_score": 1.0,
       "source": "films_filmsexperience",
-      "target": "lib_video"
+      "target": "lib_video",
+      "confidence_score": 1.0
     },
     {
       "relation": "imports",
@@ -9803,9 +9350,9 @@
       "source_file": "src/components/films/FilmsExperience.tsx",
       "source_location": "L6",
       "weight": 1.0,
-      "confidence_score": 1.0,
       "source": "films_filmsexperience",
-      "target": "lib_video_getvideoposterurl"
+      "target": "lib_video_getvideoposterurl",
+      "confidence_score": 1.0
     },
     {
       "relation": "imports",
@@ -9814,9 +9361,9 @@
       "source_file": "src/components/films/FilmsExperience.tsx",
       "source_location": "L6",
       "weight": 1.0,
-      "confidence_score": 1.0,
       "source": "films_filmsexperience",
-      "target": "lib_video_resolvevideosource"
+      "target": "lib_video_resolvevideosource",
+      "confidence_score": 1.0
     },
     {
       "relation": "imports_from",
@@ -9825,9 +9372,9 @@
       "source_file": "src/components/films/FilmsExperience.tsx",
       "source_location": "L5",
       "weight": 1.0,
-      "confidence_score": 1.0,
       "source": "films_filmsexperience",
-      "target": "transitions_transitionlink"
+      "target": "transitions_transitionlink",
+      "confidence_score": 1.0
     },
     {
       "relation": "imports",
@@ -9836,9 +9383,9 @@
       "source_file": "src/components/films/FilmsExperience.tsx",
       "source_location": "L5",
       "weight": 1.0,
-      "confidence_score": 1.0,
       "source": "films_filmsexperience",
-      "target": "transitions_transitionlink_transitionlink"
+      "target": "transitions_transitionlink_transitionlink",
+      "confidence_score": 1.0
     },
     {
       "relation": "imports_from",
@@ -9847,9 +9394,9 @@
       "source_file": "src/components/films/FilmsExperience.tsx",
       "source_location": "L8",
       "weight": 1.0,
-      "confidence_score": 1.0,
       "source": "films_filmsexperience",
-      "target": "types_film"
+      "target": "types_film",
+      "confidence_score": 1.0
     },
     {
       "relation": "imports",
@@ -9858,9 +9405,9 @@
       "source_file": "src/components/films/FilmsExperience.tsx",
       "source_location": "L8",
       "weight": 1.0,
-      "confidence_score": 1.0,
       "source": "films_filmsexperience",
-      "target": "types_film_film"
+      "target": "types_film_film",
+      "confidence_score": 1.0
     },
     {
       "relation": "imports",
@@ -9869,9 +9416,9 @@
       "source_file": "src/components/films/FilmsExperience.tsx",
       "source_location": "L8",
       "weight": 1.0,
-      "confidence_score": 1.0,
       "source": "films_filmsexperience",
-      "target": "types_film_filmrolelabel"
+      "target": "types_film_filmrolelabel",
+      "confidence_score": 1.0
     },
     {
       "relation": "calls",
@@ -9880,9 +9427,9 @@
       "source_file": "src/components/films/FilmsExperience.tsx",
       "source_location": "L15",
       "weight": 1.0,
-      "confidence_score": 1.0,
       "source": "films_filmsexperience_filmstill",
-      "target": "lib_image_urlfor"
+      "target": "lib_image_urlfor",
+      "confidence_score": 1.0
     },
     {
       "relation": "calls",
@@ -9891,9 +9438,9 @@
       "source_file": "src/components/films/FilmsExperience.tsx",
       "source_location": "L17",
       "weight": 1.0,
-      "confidence_score": 1.0,
       "source": "films_filmsexperience_filmstill",
-      "target": "lib_video_getvideoposterurl"
+      "target": "lib_video_getvideoposterurl",
+      "confidence_score": 1.0
     },
     {
       "relation": "calls",
@@ -9902,9 +9449,9 @@
       "source_file": "src/components/films/FilmsExperience.tsx",
       "source_location": "L16",
       "weight": 1.0,
-      "confidence_score": 1.0,
       "source": "films_filmsexperience_filmstill",
-      "target": "lib_video_resolvevideosource"
+      "target": "lib_video_resolvevideosource",
+      "confidence_score": 1.0
     },
     {
       "relation": "contains",
@@ -10300,58 +9847,6 @@
       "target": "home_preloader_usesprocketcount"
     },
     {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "src/components/media/RevealImage.tsx",
-      "source_location": "L31",
-      "weight": 1.0,
-      "source": "media_revealimage",
-      "target": "media_revealimage_revealimage",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "src/components/media/RevealImage.tsx",
-      "source_location": "L12",
-      "weight": 1.0,
-      "source": "media_revealimage",
-      "target": "media_revealimage_revealimageprops",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "src/components/media/RevealImage.tsx",
-      "source_location": "L10",
-      "weight": 1.0,
-      "source": "media_revealimage",
-      "target": "media_revealimage_revealvariant",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "imports_from",
-      "context": "import",
-      "confidence": "EXTRACTED",
-      "source_file": "src/components/photography/PhotoSeriesDetail.tsx",
-      "source_location": "L6",
-      "weight": 1.0,
-      "source": "photography_photoseriesdetail",
-      "target": "media_revealimage",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "imports",
-      "context": "import",
-      "confidence": "EXTRACTED",
-      "source_file": "src/components/photography/PhotoSeriesDetail.tsx",
-      "source_location": "L6",
-      "weight": 1.0,
-      "source": "photography_photoseriesdetail",
-      "target": "media_revealimage_revealimage",
-      "confidence_score": 1.0
-    },
-    {
       "relation": "imports_from",
       "context": "import",
       "confidence": "EXTRACTED",
@@ -10521,223 +10016,6 @@
       "target": "navigation_ghostbar_ghostbar"
     },
     {
-      "relation": "imports_from",
-      "context": "import",
-      "confidence": "EXTRACTED",
-      "source_file": "src/components/photography/PhotoSeriesDetail.tsx",
-      "source_location": "L8",
-      "weight": 1.0,
-      "source": "photography_photoseriesdetail",
-      "target": "lib_photoseries",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "imports",
-      "context": "import",
-      "confidence": "EXTRACTED",
-      "source_file": "src/components/photography/PhotoSeriesDetail.tsx",
-      "source_location": "L8",
-      "weight": 1.0,
-      "source": "photography_photoseriesdetail",
-      "target": "lib_photoseries_seriesimageurl",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "src/components/photography/PhotoSeriesDetail.tsx",
-      "source_location": "L14",
-      "weight": 1.0,
-      "source": "photography_photoseriesdetail",
-      "target": "photography_photoseriesdetail_iswide",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "src/components/photography/PhotoSeriesDetail.tsx",
-      "source_location": "L18",
-      "weight": 1.0,
-      "source": "photography_photoseriesdetail",
-      "target": "photography_photoseriesdetail_photoseriesdetail",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "imports_from",
-      "context": "import",
-      "confidence": "EXTRACTED",
-      "source_file": "src/components/photography/PhotoSeriesDetail.tsx",
-      "source_location": "L7",
-      "weight": 1.0,
-      "source": "photography_photoseriesdetail",
-      "target": "transitions_transitionlink",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "imports",
-      "context": "import",
-      "confidence": "EXTRACTED",
-      "source_file": "src/components/photography/PhotoSeriesDetail.tsx",
-      "source_location": "L7",
-      "weight": 1.0,
-      "source": "photography_photoseriesdetail",
-      "target": "transitions_transitionlink_transitionlink",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "imports_from",
-      "context": "import",
-      "confidence": "EXTRACTED",
-      "source_file": "src/components/photography/PhotoSeriesDetail.tsx",
-      "source_location": "L9",
-      "weight": 1.0,
-      "source": "photography_photoseriesdetail",
-      "target": "types_photoseries",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "imports",
-      "context": "import",
-      "confidence": "EXTRACTED",
-      "source_file": "src/components/photography/PhotoSeriesDetail.tsx",
-      "source_location": "L9",
-      "weight": 1.0,
-      "source": "photography_photoseriesdetail",
-      "target": "types_photoseries_photoseries",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "calls",
-      "context": "call",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "src/components/photography/PhotoSeriesDetail.tsx",
-      "source_location": "L19",
-      "weight": 1.0,
-      "source": "photography_photoseriesdetail_photoseriesdetail",
-      "target": "lib_photoseries_seriesimageurl"
-    },
-    {
-      "relation": "imports_from",
-      "context": "import",
-      "confidence": "EXTRACTED",
-      "source_file": "src/components/photography/PhotographyExperience.tsx",
-      "source_location": "L11",
-      "weight": 1.0,
-      "source": "photography_photographyexperience",
-      "target": "lib_photoseries",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "imports",
-      "context": "import",
-      "confidence": "EXTRACTED",
-      "source_file": "src/components/photography/PhotographyExperience.tsx",
-      "source_location": "L11",
-      "weight": 1.0,
-      "source": "photography_photographyexperience",
-      "target": "lib_photoseries_seriesimageurl",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "src/components/photography/PhotographyExperience.tsx",
-      "source_location": "L23",
-      "weight": 1.0,
-      "source": "photography_photographyexperience",
-      "target": "photography_photographyexperience_photographyexperience",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "imports_from",
-      "context": "import",
-      "confidence": "EXTRACTED",
-      "source_file": "src/components/photography/PhotographyExperience.tsx",
-      "source_location": "L9",
-      "weight": 1.0,
-      "source": "photography_photographyexperience",
-      "target": "transitions_transitionlink",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "imports",
-      "context": "import",
-      "confidence": "EXTRACTED",
-      "source_file": "src/components/photography/PhotographyExperience.tsx",
-      "source_location": "L9",
-      "weight": 1.0,
-      "source": "photography_photographyexperience",
-      "target": "transitions_transitionlink_transitionlink",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "imports_from",
-      "context": "import",
-      "confidence": "EXTRACTED",
-      "source_file": "src/components/photography/PhotographyExperience.tsx",
-      "source_location": "L10",
-      "weight": 1.0,
-      "source": "photography_photographyexperience",
-      "target": "transitions_transitionprovider",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "imports",
-      "context": "import",
-      "confidence": "EXTRACTED",
-      "source_file": "src/components/photography/PhotographyExperience.tsx",
-      "source_location": "L10",
-      "weight": 1.0,
-      "source": "photography_photographyexperience",
-      "target": "transitions_transitionprovider_usetransition",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "imports_from",
-      "context": "import",
-      "confidence": "EXTRACTED",
-      "source_file": "src/components/photography/PhotographyExperience.tsx",
-      "source_location": "L12",
-      "weight": 1.0,
-      "source": "photography_photographyexperience",
-      "target": "types_photoseries",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "imports",
-      "context": "import",
-      "confidence": "EXTRACTED",
-      "source_file": "src/components/photography/PhotographyExperience.tsx",
-      "source_location": "L12",
-      "weight": 1.0,
-      "source": "photography_photographyexperience",
-      "target": "types_photoseries_photoseries",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "calls",
-      "context": "call",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "src/components/photography/PhotographyExperience.tsx",
-      "source_location": "L226",
-      "weight": 1.0,
-      "source": "photography_photographyexperience_photographyexperience",
-      "target": "lib_photoseries_seriesimageurl"
-    },
-    {
-      "relation": "calls",
-      "context": "call",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "src/components/photography/PhotographyExperience.tsx",
-      "source_location": "L24",
-      "weight": 1.0,
-      "source": "photography_photographyexperience_photographyexperience",
-      "target": "transitions_transitionprovider_usetransition"
-    },
-    {
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "src/components/providers/GSAPProvider.tsx",
@@ -10806,9 +10084,9 @@
       "source_file": "src/components/transitions/TransitionLink.tsx",
       "source_location": "L19",
       "weight": 1.0,
-      "confidence_score": 1.0,
       "source": "transitions_transitionlink",
-      "target": "transitions_transitionlink_transitionlink"
+      "target": "transitions_transitionlink_transitionlink",
+      "confidence_score": 1.0
     },
     {
       "relation": "contains",
@@ -10816,9 +10094,9 @@
       "source_file": "src/components/transitions/TransitionLink.tsx",
       "source_location": "L9",
       "weight": 1.0,
-      "confidence_score": 1.0,
       "source": "transitions_transitionlink",
-      "target": "transitions_transitionlink_transitionlinkprops"
+      "target": "transitions_transitionlink_transitionlinkprops",
+      "confidence_score": 1.0
     },
     {
       "relation": "imports_from",
@@ -10827,9 +10105,9 @@
       "source_file": "src/components/transitions/TransitionLink.tsx",
       "source_location": "L7",
       "weight": 1.0,
-      "confidence_score": 1.0,
       "source": "transitions_transitionlink",
-      "target": "transitions_transitionprovider"
+      "target": "transitions_transitionprovider",
+      "confidence_score": 1.0
     },
     {
       "relation": "imports",
@@ -10838,9 +10116,9 @@
       "source_file": "src/components/transitions/TransitionLink.tsx",
       "source_location": "L7",
       "weight": 1.0,
-      "confidence_score": 1.0,
       "source": "transitions_transitionlink",
-      "target": "transitions_transitionprovider_navigateoptions"
+      "target": "transitions_transitionprovider_navigateoptions",
+      "confidence_score": 1.0
     },
     {
       "relation": "imports",
@@ -10849,9 +10127,9 @@
       "source_file": "src/components/transitions/TransitionLink.tsx",
       "source_location": "L7",
       "weight": 1.0,
-      "confidence_score": 1.0,
       "source": "transitions_transitionlink",
-      "target": "transitions_transitionprovider_usetransition"
+      "target": "transitions_transitionprovider_usetransition",
+      "confidence_score": 1.0
     },
     {
       "relation": "calls",
@@ -10871,9 +10149,9 @@
       "source_file": "src/components/transitions/TransitionProvider.tsx",
       "source_location": "L15",
       "weight": 1.0,
-      "confidence_score": 1.0,
       "source": "transitions_transitionprovider",
-      "target": "hooks_usemedia"
+      "target": "hooks_usemedia",
+      "confidence_score": 1.0
     },
     {
       "relation": "imports",
@@ -10882,9 +10160,9 @@
       "source_file": "src/components/transitions/TransitionProvider.tsx",
       "source_location": "L15",
       "weight": 1.0,
-      "confidence_score": 1.0,
       "source": "transitions_transitionprovider",
-      "target": "hooks_usemedia_usemedia"
+      "target": "hooks_usemedia_usemedia",
+      "confidence_score": 1.0
     },
     {
       "relation": "contains",
@@ -10892,9 +10170,9 @@
       "source_file": "src/components/transitions/TransitionProvider.tsx",
       "source_location": "L31",
       "weight": 1.0,
-      "confidence_score": 1.0,
       "source": "transitions_transitionprovider",
-      "target": "transitions_transitionprovider_navigateoptions"
+      "target": "transitions_transitionprovider_navigateoptions",
+      "confidence_score": 1.0
     },
     {
       "relation": "contains",
@@ -10902,9 +10180,9 @@
       "source_file": "src/components/transitions/TransitionProvider.tsx",
       "source_location": "L44",
       "weight": 1.0,
-      "confidence_score": 1.0,
       "source": "transitions_transitionprovider",
-      "target": "transitions_transitionprovider_transitioncontext"
+      "target": "transitions_transitionprovider_transitioncontext",
+      "confidence_score": 1.0
     },
     {
       "relation": "contains",
@@ -10912,9 +10190,9 @@
       "source_file": "src/components/transitions/TransitionProvider.tsx",
       "source_location": "L38",
       "weight": 1.0,
-      "confidence_score": 1.0,
       "source": "transitions_transitionprovider",
-      "target": "transitions_transitionprovider_transitioncontextvalue"
+      "target": "transitions_transitionprovider_transitioncontextvalue",
+      "confidence_score": 1.0
     },
     {
       "relation": "contains",
@@ -10922,9 +10200,9 @@
       "source_file": "src/components/transitions/TransitionProvider.tsx",
       "source_location": "L54",
       "weight": 1.0,
-      "confidence_score": 1.0,
       "source": "transitions_transitionprovider",
-      "target": "transitions_transitionprovider_transitionprovider"
+      "target": "transitions_transitionprovider_transitionprovider",
+      "confidence_score": 1.0
     },
     {
       "relation": "contains",
@@ -10932,9 +10210,9 @@
       "source_file": "src/components/transitions/TransitionProvider.tsx",
       "source_location": "L46",
       "weight": 1.0,
-      "confidence_score": 1.0,
       "source": "transitions_transitionprovider",
-      "target": "transitions_transitionprovider_usetransition"
+      "target": "transitions_transitionprovider_usetransition",
+      "confidence_score": 1.0
     },
     {
       "relation": "calls",
@@ -11127,9 +10405,9 @@
       "source_file": "src/lib/films.ts",
       "source_location": "L1",
       "weight": 1.0,
-      "confidence_score": 1.0,
       "source": "lib_films",
-      "target": "lib_client"
+      "target": "lib_client",
+      "confidence_score": 1.0
     },
     {
       "relation": "imports",
@@ -11138,9 +10416,9 @@
       "source_file": "src/lib/films.ts",
       "source_location": "L1",
       "weight": 1.0,
-      "confidence_score": 1.0,
       "source": "lib_films",
-      "target": "lib_client_client"
+      "target": "lib_client_client",
+      "confidence_score": 1.0
     },
     {
       "relation": "contains",
@@ -11148,9 +10426,9 @@
       "source_file": "src/lib/films.ts",
       "source_location": "L20",
       "weight": 1.0,
-      "confidence_score": 1.0,
       "source": "lib_films",
-      "target": "lib_films_filmplayerurl"
+      "target": "lib_films_filmplayerurl",
+      "confidence_score": 1.0
     },
     {
       "relation": "contains",
@@ -11158,9 +10436,9 @@
       "source_file": "src/lib/films.ts",
       "source_location": "L7",
       "weight": 1.0,
-      "confidence_score": 1.0,
       "source": "lib_films",
-      "target": "lib_films_getallfilms"
+      "target": "lib_films_getallfilms",
+      "confidence_score": 1.0
     },
     {
       "relation": "imports_from",
@@ -11169,9 +10447,9 @@
       "source_file": "src/lib/films.ts",
       "source_location": "L2",
       "weight": 1.0,
-      "confidence_score": 1.0,
       "source": "lib_films",
-      "target": "lib_queries"
+      "target": "lib_queries",
+      "confidence_score": 1.0
     },
     {
       "relation": "imports",
@@ -11180,9 +10458,9 @@
       "source_file": "src/lib/films.ts",
       "source_location": "L2",
       "weight": 1.0,
-      "confidence_score": 1.0,
       "source": "lib_films",
-      "target": "lib_queries_allfilmsquery"
+      "target": "lib_queries_allfilmsquery",
+      "confidence_score": 1.0
     },
     {
       "relation": "imports_from",
@@ -11191,9 +10469,9 @@
       "source_file": "src/lib/films.ts",
       "source_location": "L5",
       "weight": 1.0,
-      "confidence_score": 1.0,
       "source": "lib_films",
-      "target": "lib_video"
+      "target": "lib_video",
+      "confidence_score": 1.0
     },
     {
       "relation": "imports",
@@ -11202,9 +10480,9 @@
       "source_file": "src/lib/films.ts",
       "source_location": "L5",
       "weight": 1.0,
-      "confidence_score": 1.0,
       "source": "lib_films",
-      "target": "lib_video_resolvevideosource"
+      "target": "lib_video_resolvevideosource",
+      "confidence_score": 1.0
     },
     {
       "relation": "imports",
@@ -11213,9 +10491,9 @@
       "source_file": "src/lib/films.ts",
       "source_location": "L1",
       "weight": 1.0,
-      "confidence_score": 1.0,
       "source": "lib_films",
-      "target": "sanity_env_issanityconfigured"
+      "target": "sanity_env_issanityconfigured",
+      "confidence_score": 1.0
     },
     {
       "relation": "imports_from",
@@ -11224,9 +10502,9 @@
       "source_file": "src/lib/films.ts",
       "source_location": "L3",
       "weight": 1.0,
-      "confidence_score": 1.0,
       "source": "lib_films",
-      "target": "types_film"
+      "target": "types_film",
+      "confidence_score": 1.0
     },
     {
       "relation": "imports",
@@ -11235,9 +10513,9 @@
       "source_file": "src/lib/films.ts",
       "source_location": "L3",
       "weight": 1.0,
-      "confidence_score": 1.0,
       "source": "lib_films",
-      "target": "types_film_film"
+      "target": "types_film_film",
+      "confidence_score": 1.0
     },
     {
       "relation": "calls",
@@ -11269,189 +10547,6 @@
       "confidence_score": 1.0,
       "source": "lib_fonts",
       "target": "lib_fonts_cormorant"
-    },
-    {
-      "relation": "imports_from",
-      "context": "import",
-      "confidence": "EXTRACTED",
-      "source_file": "src/lib/photoSeries.ts",
-      "source_location": "L3",
-      "weight": 1.0,
-      "source": "lib_photoseries",
-      "target": "lib_client",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "imports",
-      "context": "import",
-      "confidence": "EXTRACTED",
-      "source_file": "src/lib/photoSeries.ts",
-      "source_location": "L3",
-      "weight": 1.0,
-      "source": "lib_photoseries",
-      "target": "lib_client_client",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "imports_from",
-      "context": "import",
-      "confidence": "EXTRACTED",
-      "source_file": "src/lib/photoSeries.ts",
-      "source_location": "L4",
-      "weight": 1.0,
-      "source": "lib_photoseries",
-      "target": "lib_image",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "imports",
-      "context": "import",
-      "confidence": "EXTRACTED",
-      "source_file": "src/lib/photoSeries.ts",
-      "source_location": "L4",
-      "weight": 1.0,
-      "source": "lib_photoseries",
-      "target": "lib_image_urlfor",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "src/lib/photoSeries.ts",
-      "source_location": "L12",
-      "weight": 1.0,
-      "source": "lib_photoseries",
-      "target": "lib_photoseries_getallphotoseries",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "src/lib/photoSeries.ts",
-      "source_location": "L30",
-      "weight": 1.0,
-      "source": "lib_photoseries",
-      "target": "lib_photoseries_getallphotoseriesslugs",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "src/lib/photoSeries.ts",
-      "source_location": "L21",
-      "weight": 1.0,
-      "source": "lib_photoseries",
-      "target": "lib_photoseries_getphotoseries",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "src/lib/photoSeries.ts",
-      "source_location": "L41",
-      "weight": 1.0,
-      "source": "lib_photoseries",
-      "target": "lib_photoseries_seriesimageurl",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "imports_from",
-      "context": "import",
-      "confidence": "EXTRACTED",
-      "source_file": "src/lib/photoSeries.ts",
-      "source_location": "L5",
-      "weight": 1.0,
-      "source": "lib_photoseries",
-      "target": "lib_queries",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "imports",
-      "context": "import",
-      "confidence": "EXTRACTED",
-      "source_file": "src/lib/photoSeries.ts",
-      "source_location": "L5",
-      "weight": 1.0,
-      "source": "lib_photoseries",
-      "target": "lib_queries_allphotoseriesquery",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "imports",
-      "context": "import",
-      "confidence": "EXTRACTED",
-      "source_file": "src/lib/photoSeries.ts",
-      "source_location": "L5",
-      "weight": 1.0,
-      "source": "lib_photoseries",
-      "target": "lib_queries_allphotoseriesslugsquery",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "imports",
-      "context": "import",
-      "confidence": "EXTRACTED",
-      "source_file": "src/lib/photoSeries.ts",
-      "source_location": "L5",
-      "weight": 1.0,
-      "source": "lib_photoseries",
-      "target": "lib_queries_photoseriesbyslugquery",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "imports",
-      "context": "import",
-      "confidence": "EXTRACTED",
-      "source_file": "src/lib/photoSeries.ts",
-      "source_location": "L3",
-      "weight": 1.0,
-      "source": "lib_photoseries",
-      "target": "sanity_env_issanityconfigured",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "imports_from",
-      "context": "import",
-      "confidence": "EXTRACTED",
-      "source_file": "src/lib/photoSeries.ts",
-      "source_location": "L10",
-      "weight": 1.0,
-      "source": "lib_photoseries",
-      "target": "types_photoseries",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "imports",
-      "context": "import",
-      "confidence": "EXTRACTED",
-      "source_file": "src/lib/photoSeries.ts",
-      "source_location": "L10",
-      "weight": 1.0,
-      "source": "lib_photoseries",
-      "target": "types_photoseries_photoseries",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "imports",
-      "context": "import",
-      "confidence": "EXTRACTED",
-      "source_file": "src/lib/photoSeries.ts",
-      "source_location": "L10",
-      "weight": 1.0,
-      "source": "lib_photoseries",
-      "target": "types_photoseries_seriesimage",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "calls",
-      "context": "call",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "src/lib/photoSeries.ts",
-      "source_location": "L46",
-      "weight": 1.0,
-      "source": "lib_photoseries_seriesimageurl",
-      "target": "lib_image_urlfor"
     },
     {
       "relation": "contains",
@@ -11707,18 +10802,8 @@
       "source_file": "src/sanity/lib/queries.ts",
       "source_location": "L38",
       "weight": 1.0,
-      "confidence_score": 1.0,
       "source": "lib_queries",
-      "target": "lib_queries_allfilmsquery"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "src/sanity/lib/queries.ts",
-      "source_location": "L23",
-      "weight": 1.0,
-      "source": "lib_queries",
-      "target": "lib_queries_allphotoseriesquery",
+      "target": "lib_queries_allfilmsquery",
       "confidence_score": 1.0
     },
     {
@@ -12040,9 +11125,9 @@
       "source_file": "src/types/film.ts",
       "source_location": "L5",
       "weight": 1.0,
-      "confidence_score": 1.0,
       "source": "types_film",
-      "target": "types_film_film"
+      "target": "types_film_film",
+      "confidence_score": 1.0
     },
     {
       "relation": "contains",
@@ -12050,9 +11135,9 @@
       "source_file": "src/types/film.ts",
       "source_location": "L23",
       "weight": 1.0,
-      "confidence_score": 1.0,
       "source": "types_film",
-      "target": "types_film_film_role_labels"
+      "target": "types_film_film_role_labels",
+      "confidence_score": 1.0
     },
     {
       "relation": "contains",
@@ -12060,9 +11145,9 @@
       "source_file": "src/types/film.ts",
       "source_location": "L3",
       "weight": 1.0,
-      "confidence_score": 1.0,
       "source": "types_film",
-      "target": "types_film_filmrole"
+      "target": "types_film_filmrole",
+      "confidence_score": 1.0
     },
     {
       "relation": "contains",
@@ -12070,28 +11155,8 @@
       "source_file": "src/types/film.ts",
       "source_location": "L29",
       "weight": 1.0,
-      "confidence_score": 1.0,
       "source": "types_film",
-      "target": "types_film_filmrolelabel"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "src/types/photoSeries.ts",
-      "source_location": "L12",
-      "weight": 1.0,
-      "source": "types_photoseries",
-      "target": "types_photoseries_photoseries",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "src/types/photoSeries.ts",
-      "source_location": "L2",
-      "weight": 1.0,
-      "source": "types_photoseries",
-      "target": "types_photoseries_seriesimage",
+      "target": "types_film_filmrolelabel",
       "confidence_score": 1.0
     },
     {
@@ -12870,9 +11935,9 @@
       "source_file": "docs/BUILD-PLAN.md",
       "source_location": "L1",
       "weight": 1.0,
-      "confidence_score": 1.0,
       "source": "docs_build_plan",
-      "target": "docs_build_plan_sarath_menon_cinematic_build_plan"
+      "target": "docs_build_plan_sarath_menon_cinematic_build_plan",
+      "confidence_score": 1.0
     },
     {
       "relation": "contains",
@@ -12880,9 +11945,9 @@
       "source_file": "docs/BUILD-PLAN.md",
       "source_location": "L13",
       "weight": 1.0,
-      "confidence_score": 1.0,
       "source": "docs_build_plan_sarath_menon_cinematic_build_plan",
-      "target": "docs_build_plan_0_design_constraint_hero_images_on_every_page"
+      "target": "docs_build_plan_0_design_constraint_hero_images_on_every_page",
+      "confidence_score": 1.0
     },
     {
       "relation": "contains",
@@ -12890,9 +11955,9 @@
       "source_file": "docs/BUILD-PLAN.md",
       "source_location": "L27",
       "weight": 1.0,
-      "confidence_score": 1.0,
       "source": "docs_build_plan_sarath_menon_cinematic_build_plan",
-      "target": "docs_build_plan_1_architecture_hybrid_teaser_page"
+      "target": "docs_build_plan_1_architecture_hybrid_teaser_page",
+      "confidence_score": 1.0
     },
     {
       "relation": "contains",
@@ -12900,9 +11965,9 @@
       "source_file": "docs/BUILD-PLAN.md",
       "source_location": "L49",
       "weight": 1.0,
-      "confidence_score": 1.0,
       "source": "docs_build_plan_sarath_menon_cinematic_build_plan",
-      "target": "docs_build_plan_2_page_transition_the_crimson_shutter_the_heartbeat"
+      "target": "docs_build_plan_2_page_transition_the_crimson_shutter_the_heartbeat",
+      "confidence_score": 1.0
     },
     {
       "relation": "contains",
@@ -12910,9 +11975,9 @@
       "source_file": "docs/BUILD-PLAN.md",
       "source_location": "L73",
       "weight": 1.0,
-      "confidence_score": 1.0,
       "source": "docs_build_plan_sarath_menon_cinematic_build_plan",
-      "target": "docs_build_plan_3_home_panels_each_a_unique_signature"
+      "target": "docs_build_plan_3_home_panels_each_a_unique_signature",
+      "confidence_score": 1.0
     },
     {
       "relation": "contains",
@@ -12920,9 +11985,9 @@
       "source_file": "docs/BUILD-PLAN.md",
       "source_location": "L90",
       "weight": 1.0,
-      "confidence_score": 1.0,
       "source": "docs_build_plan_sarath_menon_cinematic_build_plan",
-      "target": "docs_build_plan_4_craft_pages"
+      "target": "docs_build_plan_4_craft_pages",
+      "confidence_score": 1.0
     },
     {
       "relation": "contains",
@@ -12930,9 +11995,9 @@
       "source_file": "docs/BUILD-PLAN.md",
       "source_location": "L130",
       "weight": 1.0,
-      "confidence_score": 1.0,
       "source": "docs_build_plan_sarath_menon_cinematic_build_plan",
-      "target": "docs_build_plan_5_reusable_motion_system_configurable_primitives"
+      "target": "docs_build_plan_5_reusable_motion_system_configurable_primitives",
+      "confidence_score": 1.0
     },
     {
       "relation": "contains",
@@ -12940,9 +12005,9 @@
       "source_file": "docs/BUILD-PLAN.md",
       "source_location": "L150",
       "weight": 1.0,
-      "confidence_score": 1.0,
       "source": "docs_build_plan_sarath_menon_cinematic_build_plan",
-      "target": "docs_build_plan_6_cross_cutting_defaults_veto_able"
+      "target": "docs_build_plan_6_cross_cutting_defaults_veto_able",
+      "confidence_score": 1.0
     },
     {
       "relation": "contains",
@@ -12950,9 +12015,9 @@
       "source_file": "docs/BUILD-PLAN.md",
       "source_location": "L172",
       "weight": 1.0,
-      "confidence_score": 1.0,
       "source": "docs_build_plan_sarath_menon_cinematic_build_plan",
-      "target": "docs_build_plan_7_cms_reconciliation"
+      "target": "docs_build_plan_7_cms_reconciliation",
+      "confidence_score": 1.0
     },
     {
       "relation": "contains",
@@ -12960,9 +12025,9 @@
       "source_file": "docs/BUILD-PLAN.md",
       "source_location": "L183",
       "weight": 1.0,
-      "confidence_score": 1.0,
       "source": "docs_build_plan_sarath_menon_cinematic_build_plan",
-      "target": "docs_build_plan_8_build_increments"
+      "target": "docs_build_plan_8_build_increments",
+      "confidence_score": 1.0
     },
     {
       "relation": "contains",
@@ -12970,9 +12035,9 @@
       "source_file": "docs/BUILD-PLAN.md",
       "source_location": "L204",
       "weight": 1.0,
-      "confidence_score": 1.0,
       "source": "docs_build_plan_sarath_menon_cinematic_build_plan",
-      "target": "docs_build_plan_9_decisions_locked_provenance"
+      "target": "docs_build_plan_9_decisions_locked_provenance",
+      "confidence_score": 1.0
     },
     {
       "relation": "contains",
@@ -12980,9 +12045,9 @@
       "source_file": "docs/BUILD-PLAN.md",
       "source_location": "L92",
       "weight": 1.0,
-      "confidence_score": 1.0,
       "source": "docs_build_plan_4_craft_pages",
-      "target": "docs_build_plan_films_typographic_reel_index"
+      "target": "docs_build_plan_films_typographic_reel_index",
+      "confidence_score": 1.0
     },
     {
       "relation": "contains",
@@ -12990,9 +12055,9 @@
       "source_file": "docs/BUILD-PLAN.md",
       "source_location": "L100",
       "weight": 1.0,
-      "confidence_score": 1.0,
       "source": "docs_build_plan_4_craft_pages",
-      "target": "docs_build_plan_photography_index_series_detail_two_levels"
+      "target": "docs_build_plan_photography_index_series_detail_two_levels",
+      "confidence_score": 1.0
     },
     {
       "relation": "contains",
@@ -13000,9 +12065,9 @@
       "source_file": "docs/BUILD-PLAN.md",
       "source_location": "L111",
       "weight": 1.0,
-      "confidence_score": 1.0,
       "source": "docs_build_plan_4_craft_pages",
-      "target": "docs_build_plan_poetry_single_flat_reader_intentionally_no_detail_level"
+      "target": "docs_build_plan_poetry_single_flat_reader_intentionally_no_detail_level",
+      "confidence_score": 1.0
     },
     {
       "relation": "contains",
@@ -16045,56 +15110,6 @@
       "target": "reference_files_preloader_build_prompt_beat_3_panel_slide_up_0_6s"
     },
     {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "research/2026-06-14-jasonbergh-teardown.md",
-      "source_location": "L1",
-      "weight": 1.0,
-      "source": "research_2026_06_14_jasonbergh_teardown",
-      "target": "research_2026_06_14_jasonbergh_teardown_site_teardown_jason_bergh_hero_slider",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "research/2026-06-14-jasonbergh-teardown.md",
-      "source_location": "L30",
-      "weight": 1.0,
-      "source": "research_2026_06_14_jasonbergh_teardown_site_teardown_jason_bergh_hero_slider",
-      "target": "research_2026_06_14_jasonbergh_teardown_adaptation_for_our_photography_index",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "research/2026-06-14-jasonbergh-teardown.md",
-      "source_location": "L39",
-      "weight": 1.0,
-      "source": "research_2026_06_14_jasonbergh_teardown_site_teardown_jason_bergh_hero_slider",
-      "target": "research_2026_06_14_jasonbergh_teardown_build_notes",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "research/2026-06-14-jasonbergh-teardown.md",
-      "source_location": "L9",
-      "weight": 1.0,
-      "source": "research_2026_06_14_jasonbergh_teardown_site_teardown_jason_bergh_hero_slider",
-      "target": "research_2026_06_14_jasonbergh_teardown_the_effect_deconstructed",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "research/2026-06-14-jasonbergh-teardown.md",
-      "source_location": "L20",
-      "weight": 1.0,
-      "source": "research_2026_06_14_jasonbergh_teardown_site_teardown_jason_bergh_hero_slider",
-      "target": "research_2026_06_14_jasonbergh_teardown_the_reveal_the_viewfinder_alignment_trick",
-      "confidence_score": 1.0
-    },
-    {
       "relation": "references",
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
@@ -16702,5 +15717,5 @@
       "source_file": "reference files/hero-section-build-prompt.md"
     }
   ],
-  "built_at_commit": "3b5f7ff23632ff9a9802c364442211f43759aaa0"
+  "built_at_commit": "8cc556ca9a8ecc0785cab022786003cffaab6a82"
 }

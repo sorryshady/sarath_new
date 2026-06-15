@@ -1,18 +1,14 @@
 import type { Metadata } from 'next';
 
-import { CraftStub } from '@/components/dev/CraftStub';
+import { PhotographyExperience } from '@/components/photography/PhotographyExperience';
+import { getAllPhotoSeries } from '@/lib/photoSeries';
 
 export const metadata: Metadata = {
   title: 'Photography',
-  description: 'Photo series index — full build coming soon.',
+  description: 'Photo series — selected work across light and stillness.',
 };
 
-export default function PhotographyPage() {
-  return (
-    <CraftStub
-      name="Photography"
-      background="var(--color-cream)"
-      foreground="var(--color-ink)"
-    />
-  );
+export default async function PhotographyPage() {
+  const series = await getAllPhotoSeries();
+  return <PhotographyExperience series={series} />;
 }

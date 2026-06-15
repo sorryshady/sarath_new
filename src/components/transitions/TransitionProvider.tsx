@@ -11,10 +11,13 @@ import {
 import { usePathname, useRouter } from 'next/navigation';
 import { useLenis } from 'lenis/react';
 import gsap from 'gsap';
+import { ScrollTrigger } from 'gsap/ScrollTrigger';
 
 import { useMedia } from '@/hooks/useMedia';
 
 import './page-transition.css';
+
+gsap.registerPlugin(ScrollTrigger);
 
 /** Durations in seconds — mirror the --shutter-* tokens in tokens.css. */
 const COVER = 0.5;
@@ -187,6 +190,25 @@ export function TransitionProvider({
       cancelAnimationFrame(raf2);
     };
   }, [pathname, resetShutter]);
+
+  // Recompute scroll bounds after every client navigation. The index page is
+  // height:100svh/overflow:hidden, so Lenis caches a ~0 scroll limit; without
+  // an explicit resize the next (tall) page won't scroll until a reload.
+  useEffect(() => {
+    if (!lenis) return;
+    let raf1 = 0;
+    let raf2 = 0;
+    raf1 = requestAnimationFrame(() => {
+      raf2 = requestAnimationFrame(() => {
+        lenis.resize();
+        ScrollTrigger.refresh();
+      });
+    });
+    return () => {
+      cancelAnimationFrame(raf1);
+      cancelAnimationFrame(raf2);
+    };
+  }, [pathname, lenis]);
 
   return (
     <TransitionContext.Provider value={{ navigate, isTransitioning }}>
