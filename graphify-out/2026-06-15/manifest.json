@@ -95,8 +95,8 @@
     "semantic_hash": ""
   },
   "src/app/(site)/poetry/page.tsx": {
-    "mtime": 1781410681.7929971,
-    "ast_hash": "673689f57e66f5536b2263c545caeb68",
+    "mtime": 1781513879.7045712,
+    "ast_hash": "c6f5fc11560dc90586295bc84acbcf3c",
     "semantic_hash": ""
   },
   "src/app/(site)/works/page.tsx": {
@@ -165,9 +165,9 @@
     "semantic_hash": ""
   },
   "src/components/home/Preloader.tsx": {
-    "mtime": 1780738551.5866542,
-    "ast_hash": "8808ba8b7ff6ee4a1486b5ba2dc22944",
-    "semantic_hash": "8808ba8b7ff6ee4a1486b5ba2dc22944"
+    "mtime": 1781514475.7675817,
+    "ast_hash": "f4c4717c0ce6ac99a15e926fcf47f11c",
+    "semantic_hash": ""
   },
   "src/components/navigation/GhostBar.tsx": {
     "mtime": 1780814369.39155,
@@ -235,8 +235,8 @@
     "semantic_hash": "23a060414de984b25bad60297d09b8cb"
   },
   "src/sanity/lib/queries.ts": {
-    "mtime": 1781427731.3849113,
-    "ast_hash": "370ab186c0f16f83e6fa91f7783d1e4d",
+    "mtime": 1781513760.8882494,
+    "ast_hash": "e377dcc158bd99576d2fc6bd90b49cac",
     "semantic_hash": ""
   },
   "src/sanity/schemaTypes/documents/aboutTeaser.ts": {
@@ -480,8 +480,8 @@
     "semantic_hash": ""
   },
   "src/components/media/RevealImage.tsx": {
-    "mtime": 1781491421.0909493,
-    "ast_hash": "9bd5da57bdc958fbfb6be8d030fd23c8",
+    "mtime": 1781513787.5507064,
+    "ast_hash": "cbf9b51d6d5e5e6e8ff82cb8fdaad2cf",
     "semantic_hash": ""
   },
   "src/components/photography/PhotoSeriesDetail.tsx": {
@@ -512,6 +512,21 @@
   "research/2026-06-14-jasonbergh-teardown.md": {
     "mtime": 1781450292.6277058,
     "ast_hash": "118a77ddeab5fe3d8b470d85a44fa717",
+    "semantic_hash": ""
+  },
+  "src/components/poetry/PoetryExperience.tsx": {
+    "mtime": 1781513808.7023761,
+    "ast_hash": "5a03b3ed84984cb9c7048c066acb95ca",
+    "semantic_hash": ""
+  },
+  "src/lib/poems.ts": {
+    "mtime": 1781513766.3284106,
+    "ast_hash": "092a5bbb714e2ce660edc6e54e7e0495",
+    "semantic_hash": ""
+  },
+  "src/types/poem.ts": {
+    "mtime": 1781513755.9666586,
+    "ast_hash": "c35cd938606d6ff065a6f354704571d4",
     "semantic_hash": ""
   }
 }

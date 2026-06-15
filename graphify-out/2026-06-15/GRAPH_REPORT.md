@@ -1,16 +1,16 @@
 # Graph Report - sarath_menon  (2026-06-15)
 
 ## Corpus Check
-- 95 files · ~85,511 words
+- 98 files · ~86,287 words
 - Verdict: corpus is large enough that graph structure adds value.
 
 ## Summary
-- 761 nodes · 933 edges · 46 communities (33 shown, 13 thin omitted)
+- 776 nodes · 973 edges · 50 communities (37 shown, 13 thin omitted)
 - Extraction: 99% EXTRACTED · 1% INFERRED · 0% AMBIGUOUS · INFERRED: 12 edges (avg confidence: 0.77)
 - Token cost: 0 input · 0 output
 
 ## Graph Freshness
-- Built from commit: `3b5f7ff2`
+- Built from commit: `37d67aee`
 - Run `git rev-parse HEAD` and compare to check if the graph is stale.
 - Run `graphify update .` after code changes (no API cost).
 
@@ -57,6 +57,10 @@
 - [[_COMMUNITY_Community 42|Community 42]]
 - [[_COMMUNITY_Community 43|Community 43]]
 - [[_COMMUNITY_Community 44|Community 44]]
+- [[_COMMUNITY_Community 46|Community 46]]
+- [[_COMMUNITY_Community 47|Community 47]]
+- [[_COMMUNITY_Community 48|Community 48]]
+- [[_COMMUNITY_Community 49|Community 49]]
 
 ## God Nodes (most connected - your core abstractions)
 1. `Photography Section — AI Build Prompt` - 21 edges
@@ -75,10 +79,10 @@
   AGENTS.md → CLAUDE.md
 - `Copy()` --calls--> `useMedia()`  [INFERRED]
   reference files/copy/copy.tsx → src/hooks/useMedia.ts
-- `/poetry Page (Pinned Image Anthology)` --references--> `Poetry Anthology (Live Site)`  [INFERRED]
-  reference files/poetry-section-build-prompt.md → .firecrawl/poems.md
 - `VIMEO LIGHTBOX` --references--> `The Death of Don Quixote (Film)`  [INFERRED]
   reference files/films-section-build-prompt.md → .firecrawl/home.md
+- `/poetry Page (Pinned Image Anthology)` --references--> `Poetry Anthology (Live Site)`  [INFERRED]
+  reference files/poetry-section-build-prompt.md → .firecrawl/poems.md
 - `Contact Section Build Prompt` --references--> `Sarath Menon (Artist | Filmmaker)`  [INFERRED]
   reference files/contact-section-build-prompt.md → .firecrawl/home.md
 
@@ -90,15 +94,15 @@
 - **Shared Crimson/Cream + GSAP + Sanity Design System** — concept_crimson_cream_palette, concept_gsap_scrolltrigger_stack, concept_sanity_cms [INFERRED 0.85]
 - **Preloader to Hero Handoff Flow** — reference_files_preloader_build_prompt_counter_logic, reference_files_hero_section_build_prompt_preloader_handshake, reference_files_hero_section_build_prompt_vimeo_background, reference_files_hero_section_build_prompt_scroll_timeline [INFERRED 0.85]
 
-## Communities (46 total, 13 thin omitted)
+## Communities (50 total, 13 thin omitted)
 
 ### Community 0 - "Sanity Data Layer"
-Cohesion: 0.10
-Nodes (26): FilmLightbox(), FilmLightboxProps, filmStill(), HeroSection(), HeroSectionProps, metaLabelStyle, HeroVideoBackground(), HeroVideoBackgroundProps (+18 more)
+Cohesion: 0.09
+Nodes (28): FilmLightbox(), FilmLightboxProps, FilmsExperience(), filmStill(), HeroSection(), HeroSectionProps, metaLabelStyle, HeroVideoBackground() (+20 more)
 
 ### Community 1 - "Page Routes & Nav Observer"
 Cohesion: 0.08
-Nodes (34): CRAFTS, CraftStub(), CraftStubProps, getAllPhotoSeries(), getAllPhotoSeriesSlugs(), getPhotoSeries(), seriesImageUrl(), aboutTeaserQuery (+26 more)
+Nodes (32): CRAFTS, CraftStub(), CraftStubProps, getAllPhotoSeries(), getAllPhotoSeriesSlugs(), getPhotoSeries(), seriesImageUrl(), aboutTeaserQuery (+24 more)
 
 ### Community 2 - "Home Page & Preloader Scroll"
 Cohesion: 0.05
@@ -137,8 +141,8 @@ Cohesion: 0.23
 Nodes (15): 7 Minutes, Always, Poetry Anthology (Live Site), Blood of God, Contact, Life, My friend Tony, Rain (+7 more)
 
 ### Community 11 - "Cinematic Design System"
-Cohesion: 0.06
-Nodes (46): Crimson #8B1E1E / Cream #EFD9B6 Palette, GSAP + ScrollTrigger Animation Stack, Sanity CMS Data Source, About, Contact, The Death of Don Quixote (Film), Filmography, More options (+38 more)
+Cohesion: 0.19
+Nodes (13): GSAP + ScrollTrigger Animation Stack, Sanity CMS Data Source, Rajasthan (Photography Series), About Teaser Section Build Prompt, PhotoSeries Sanity Schema, Polaroid Scatter Sequence, Photography Section Build Prompt, Zustand Transition Store (+5 more)
 
 ### Community 12 - "npm Scripts"
 Cohesion: 0.06
@@ -197,8 +201,8 @@ Cohesion: 0.29
 Nodes (5): 1. Think Before Coding, 2. Simplicity First, 3. Surgical Changes, 4. Goal-Driven Execution, graphify
 
 ### Community 41 - "Community 41"
-Cohesion: 0.17
-Nodes (10): metadata, FilmsExperience(), FilmsPage(), metadata, placeholderMetadata(), PlaceholderPage(), PlaceholderPageProps, getAllFilms() (+2 more)
+Cohesion: 0.10
+Nodes (23): metadata, FilmsPage(), metadata, placeholderMetadata(), PlaceholderPage(), PlaceholderPageProps, getAllFilms(), getAllPoems() (+15 more)
 
 ### Community 42 - "Community 42"
 Cohesion: 0.13
@@ -208,6 +212,22 @@ Nodes (14): 0. Design constraint — Hero images on every page, 1. Architecture 
 Cohesion: 0.33
 Nodes (5): Adaptation for our Photography index, Build notes, Site Teardown: Jason Bergh (hero slider), The effect, deconstructed, THE REVEAL — the viewfinder alignment trick
 
+### Community 46 - "Community 46"
+Cohesion: 0.20
+Nodes (12): Crimson #8B1E1E / Cream #EFD9B6 Palette, Paper Texture (Global mix-blend-mode), Preloader Handshake, Hero Scroll Timeline (Crimson Drop + Zoom), Hero Section Build Prompt, Colour Inversion System, Full-Screen Mobile Menu Overlay, Ghost Bar Navigation Build Prompt (+4 more)
+
+### Community 47 - "Community 47"
+Cohesion: 0.24
+Nodes (10): The Death of Don Quixote (Film), Sarath Menon Home (Live Site), Rajakumaran, Sarath Menon (Artist | Filmmaker), Settings, The Death of Don Quixote, The Red Ball, Colophon Strip (+2 more)
+
+### Community 48 - "Community 48"
+Cohesion: 0.29
+Nodes (6): About, Contact, Filmography, More options, Photography, Poetry
+
+### Community 49 - "Community 49"
+Cohesion: 0.40
+Nodes (5): Accordion Carousel, Lights-Down Transition, Films Section Build Prompt, VIMEO LIGHTBOX, Vimeo Video Background
+
 ## Knowledge Gaps
 - **428 isolated node(s):** `version`, `configurations`, `PreToolUse`, `eslintConfig`, `projectRoot` (+423 more)
   These have ≤1 connection - possible missing edges or undocumented components.
@@ -216,17 +236,17 @@ Nodes (5): Adaptation for our Photography index, Build notes, Site Teardown: Jas
 ## Suggested Questions
 _Questions this graph is uniquely positioned to answer:_
 
-- **Why does `Films Section — AI Build Prompt` connect `View Transitions Engine` to `Cinematic Design System`?**
+- **Why does `Films Section — AI Build Prompt` connect `View Transitions Engine` to `Community 49`?**
   _High betweenness centrality (0.011) - this node is a cross-community bridge._
-- **Why does `VIMEO LIGHTBOX` connect `Cinematic Design System` to `View Transitions Engine`?**
+- **Why does `VIMEO LIGHTBOX` connect `Community 49` to `View Transitions Engine`, `Community 47`?**
   _High betweenness centrality (0.009) - this node is a cross-community bridge._
 - **Why does `useMedia()` connect `Providers & Layout Effects` to `Sanity Data Layer`?**
   _High betweenness centrality (0.008) - this node is a cross-community bridge._
 - **What connects `version`, `configurations`, `PreToolUse` to the rest of the system?**
   _430 weakly-connected nodes found - possible documentation gaps or missing edges._
 - **Should `Sanity Data Layer` be split into smaller, more focused modules?**
-  _Cohesion score 0.09957325746799431 - nodes in this community are weakly interconnected._
+  _Cohesion score 0.09230769230769231 - nodes in this community are weakly interconnected._
 - **Should `Page Routes & Nav Observer` be split into smaller, more focused modules?**
-  _Cohesion score 0.07878787878787878 - nodes in this community are weakly interconnected._
+  _Cohesion score 0.08416389811738649 - nodes in this community are weakly interconnected._
 - **Should `Home Page & Preloader Scroll` be split into smaller, more focused modules?**
   _Cohesion score 0.046511627906976744 - nodes in this community are weakly interconnected._

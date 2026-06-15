@@ -2,11 +2,19 @@
 
 import { useCallback, useState } from 'react';
 
+import { AboutTeaserSection } from '@/components/about/AboutTeaserSection';
 import { GhostBar } from '@/components/navigation/GhostBar';
 import { HeroSection } from '@/components/home/HeroSection';
 import { Preloader } from '@/components/home/Preloader';
+import type { AboutMeta, AboutTeaser } from '@/types/about';
 
-export function HomePage() {
+export function HomePage({
+  aboutTeaser = null,
+  aboutMeta = null,
+}: {
+  aboutTeaser?: AboutTeaser | null;
+  aboutMeta?: AboutMeta | null;
+} = {}) {
   const [isPreloaderDone, setIsPreloaderDone] = useState(false);
   const [isVideoReady, setIsVideoReady] = useState(false);
   const [isHeroComplete, setIsHeroComplete] = useState(false);
@@ -39,13 +47,7 @@ export function HomePage() {
           onHeroComplete={handleHeroComplete}
         />
 
-        <section
-          id="about"
-          data-nav-theme="dark"
-          className="min-h-screen"
-          style={{ background: 'var(--color-crimson)' }}
-          aria-label="About teaser"
-        />
+        <AboutTeaserSection teaser={aboutTeaser} meta={aboutMeta} />
 
         <section
           id="films"

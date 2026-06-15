@@ -90,8 +90,8 @@
     "semantic_hash": ""
   },
   "src/app/(site)/page.tsx": {
-    "mtime": 1781405582.6936758,
-    "ast_hash": "ec86aff3af2fb8ab35d4392c2e1347aa",
+    "mtime": 1781514949.803685,
+    "ast_hash": "fe05c5f28b6b8cee735e28018e5d04aa",
     "semantic_hash": ""
   },
   "src/app/(site)/poetry/page.tsx": {
@@ -160,8 +160,8 @@
     "semantic_hash": "27d1337a90915f63c922105420fe6eb0"
   },
   "src/components/home/HomePage.tsx": {
-    "mtime": 1781405596.8290637,
-    "ast_hash": "5503b7031cad44f3a3b8ef93c953fc7d",
+    "mtime": 1781514934.9988081,
+    "ast_hash": "d6c841b7ad6939ff913c681c28d5d8de",
     "semantic_hash": ""
   },
   "src/components/home/Preloader.tsx": {
@@ -480,8 +480,8 @@
     "semantic_hash": ""
   },
   "src/components/media/RevealImage.tsx": {
-    "mtime": 1781513787.5507064,
-    "ast_hash": "cbf9b51d6d5e5e6e8ff82cb8fdaad2cf",
+    "mtime": 1781514844.1543484,
+    "ast_hash": "5141730dccba81638a7ea385c07e269b",
     "semantic_hash": ""
   },
   "src/components/photography/PhotoSeriesDetail.tsx": {
@@ -527,6 +527,21 @@
   "src/types/poem.ts": {
     "mtime": 1781513755.9666586,
     "ast_hash": "c35cd938606d6ff065a6f354704571d4",
+    "semantic_hash": ""
+  },
+  "src/components/about/AboutTeaserSection.tsx": {
+    "mtime": 1781514876.1713,
+    "ast_hash": "36fa98cdb433f06bfb2213751f53a43e",
+    "semantic_hash": ""
+  },
+  "src/lib/about.ts": {
+    "mtime": 1781514859.0219111,
+    "ast_hash": "098c24608a9fb46c9186ec5f4881d119",
+    "semantic_hash": ""
+  },
+  "src/types/about.ts": {
+    "mtime": 1781514850.8941267,
+    "ast_hash": "74f6bdd5385bbd68609e802c3e995074",
     "semantic_hash": ""
   }
 }

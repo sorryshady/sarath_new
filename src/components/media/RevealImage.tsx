@@ -7,7 +7,7 @@ import { useGSAP } from '@gsap/react';
 
 gsap.registerPlugin(ScrollTrigger, useGSAP);
 
-type RevealVariant = 'lift' | 'develop';
+type RevealVariant = 'lift' | 'develop' | 'rackFocus';
 
 type RevealImageProps = {
   src: string;
@@ -56,6 +56,24 @@ export function RevealImage({
           filter: 'none',
         });
         if (img) gsap.set(img, { scale: 1 });
+        return;
+      }
+
+      // rackFocus is scroll-LINKED (scrub): the frame pulls from defocused to
+      // sharp as the section travels through the viewport — a literal rack focus.
+      if (variant === 'rackFocus') {
+        const rtl = gsap.timeline({
+          scrollTrigger: { trigger: wrap, start: 'top 85%', end: 'center 55%', scrub: true },
+        });
+        rtl.fromTo(
+          wrap,
+          { filter: 'blur(18px)', opacity: 0.45 },
+          { filter: 'blur(0px)', opacity: 1, ease: 'none' },
+          0,
+        );
+        if (img) {
+          rtl.fromTo(img, { scale: 1.08 }, { scale: 1, ease: 'none' }, 0);
+        }
         return;
       }
 

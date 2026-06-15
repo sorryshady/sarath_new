@@ -1306,7 +1306,7 @@
       "label": "metadata",
       "file_type": "code",
       "source_file": "src/app/(site)/poetry/page.tsx",
-      "source_location": "L5",
+      "source_location": "L6",
       "id": "poetry_page_metadata",
       "community": 41,
       "norm_label": "metadata"
@@ -1315,7 +1315,7 @@
       "label": "PoetryPage()",
       "file_type": "code",
       "source_file": "src/app/(site)/poetry/page.tsx",
-      "source_location": "L10",
+      "source_location": "L11",
       "id": "poetry_page_poetrypage",
       "community": 41,
       "norm_label": "poetrypage()"
@@ -1596,7 +1596,7 @@
       "source_file": "src/components/films/FilmsExperience.tsx",
       "source_location": "L20",
       "id": "films_filmsexperience_filmsexperience",
-      "community": 41,
+      "community": 0,
       "norm_label": "filmsexperience()"
     },
     {
@@ -1801,7 +1801,7 @@
       "label": "RevealImage()",
       "file_type": "code",
       "source_file": "src/components/media/RevealImage.tsx",
-      "source_location": "L31",
+      "source_location": "L33",
       "id": "media_revealimage_revealimage",
       "community": 1,
       "norm_label": "revealimage()"
@@ -1931,6 +1931,87 @@
       "id": "photography_photographyexperience_photographyexperience",
       "community": 1,
       "norm_label": "photographyexperience()"
+    },
+    {
+      "label": "PoetryExperience.tsx",
+      "file_type": "code",
+      "source_file": "src/components/poetry/PoetryExperience.tsx",
+      "source_location": "L1",
+      "id": "poetry_poetryexperience",
+      "community": 41,
+      "norm_label": "poetryexperience.tsx"
+    },
+    {
+      "label": "Treatment",
+      "file_type": "code",
+      "source_file": "src/components/poetry/PoetryExperience.tsx",
+      "source_location": "L14",
+      "id": "poetry_poetryexperience_treatment",
+      "community": 41,
+      "norm_label": "treatment"
+    },
+    {
+      "label": "treatmentFor()",
+      "file_type": "code",
+      "source_file": "src/components/poetry/PoetryExperience.tsx",
+      "source_location": "L16",
+      "id": "poetry_poetryexperience_treatmentfor",
+      "community": 41,
+      "norm_label": "treatmentfor()"
+    },
+    {
+      "label": "toStanzas()",
+      "file_type": "code",
+      "source_file": "src/components/poetry/PoetryExperience.tsx",
+      "source_location": "L23",
+      "id": "poetry_poetryexperience_tostanzas",
+      "community": 41,
+      "norm_label": "tostanzas()"
+    },
+    {
+      "label": "yearRange()",
+      "file_type": "code",
+      "source_file": "src/components/poetry/PoetryExperience.tsx",
+      "source_location": "L30",
+      "id": "poetry_poetryexperience_yearrange",
+      "community": 41,
+      "norm_label": "yearrange()"
+    },
+    {
+      "label": "PoemText()",
+      "file_type": "code",
+      "source_file": "src/components/poetry/PoetryExperience.tsx",
+      "source_location": "L42",
+      "id": "poetry_poetryexperience_poemtext",
+      "community": 41,
+      "norm_label": "poemtext()"
+    },
+    {
+      "label": "PoemImage()",
+      "file_type": "code",
+      "source_file": "src/components/poetry/PoetryExperience.tsx",
+      "source_location": "L63",
+      "id": "poetry_poetryexperience_poemimage",
+      "community": 41,
+      "norm_label": "poemimage()"
+    },
+    {
+      "label": "PoemBlock()",
+      "file_type": "code",
+      "source_file": "src/components/poetry/PoetryExperience.tsx",
+      "source_location": "L93",
+      "id": "poetry_poetryexperience_poemblock",
+      "community": 41,
+      "norm_label": "poemblock()"
+    },
+    {
+      "label": "PoetryExperience()",
+      "file_type": "code",
+      "source_file": "src/components/poetry/PoetryExperience.tsx",
+      "source_location": "L143",
+      "id": "poetry_poetryexperience_poetryexperience",
+      "community": 41,
+      "norm_label": "poetryexperience()"
     },
     {
       "label": "GSAPProvider.tsx",
@@ -2311,6 +2392,33 @@
       "norm_label": "seriesimageurl()"
     },
     {
+      "label": "poems.ts",
+      "file_type": "code",
+      "source_file": "src/lib/poems.ts",
+      "source_location": "L1",
+      "id": "lib_poems",
+      "community": 41,
+      "norm_label": "poems.ts"
+    },
+    {
+      "label": "getAllPoems()",
+      "file_type": "code",
+      "source_file": "src/lib/poems.ts",
+      "source_location": "L8",
+      "id": "lib_poems_getallpoems",
+      "community": 41,
+      "norm_label": "getallpoems()"
+    },
+    {
+      "label": "poemImageUrl()",
+      "file_type": "code",
+      "source_file": "src/lib/poems.ts",
+      "source_location": "L18",
+      "id": "lib_poems_poemimageurl",
+      "community": 41,
+      "norm_label": "poemimageurl()"
+    },
+    {
       "label": "video.ts",
       "file_type": "code",
       "source_file": "src/lib/video.ts",
@@ -2577,7 +2685,7 @@
       "source_file": "src/sanity/lib/queries.ts",
       "source_location": "L56",
       "id": "lib_queries_allfilmsquery",
-      "community": 1,
+      "community": 0,
       "norm_label": "allfilmsquery"
     },
     {
@@ -2595,7 +2703,7 @@
       "source_file": "src/sanity/lib/queries.ts",
       "source_location": "L79",
       "id": "lib_queries_allpoemsquery",
-      "community": 1,
+      "community": 41,
       "norm_label": "allpoemsquery"
     },
     {
@@ -2824,6 +2932,33 @@
       "norm_label": "photoseries"
     },
     {
+      "label": "poem.ts",
+      "file_type": "code",
+      "source_file": "src/types/poem.ts",
+      "source_location": "L1",
+      "id": "types_poem",
+      "community": 41,
+      "norm_label": "poem.ts"
+    },
+    {
+      "label": "PoemImage",
+      "file_type": "code",
+      "source_file": "src/types/poem.ts",
+      "source_location": "L2",
+      "id": "types_poem_poemimage",
+      "community": 41,
+      "norm_label": "poemimage"
+    },
+    {
+      "label": "Poem",
+      "file_type": "code",
+      "source_file": "src/types/poem.ts",
+      "source_location": "L9",
+      "id": "types_poem_poem",
+      "community": 41,
+      "norm_label": "poem"
+    },
+    {
       "label": "tsconfig.json",
       "file_type": "code",
       "source_file": "tsconfig.json",
@@ -3018,7 +3153,7 @@
       "source_file": ".firecrawl/home.md",
       "source_location": "L1",
       "id": "firecrawl_home",
-      "community": 11,
+      "community": 48,
       "norm_label": "home.md"
     },
     {
@@ -3027,7 +3162,7 @@
       "source_file": ".firecrawl/home.md",
       "source_location": "L9",
       "id": "firecrawl_home_about",
-      "community": 11,
+      "community": 48,
       "norm_label": "about"
     },
     {
@@ -3036,7 +3171,7 @@
       "source_file": ".firecrawl/home.md",
       "source_location": "L95",
       "id": "firecrawl_home_photography",
-      "community": 11,
+      "community": 48,
       "norm_label": "photography"
     },
     {
@@ -3045,7 +3180,7 @@
       "source_file": ".firecrawl/home.md",
       "source_location": "L127",
       "id": "firecrawl_home_filmography",
-      "community": 11,
+      "community": 48,
       "norm_label": "filmography"
     },
     {
@@ -3054,7 +3189,7 @@
       "source_file": ".firecrawl/home.md",
       "source_location": "L143",
       "id": "firecrawl_home_more_options",
-      "community": 11,
+      "community": 48,
       "norm_label": "more options"
     },
     {
@@ -3063,7 +3198,7 @@
       "source_file": ".firecrawl/home.md",
       "source_location": "L165",
       "id": "firecrawl_home_settings",
-      "community": 11,
+      "community": 47,
       "norm_label": "settings"
     },
     {
@@ -3072,7 +3207,7 @@
       "source_file": ".firecrawl/home.md",
       "source_location": "L199",
       "id": "firecrawl_home_the_death_of_don_quixote",
-      "community": 11,
+      "community": 47,
       "norm_label": "the death of don quixote"
     },
     {
@@ -3081,7 +3216,7 @@
       "source_file": ".firecrawl/home.md",
       "source_location": "L205",
       "id": "firecrawl_home_rajakumaran",
-      "community": 11,
+      "community": 47,
       "norm_label": "rajakumaran"
     },
     {
@@ -3090,7 +3225,7 @@
       "source_file": ".firecrawl/home.md",
       "source_location": "L211",
       "id": "firecrawl_home_the_red_ball",
-      "community": 11,
+      "community": 47,
       "norm_label": "the red ball"
     },
     {
@@ -3099,7 +3234,7 @@
       "source_file": ".firecrawl/home.md",
       "source_location": "L215",
       "id": "firecrawl_home_poetry",
-      "community": 11,
+      "community": 48,
       "norm_label": "poetry"
     },
     {
@@ -3108,7 +3243,7 @@
       "source_file": ".firecrawl/home.md",
       "source_location": "L223",
       "id": "firecrawl_home_contact",
-      "community": 11,
+      "community": 48,
       "norm_label": "contact"
     },
     {
@@ -4818,7 +4953,7 @@
       "source_file": "reference files/films-section-build-prompt.md",
       "source_location": "L473",
       "id": "reference_files_films_section_build_prompt_vimeo_lightbox",
-      "community": 11,
+      "community": 49,
       "norm_label": "vimeo lightbox"
     },
     {
@@ -6477,7 +6612,7 @@
       "captured_at": null,
       "author": "Sarath Menon",
       "contributor": null,
-      "community": 11,
+      "community": 47,
       "norm_label": "sarath menon home (live site)",
       "id": "firecrawl_home_page"
     },
@@ -6490,7 +6625,7 @@
       "captured_at": null,
       "author": "Sarath Menon",
       "contributor": null,
-      "community": 11,
+      "community": 47,
       "norm_label": "sarath menon (artist | filmmaker)",
       "id": "firecrawl_home_sarath_menon"
     },
@@ -6503,7 +6638,7 @@
       "captured_at": null,
       "author": "Sarath Menon",
       "contributor": null,
-      "community": 11,
+      "community": 47,
       "norm_label": "the death of don quixote (film)",
       "id": "firecrawl_home_death_of_don_quixote"
     },
@@ -6646,7 +6781,7 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "community": 11,
+      "community": 47,
       "norm_label": "contact section build prompt",
       "id": "reference_files_contact_section_build_prompt_section"
     },
@@ -6659,7 +6794,7 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "community": 11,
+      "community": 47,
       "norm_label": "magnetic cursor effect",
       "id": "reference_files_contact_section_build_prompt_magnetic_cursor"
     },
@@ -6672,7 +6807,7 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "community": 11,
+      "community": 47,
       "norm_label": "colophon strip",
       "id": "reference_files_contact_section_build_prompt_colophon"
     },
@@ -6685,7 +6820,7 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "community": 11,
+      "community": 49,
       "norm_label": "films section build prompt",
       "id": "reference_files_films_section_build_prompt_section"
     },
@@ -6698,7 +6833,7 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "community": 11,
+      "community": 49,
       "norm_label": "lights-down transition",
       "id": "reference_files_films_section_build_prompt_lights_down_transition"
     },
@@ -6711,7 +6846,7 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "community": 11,
+      "community": 49,
       "norm_label": "accordion carousel",
       "id": "reference_files_films_section_build_prompt_accordion_carousel"
     },
@@ -6724,7 +6859,7 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "community": 11,
+      "community": 46,
       "norm_label": "hero section build prompt",
       "id": "reference_files_hero_section_build_prompt_section"
     },
@@ -6737,7 +6872,7 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "community": 11,
+      "community": 46,
       "norm_label": "paper texture (global mix-blend-mode)",
       "id": "reference_files_hero_section_build_prompt_paper_texture"
     },
@@ -6750,7 +6885,7 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "community": 11,
+      "community": 46,
       "norm_label": "hero scroll timeline (crimson drop + zoom)",
       "id": "reference_files_hero_section_build_prompt_scroll_timeline"
     },
@@ -6763,7 +6898,7 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "community": 11,
+      "community": 49,
       "norm_label": "vimeo video background",
       "id": "reference_files_hero_section_build_prompt_vimeo_background"
     },
@@ -6776,7 +6911,7 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "community": 11,
+      "community": 46,
       "norm_label": "preloader handshake",
       "id": "reference_files_hero_section_build_prompt_preloader_handshake"
     },
@@ -6789,7 +6924,7 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "community": 11,
+      "community": 46,
       "norm_label": "ghost bar navigation build prompt",
       "id": "reference_files_navbar_build_prompt_section"
     },
@@ -6802,7 +6937,7 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "community": 11,
+      "community": 46,
       "norm_label": "colour inversion system",
       "id": "reference_files_navbar_build_prompt_colour_inversion"
     },
@@ -6815,7 +6950,7 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "community": 11,
+      "community": 46,
       "norm_label": "full-screen mobile menu overlay",
       "id": "reference_files_navbar_build_prompt_mobile_overlay"
     },
@@ -6945,7 +7080,7 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "community": 11,
+      "community": 46,
       "norm_label": "preloader component build prompt",
       "id": "reference_files_preloader_build_prompt_section"
     },
@@ -6958,7 +7093,7 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "community": 11,
+      "community": 46,
       "norm_label": "film grain & sprocket frame",
       "id": "reference_files_preloader_build_prompt_film_grain"
     },
@@ -6971,7 +7106,7 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "community": 11,
+      "community": 46,
       "norm_label": "non-linear counter logic (00 to 100)",
       "id": "reference_files_preloader_build_prompt_counter_logic"
     },
@@ -6984,7 +7119,7 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "community": 11,
+      "community": 46,
       "norm_label": "session storage skip-on-return",
       "id": "reference_files_preloader_build_prompt_session_storage"
     },
@@ -6997,7 +7132,7 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "community": 11,
+      "community": 46,
       "norm_label": "crimson #8b1e1e / cream #efd9b6 palette",
       "id": "concept_crimson_cream_palette"
     },
@@ -9028,9 +9163,9 @@
       "source_file": "src/app/(site)/photography/[slug]/page.tsx",
       "source_location": "L5",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "slug_page",
-      "target": "lib_photoseries",
-      "confidence_score": 1.0
+      "target": "lib_photoseries"
     },
     {
       "relation": "imports",
@@ -9039,9 +9174,9 @@
       "source_file": "src/app/(site)/photography/[slug]/page.tsx",
       "source_location": "L5",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "slug_page",
-      "target": "lib_photoseries_getallphotoseriesslugs",
-      "confidence_score": 1.0
+      "target": "lib_photoseries_getallphotoseriesslugs"
     },
     {
       "relation": "imports",
@@ -9050,9 +9185,9 @@
       "source_file": "src/app/(site)/photography/[slug]/page.tsx",
       "source_location": "L5",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "slug_page",
-      "target": "lib_photoseries_getphotoseries",
-      "confidence_score": 1.0
+      "target": "lib_photoseries_getphotoseries"
     },
     {
       "relation": "imports_from",
@@ -9061,9 +9196,9 @@
       "source_file": "src/app/(site)/photography/[slug]/page.tsx",
       "source_location": "L4",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "slug_page",
-      "target": "photography_photoseriesdetail",
-      "confidence_score": 1.0
+      "target": "photography_photoseriesdetail"
     },
     {
       "relation": "imports",
@@ -9072,9 +9207,9 @@
       "source_file": "src/app/(site)/photography/[slug]/page.tsx",
       "source_location": "L4",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "slug_page",
-      "target": "photography_photoseriesdetail_photoseriesdetail",
-      "confidence_score": 1.0
+      "target": "photography_photoseriesdetail_photoseriesdetail"
     },
     {
       "relation": "contains",
@@ -9082,9 +9217,9 @@
       "source_file": "src/app/(site)/photography/[slug]/page.tsx",
       "source_location": "L16",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "slug_page",
-      "target": "slug_page_generatemetadata",
-      "confidence_score": 1.0
+      "target": "slug_page_generatemetadata"
     },
     {
       "relation": "contains",
@@ -9092,9 +9227,9 @@
       "source_file": "src/app/(site)/photography/[slug]/page.tsx",
       "source_location": "L11",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "slug_page",
-      "target": "slug_page_generatestaticparams",
-      "confidence_score": 1.0
+      "target": "slug_page_generatestaticparams"
     },
     {
       "relation": "contains",
@@ -9102,9 +9237,9 @@
       "source_file": "src/app/(site)/photography/[slug]/page.tsx",
       "source_location": "L7",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "slug_page",
-      "target": "slug_page_pageprops",
-      "confidence_score": 1.0
+      "target": "slug_page_pageprops"
     },
     {
       "relation": "contains",
@@ -9112,9 +9247,9 @@
       "source_file": "src/app/(site)/photography/[slug]/page.tsx",
       "source_location": "L30",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "slug_page",
-      "target": "slug_page_photoseriespage",
-      "confidence_score": 1.0
+      "target": "slug_page_photoseriespage"
     },
     {
       "relation": "calls",
@@ -9178,9 +9313,9 @@
       "source_file": "src/app/(site)/photography/page.tsx",
       "source_location": "L4",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "photography_page",
-      "target": "lib_photoseries",
-      "confidence_score": 1.0
+      "target": "lib_photoseries"
     },
     {
       "relation": "imports",
@@ -9189,9 +9324,9 @@
       "source_file": "src/app/(site)/photography/page.tsx",
       "source_location": "L4",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "photography_page",
-      "target": "lib_photoseries_getallphotoseries",
-      "confidence_score": 1.0
+      "target": "lib_photoseries_getallphotoseries"
     },
     {
       "relation": "contains",
@@ -9220,9 +9355,9 @@
       "source_file": "src/app/(site)/photography/page.tsx",
       "source_location": "L3",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "photography_page",
-      "target": "photography_photographyexperience",
-      "confidence_score": 1.0
+      "target": "photography_photographyexperience"
     },
     {
       "relation": "imports",
@@ -9231,9 +9366,9 @@
       "source_file": "src/app/(site)/photography/page.tsx",
       "source_location": "L3",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "photography_page",
-      "target": "photography_photographyexperience_photographyexperience",
-      "confidence_score": 1.0
+      "target": "photography_photographyexperience_photographyexperience"
     },
     {
       "relation": "calls",
@@ -9302,6 +9437,28 @@
       "target": "global_placeholderpage_placeholderpage"
     },
     {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/app/(site)/poetry/page.tsx",
+      "source_location": "L4",
+      "weight": 1.0,
+      "source": "poetry_page",
+      "target": "lib_poems",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/app/(site)/poetry/page.tsx",
+      "source_location": "L4",
+      "weight": 1.0,
+      "source": "poetry_page",
+      "target": "lib_poems_getallpoems",
+      "confidence_score": 1.0
+    },
+    {
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "src/app/(site)/poetry/page.tsx",
@@ -9320,6 +9477,39 @@
       "confidence_score": 1.0,
       "source": "poetry_page",
       "target": "poetry_page_poetrypage"
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/app/(site)/poetry/page.tsx",
+      "source_location": "L3",
+      "weight": 1.0,
+      "source": "poetry_page",
+      "target": "poetry_poetryexperience",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/app/(site)/poetry/page.tsx",
+      "source_location": "L3",
+      "weight": 1.0,
+      "source": "poetry_page",
+      "target": "poetry_poetryexperience_poetryexperience",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "src/app/(site)/poetry/page.tsx",
+      "source_location": "L12",
+      "weight": 1.0,
+      "source": "poetry_page_poetrypage",
+      "target": "lib_poems_getallpoems"
     },
     {
       "relation": "imports_from",
@@ -10305,9 +10495,9 @@
       "source_file": "src/components/media/RevealImage.tsx",
       "source_location": "L31",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "media_revealimage",
-      "target": "media_revealimage_revealimage",
-      "confidence_score": 1.0
+      "target": "media_revealimage_revealimage"
     },
     {
       "relation": "contains",
@@ -10315,9 +10505,9 @@
       "source_file": "src/components/media/RevealImage.tsx",
       "source_location": "L12",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "media_revealimage",
-      "target": "media_revealimage_revealimageprops",
-      "confidence_score": 1.0
+      "target": "media_revealimage_revealimageprops"
     },
     {
       "relation": "contains",
@@ -10325,9 +10515,9 @@
       "source_file": "src/components/media/RevealImage.tsx",
       "source_location": "L10",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "media_revealimage",
-      "target": "media_revealimage_revealvariant",
-      "confidence_score": 1.0
+      "target": "media_revealimage_revealvariant"
     },
     {
       "relation": "imports_from",
@@ -10336,7 +10526,18 @@
       "source_file": "src/components/photography/PhotoSeriesDetail.tsx",
       "source_location": "L6",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "photography_photoseriesdetail",
+      "target": "media_revealimage"
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/components/poetry/PoetryExperience.tsx",
+      "source_location": "L4",
+      "weight": 1.0,
+      "source": "poetry_poetryexperience",
       "target": "media_revealimage",
       "confidence_score": 1.0
     },
@@ -10347,7 +10548,18 @@
       "source_file": "src/components/photography/PhotoSeriesDetail.tsx",
       "source_location": "L6",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "photography_photoseriesdetail",
+      "target": "media_revealimage_revealimage"
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/components/poetry/PoetryExperience.tsx",
+      "source_location": "L4",
+      "weight": 1.0,
+      "source": "poetry_poetryexperience",
       "target": "media_revealimage_revealimage",
       "confidence_score": 1.0
     },
@@ -10527,9 +10739,9 @@
       "source_file": "src/components/photography/PhotoSeriesDetail.tsx",
       "source_location": "L8",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "photography_photoseriesdetail",
-      "target": "lib_photoseries",
-      "confidence_score": 1.0
+      "target": "lib_photoseries"
     },
     {
       "relation": "imports",
@@ -10538,9 +10750,9 @@
       "source_file": "src/components/photography/PhotoSeriesDetail.tsx",
       "source_location": "L8",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "photography_photoseriesdetail",
-      "target": "lib_photoseries_seriesimageurl",
-      "confidence_score": 1.0
+      "target": "lib_photoseries_seriesimageurl"
     },
     {
       "relation": "contains",
@@ -10548,9 +10760,9 @@
       "source_file": "src/components/photography/PhotoSeriesDetail.tsx",
       "source_location": "L14",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "photography_photoseriesdetail",
-      "target": "photography_photoseriesdetail_iswide",
-      "confidence_score": 1.0
+      "target": "photography_photoseriesdetail_iswide"
     },
     {
       "relation": "contains",
@@ -10558,9 +10770,9 @@
       "source_file": "src/components/photography/PhotoSeriesDetail.tsx",
       "source_location": "L18",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "photography_photoseriesdetail",
-      "target": "photography_photoseriesdetail_photoseriesdetail",
-      "confidence_score": 1.0
+      "target": "photography_photoseriesdetail_photoseriesdetail"
     },
     {
       "relation": "imports_from",
@@ -10569,9 +10781,9 @@
       "source_file": "src/components/photography/PhotoSeriesDetail.tsx",
       "source_location": "L7",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "photography_photoseriesdetail",
-      "target": "transitions_transitionlink",
-      "confidence_score": 1.0
+      "target": "transitions_transitionlink"
     },
     {
       "relation": "imports",
@@ -10580,9 +10792,9 @@
       "source_file": "src/components/photography/PhotoSeriesDetail.tsx",
       "source_location": "L7",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "photography_photoseriesdetail",
-      "target": "transitions_transitionlink_transitionlink",
-      "confidence_score": 1.0
+      "target": "transitions_transitionlink_transitionlink"
     },
     {
       "relation": "imports_from",
@@ -10591,9 +10803,9 @@
       "source_file": "src/components/photography/PhotoSeriesDetail.tsx",
       "source_location": "L9",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "photography_photoseriesdetail",
-      "target": "types_photoseries",
-      "confidence_score": 1.0
+      "target": "types_photoseries"
     },
     {
       "relation": "imports",
@@ -10602,9 +10814,9 @@
       "source_file": "src/components/photography/PhotoSeriesDetail.tsx",
       "source_location": "L9",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "photography_photoseriesdetail",
-      "target": "types_photoseries_photoseries",
-      "confidence_score": 1.0
+      "target": "types_photoseries_photoseries"
     },
     {
       "relation": "calls",
@@ -10624,9 +10836,9 @@
       "source_file": "src/components/photography/PhotographyExperience.tsx",
       "source_location": "L11",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "photography_photographyexperience",
-      "target": "lib_photoseries",
-      "confidence_score": 1.0
+      "target": "lib_photoseries"
     },
     {
       "relation": "imports",
@@ -10635,9 +10847,9 @@
       "source_file": "src/components/photography/PhotographyExperience.tsx",
       "source_location": "L11",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "photography_photographyexperience",
-      "target": "lib_photoseries_seriesimageurl",
-      "confidence_score": 1.0
+      "target": "lib_photoseries_seriesimageurl"
     },
     {
       "relation": "contains",
@@ -10645,9 +10857,9 @@
       "source_file": "src/components/photography/PhotographyExperience.tsx",
       "source_location": "L23",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "photography_photographyexperience",
-      "target": "photography_photographyexperience_photographyexperience",
-      "confidence_score": 1.0
+      "target": "photography_photographyexperience_photographyexperience"
     },
     {
       "relation": "imports_from",
@@ -10656,9 +10868,9 @@
       "source_file": "src/components/photography/PhotographyExperience.tsx",
       "source_location": "L9",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "photography_photographyexperience",
-      "target": "transitions_transitionlink",
-      "confidence_score": 1.0
+      "target": "transitions_transitionlink"
     },
     {
       "relation": "imports",
@@ -10667,9 +10879,9 @@
       "source_file": "src/components/photography/PhotographyExperience.tsx",
       "source_location": "L9",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "photography_photographyexperience",
-      "target": "transitions_transitionlink_transitionlink",
-      "confidence_score": 1.0
+      "target": "transitions_transitionlink_transitionlink"
     },
     {
       "relation": "imports_from",
@@ -10678,9 +10890,9 @@
       "source_file": "src/components/photography/PhotographyExperience.tsx",
       "source_location": "L10",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "photography_photographyexperience",
-      "target": "transitions_transitionprovider",
-      "confidence_score": 1.0
+      "target": "transitions_transitionprovider"
     },
     {
       "relation": "imports",
@@ -10689,9 +10901,9 @@
       "source_file": "src/components/photography/PhotographyExperience.tsx",
       "source_location": "L10",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "photography_photographyexperience",
-      "target": "transitions_transitionprovider_usetransition",
-      "confidence_score": 1.0
+      "target": "transitions_transitionprovider_usetransition"
     },
     {
       "relation": "imports_from",
@@ -10700,9 +10912,9 @@
       "source_file": "src/components/photography/PhotographyExperience.tsx",
       "source_location": "L12",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "photography_photographyexperience",
-      "target": "types_photoseries",
-      "confidence_score": 1.0
+      "target": "types_photoseries"
     },
     {
       "relation": "imports",
@@ -10711,9 +10923,9 @@
       "source_file": "src/components/photography/PhotographyExperience.tsx",
       "source_location": "L12",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "photography_photographyexperience",
-      "target": "types_photoseries_photoseries",
-      "confidence_score": 1.0
+      "target": "types_photoseries_photoseries"
     },
     {
       "relation": "calls",
@@ -10736,6 +10948,196 @@
       "weight": 1.0,
       "source": "photography_photographyexperience_photographyexperience",
       "target": "transitions_transitionprovider_usetransition"
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/components/poetry/PoetryExperience.tsx",
+      "source_location": "L6",
+      "weight": 1.0,
+      "source": "poetry_poetryexperience",
+      "target": "lib_poems",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/components/poetry/PoetryExperience.tsx",
+      "source_location": "L6",
+      "weight": 1.0,
+      "source": "poetry_poetryexperience",
+      "target": "lib_poems_poemimageurl",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/components/poetry/PoetryExperience.tsx",
+      "source_location": "L93",
+      "weight": 1.0,
+      "source": "poetry_poetryexperience",
+      "target": "poetry_poetryexperience_poemblock",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/components/poetry/PoetryExperience.tsx",
+      "source_location": "L63",
+      "weight": 1.0,
+      "source": "poetry_poetryexperience",
+      "target": "poetry_poetryexperience_poemimage",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/components/poetry/PoetryExperience.tsx",
+      "source_location": "L42",
+      "weight": 1.0,
+      "source": "poetry_poetryexperience",
+      "target": "poetry_poetryexperience_poemtext",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/components/poetry/PoetryExperience.tsx",
+      "source_location": "L143",
+      "weight": 1.0,
+      "source": "poetry_poetryexperience",
+      "target": "poetry_poetryexperience_poetryexperience",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/components/poetry/PoetryExperience.tsx",
+      "source_location": "L23",
+      "weight": 1.0,
+      "source": "poetry_poetryexperience",
+      "target": "poetry_poetryexperience_tostanzas",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/components/poetry/PoetryExperience.tsx",
+      "source_location": "L14",
+      "weight": 1.0,
+      "source": "poetry_poetryexperience",
+      "target": "poetry_poetryexperience_treatment",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/components/poetry/PoetryExperience.tsx",
+      "source_location": "L16",
+      "weight": 1.0,
+      "source": "poetry_poetryexperience",
+      "target": "poetry_poetryexperience_treatmentfor",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/components/poetry/PoetryExperience.tsx",
+      "source_location": "L30",
+      "weight": 1.0,
+      "source": "poetry_poetryexperience",
+      "target": "poetry_poetryexperience_yearrange",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/components/poetry/PoetryExperience.tsx",
+      "source_location": "L5",
+      "weight": 1.0,
+      "source": "poetry_poetryexperience",
+      "target": "transitions_transitionlink",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/components/poetry/PoetryExperience.tsx",
+      "source_location": "L5",
+      "weight": 1.0,
+      "source": "poetry_poetryexperience",
+      "target": "transitions_transitionlink_transitionlink",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/components/poetry/PoetryExperience.tsx",
+      "source_location": "L7",
+      "weight": 1.0,
+      "source": "poetry_poetryexperience",
+      "target": "types_poem",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/components/poetry/PoetryExperience.tsx",
+      "source_location": "L7",
+      "weight": 1.0,
+      "source": "poetry_poetryexperience",
+      "target": "types_poem_poem",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "src/components/poetry/PoetryExperience.tsx",
+      "source_location": "L102",
+      "weight": 1.0,
+      "source": "poetry_poetryexperience_poemblock",
+      "target": "poetry_poetryexperience_treatmentfor",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "src/components/poetry/PoetryExperience.tsx",
+      "source_location": "L52",
+      "weight": 1.0,
+      "source": "poetry_poetryexperience_poemtext",
+      "target": "poetry_poetryexperience_tostanzas",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "src/components/poetry/PoetryExperience.tsx",
+      "source_location": "L156",
+      "weight": 1.0,
+      "source": "poetry_poetryexperience_poetryexperience",
+      "target": "poetry_poetryexperience_yearrange",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "src/components/poetry/PoetryExperience.tsx",
+      "source_location": "L74",
+      "weight": 1.0,
+      "source": "poetry_poetryexperience_poemimage",
+      "target": "lib_poems_poemimageurl"
     },
     {
       "relation": "contains",
@@ -11277,9 +11679,9 @@
       "source_file": "src/lib/photoSeries.ts",
       "source_location": "L3",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "lib_photoseries",
-      "target": "lib_client",
-      "confidence_score": 1.0
+      "target": "lib_client"
     },
     {
       "relation": "imports",
@@ -11288,9 +11690,9 @@
       "source_file": "src/lib/photoSeries.ts",
       "source_location": "L3",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "lib_photoseries",
-      "target": "lib_client_client",
-      "confidence_score": 1.0
+      "target": "lib_client_client"
     },
     {
       "relation": "imports_from",
@@ -11299,9 +11701,9 @@
       "source_file": "src/lib/photoSeries.ts",
       "source_location": "L4",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "lib_photoseries",
-      "target": "lib_image",
-      "confidence_score": 1.0
+      "target": "lib_image"
     },
     {
       "relation": "imports",
@@ -11310,9 +11712,9 @@
       "source_file": "src/lib/photoSeries.ts",
       "source_location": "L4",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "lib_photoseries",
-      "target": "lib_image_urlfor",
-      "confidence_score": 1.0
+      "target": "lib_image_urlfor"
     },
     {
       "relation": "contains",
@@ -11320,9 +11722,9 @@
       "source_file": "src/lib/photoSeries.ts",
       "source_location": "L12",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "lib_photoseries",
-      "target": "lib_photoseries_getallphotoseries",
-      "confidence_score": 1.0
+      "target": "lib_photoseries_getallphotoseries"
     },
     {
       "relation": "contains",
@@ -11330,9 +11732,9 @@
       "source_file": "src/lib/photoSeries.ts",
       "source_location": "L30",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "lib_photoseries",
-      "target": "lib_photoseries_getallphotoseriesslugs",
-      "confidence_score": 1.0
+      "target": "lib_photoseries_getallphotoseriesslugs"
     },
     {
       "relation": "contains",
@@ -11340,9 +11742,9 @@
       "source_file": "src/lib/photoSeries.ts",
       "source_location": "L21",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "lib_photoseries",
-      "target": "lib_photoseries_getphotoseries",
-      "confidence_score": 1.0
+      "target": "lib_photoseries_getphotoseries"
     },
     {
       "relation": "contains",
@@ -11350,9 +11752,9 @@
       "source_file": "src/lib/photoSeries.ts",
       "source_location": "L41",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "lib_photoseries",
-      "target": "lib_photoseries_seriesimageurl",
-      "confidence_score": 1.0
+      "target": "lib_photoseries_seriesimageurl"
     },
     {
       "relation": "imports_from",
@@ -11361,9 +11763,9 @@
       "source_file": "src/lib/photoSeries.ts",
       "source_location": "L5",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "lib_photoseries",
-      "target": "lib_queries",
-      "confidence_score": 1.0
+      "target": "lib_queries"
     },
     {
       "relation": "imports",
@@ -11372,9 +11774,9 @@
       "source_file": "src/lib/photoSeries.ts",
       "source_location": "L5",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "lib_photoseries",
-      "target": "lib_queries_allphotoseriesquery",
-      "confidence_score": 1.0
+      "target": "lib_queries_allphotoseriesquery"
     },
     {
       "relation": "imports",
@@ -11383,9 +11785,9 @@
       "source_file": "src/lib/photoSeries.ts",
       "source_location": "L5",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "lib_photoseries",
-      "target": "lib_queries_allphotoseriesslugsquery",
-      "confidence_score": 1.0
+      "target": "lib_queries_allphotoseriesslugsquery"
     },
     {
       "relation": "imports",
@@ -11394,9 +11796,9 @@
       "source_file": "src/lib/photoSeries.ts",
       "source_location": "L5",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "lib_photoseries",
-      "target": "lib_queries_photoseriesbyslugquery",
-      "confidence_score": 1.0
+      "target": "lib_queries_photoseriesbyslugquery"
     },
     {
       "relation": "imports",
@@ -11405,9 +11807,9 @@
       "source_file": "src/lib/photoSeries.ts",
       "source_location": "L3",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "lib_photoseries",
-      "target": "sanity_env_issanityconfigured",
-      "confidence_score": 1.0
+      "target": "sanity_env_issanityconfigured"
     },
     {
       "relation": "imports_from",
@@ -11416,9 +11818,9 @@
       "source_file": "src/lib/photoSeries.ts",
       "source_location": "L10",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "lib_photoseries",
-      "target": "types_photoseries",
-      "confidence_score": 1.0
+      "target": "types_photoseries"
     },
     {
       "relation": "imports",
@@ -11427,9 +11829,9 @@
       "source_file": "src/lib/photoSeries.ts",
       "source_location": "L10",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "lib_photoseries",
-      "target": "types_photoseries_photoseries",
-      "confidence_score": 1.0
+      "target": "types_photoseries_photoseries"
     },
     {
       "relation": "imports",
@@ -11438,9 +11840,9 @@
       "source_file": "src/lib/photoSeries.ts",
       "source_location": "L10",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "lib_photoseries",
-      "target": "types_photoseries_seriesimage",
-      "confidence_score": 1.0
+      "target": "types_photoseries_seriesimage"
     },
     {
       "relation": "calls",
@@ -11451,6 +11853,147 @@
       "source_location": "L46",
       "weight": 1.0,
       "source": "lib_photoseries_seriesimageurl",
+      "target": "lib_image_urlfor"
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/lib/poems.ts",
+      "source_location": "L3",
+      "weight": 1.0,
+      "source": "lib_poems",
+      "target": "lib_client",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/lib/poems.ts",
+      "source_location": "L3",
+      "weight": 1.0,
+      "source": "lib_poems",
+      "target": "lib_client_client",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/lib/poems.ts",
+      "source_location": "L4",
+      "weight": 1.0,
+      "source": "lib_poems",
+      "target": "lib_image",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/lib/poems.ts",
+      "source_location": "L4",
+      "weight": 1.0,
+      "source": "lib_poems",
+      "target": "lib_image_urlfor",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/lib/poems.ts",
+      "source_location": "L8",
+      "weight": 1.0,
+      "source": "lib_poems",
+      "target": "lib_poems_getallpoems",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/lib/poems.ts",
+      "source_location": "L18",
+      "weight": 1.0,
+      "source": "lib_poems",
+      "target": "lib_poems_poemimageurl",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/lib/poems.ts",
+      "source_location": "L5",
+      "weight": 1.0,
+      "source": "lib_poems",
+      "target": "lib_queries",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/lib/poems.ts",
+      "source_location": "L5",
+      "weight": 1.0,
+      "source": "lib_poems",
+      "target": "lib_queries_allpoemsquery",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/lib/poems.ts",
+      "source_location": "L3",
+      "weight": 1.0,
+      "source": "lib_poems",
+      "target": "sanity_env_issanityconfigured",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/lib/poems.ts",
+      "source_location": "L6",
+      "weight": 1.0,
+      "source": "lib_poems",
+      "target": "types_poem",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/lib/poems.ts",
+      "source_location": "L6",
+      "weight": 1.0,
+      "source": "lib_poems",
+      "target": "types_poem_poem",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/lib/poems.ts",
+      "source_location": "L6",
+      "weight": 1.0,
+      "source": "lib_poems",
+      "target": "types_poem_poemimage",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "src/lib/poems.ts",
+      "source_location": "L23",
+      "weight": 1.0,
+      "source": "lib_poems_poemimageurl",
       "target": "lib_image_urlfor"
     },
     {
@@ -11717,9 +12260,9 @@
       "source_file": "src/sanity/lib/queries.ts",
       "source_location": "L23",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "lib_queries",
-      "target": "lib_queries_allphotoseriesquery",
-      "confidence_score": 1.0
+      "target": "lib_queries_allphotoseriesquery"
     },
     {
       "relation": "contains",
@@ -12080,9 +12623,9 @@
       "source_file": "src/types/photoSeries.ts",
       "source_location": "L12",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "types_photoseries",
-      "target": "types_photoseries_photoseries",
-      "confidence_score": 1.0
+      "target": "types_photoseries_photoseries"
     },
     {
       "relation": "contains",
@@ -12090,8 +12633,28 @@
       "source_file": "src/types/photoSeries.ts",
       "source_location": "L2",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "types_photoseries",
-      "target": "types_photoseries_seriesimage",
+      "target": "types_photoseries_seriesimage"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/types/poem.ts",
+      "source_location": "L9",
+      "weight": 1.0,
+      "source": "types_poem",
+      "target": "types_poem_poem",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/types/poem.ts",
+      "source_location": "L2",
+      "weight": 1.0,
+      "source": "types_poem",
+      "target": "types_poem_poemimage",
       "confidence_score": 1.0
     },
     {
@@ -16050,9 +16613,9 @@
       "source_file": "research/2026-06-14-jasonbergh-teardown.md",
       "source_location": "L1",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "research_2026_06_14_jasonbergh_teardown",
-      "target": "research_2026_06_14_jasonbergh_teardown_site_teardown_jason_bergh_hero_slider",
-      "confidence_score": 1.0
+      "target": "research_2026_06_14_jasonbergh_teardown_site_teardown_jason_bergh_hero_slider"
     },
     {
       "relation": "contains",
@@ -16060,9 +16623,9 @@
       "source_file": "research/2026-06-14-jasonbergh-teardown.md",
       "source_location": "L30",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "research_2026_06_14_jasonbergh_teardown_site_teardown_jason_bergh_hero_slider",
-      "target": "research_2026_06_14_jasonbergh_teardown_adaptation_for_our_photography_index",
-      "confidence_score": 1.0
+      "target": "research_2026_06_14_jasonbergh_teardown_adaptation_for_our_photography_index"
     },
     {
       "relation": "contains",
@@ -16070,9 +16633,9 @@
       "source_file": "research/2026-06-14-jasonbergh-teardown.md",
       "source_location": "L39",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "research_2026_06_14_jasonbergh_teardown_site_teardown_jason_bergh_hero_slider",
-      "target": "research_2026_06_14_jasonbergh_teardown_build_notes",
-      "confidence_score": 1.0
+      "target": "research_2026_06_14_jasonbergh_teardown_build_notes"
     },
     {
       "relation": "contains",
@@ -16080,9 +16643,9 @@
       "source_file": "research/2026-06-14-jasonbergh-teardown.md",
       "source_location": "L9",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "research_2026_06_14_jasonbergh_teardown_site_teardown_jason_bergh_hero_slider",
-      "target": "research_2026_06_14_jasonbergh_teardown_the_effect_deconstructed",
-      "confidence_score": 1.0
+      "target": "research_2026_06_14_jasonbergh_teardown_the_effect_deconstructed"
     },
     {
       "relation": "contains",
@@ -16090,9 +16653,9 @@
       "source_file": "research/2026-06-14-jasonbergh-teardown.md",
       "source_location": "L20",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "research_2026_06_14_jasonbergh_teardown_site_teardown_jason_bergh_hero_slider",
-      "target": "research_2026_06_14_jasonbergh_teardown_the_reveal_the_viewfinder_alignment_trick",
-      "confidence_score": 1.0
+      "target": "research_2026_06_14_jasonbergh_teardown_the_reveal_the_viewfinder_alignment_trick"
     },
     {
       "relation": "references",
@@ -16702,5 +17265,5 @@
       "source_file": "reference files/hero-section-build-prompt.md"
     }
   ],
-  "built_at_commit": "3b5f7ff23632ff9a9802c364442211f43759aaa0"
+  "built_at_commit": "37d67aee4606e009809da947c6f5c4c4c982f26d"
 }

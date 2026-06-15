@@ -1,0 +1,171 @@
+/* ============================================================
+   ABOUT TEASER — crimson home section
+   Rack-focus portrait (left) pulls sharp as the section scrolls in;
+   name / bio / identity meta resolve beside it (right).
+   Mobile stacks: portrait on top, text below.
+   ============================================================ */
+
+.abt {
+  position: relative;
+  min-height: 100svh;
+  display: grid;
+  grid-template-columns: 0.85fr 1fr;
+  align-items: center;
+  gap: var(--space-4xl);
+  padding: var(--space-4xl) var(--space-3xl);
+  background: var(--color-crimson);
+  color: var(--color-parchment-text);
+  overflow: hidden;
+}
+
+/* ─── Portrait ───────────────────────────────────────────── */
+
+.abt-portrait {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-self: center;
+}
+
+.abt-portrait-frame {
+  position: relative;
+  width: clamp(260px, 30vw, 440px);
+  aspect-ratio: 3 / 4;
+  overflow: hidden;
+}
+
+.abt-portrait-img {
+  width: 100%;
+  height: 100%;
+}
+
+/* Black-and-white treatment on the image itself — the wrapper's filter is
+   reserved for the rack-focus blur, so grayscale lives here to avoid conflict. */
+.abt-portrait-img img {
+  filter: grayscale(100%) contrast(1.05);
+}
+
+/* Warm crimson tint ties the portrait into the palette */
+.abt-portrait-tint {
+  position: absolute;
+  inset: 0;
+  z-index: 2;
+  pointer-events: none;
+  background: rgba(139, 30, 30, 0.12);
+  mix-blend-mode: multiply;
+}
+
+.abt-portrait-cap {
+  margin-top: var(--space-sm);
+  font-family: var(--font-data);
+  font-size: var(--size-caption);
+  letter-spacing: var(--tracking-label);
+  text-transform: uppercase;
+  color: var(--color-parchment-50);
+}
+
+/* ─── Text column ────────────────────────────────────────── */
+
+.abt-text {
+  max-width: 540px;
+}
+
+.abt-eyebrow {
+  font-family: var(--font-data);
+  font-size: var(--size-label);
+  letter-spacing: var(--tracking-widest);
+  text-transform: uppercase;
+  color: var(--color-parchment-50);
+  margin-bottom: var(--space-lg);
+}
+
+.abt-name {
+  font-family: var(--font-editorial);
+  font-weight: var(--weight-semibold);
+  font-size: clamp(40px, 5vw, 72px);
+  line-height: 0.95;
+  letter-spacing: var(--tracking-tight);
+  color: var(--color-parchment-text);
+}
+
+.abt-rule {
+  width: 40px;
+  height: 1px;
+  background: rgba(239, 217, 182, 0.3);
+  margin: var(--space-xl) 0;
+}
+
+.abt-bio {
+  font-family: var(--font-editorial);
+  font-weight: var(--weight-light);
+  font-size: var(--size-about-bio);
+  line-height: 1.75;
+  color: var(--color-parchment-70);
+  max-width: 480px;
+}
+
+.abt-meta {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-xs);
+  margin-top: var(--space-xl);
+  font-family: var(--font-data);
+  font-size: var(--size-label);
+  letter-spacing: var(--tracking-wide);
+  text-transform: uppercase;
+}
+
+.abt-roles {
+  color: var(--color-parchment-text);
+}
+
+.abt-subline {
+  color: var(--color-parchment-50);
+}
+
+.abt-link {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-sm);
+  margin-top: var(--space-2xl);
+  font-family: var(--font-data);
+  font-size: var(--size-nav);
+  font-weight: var(--weight-bold);
+  letter-spacing: var(--tracking-label);
+  text-transform: uppercase;
+  color: var(--color-parchment-text);
+  transition: opacity 0.2s ease;
+}
+
+.abt-link:hover {
+  opacity: 0.6;
+}
+
+/* ─── Mobile — stack, portrait on top ────────────────────── */
+
+@media (max-width: 768px) {
+  .abt {
+    grid-template-columns: 1fr;
+    align-items: start;
+    gap: var(--space-2xl);
+    padding: var(--space-3xl) var(--space-xl);
+    min-height: auto;
+  }
+
+  .abt-portrait {
+    align-items: flex-start;
+    justify-self: start;
+  }
+
+  .abt-portrait-frame {
+    width: clamp(140px, 40vw, 200px);
+  }
+
+  .abt-name {
+    font-size: clamp(36px, 11vw, 56px);
+  }
+
+  .abt-bio {
+    max-width: 100%;
+  }
+}
