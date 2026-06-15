@@ -21,6 +21,8 @@ type RevealImageProps = {
   distance?: number;
   /** ScrollTrigger start. */
   start?: string;
+  /** Fill the parent (cover, 100% height) instead of using aspectRatio — for full-bleed panels. */
+  fill?: boolean;
 };
 
 /**
@@ -36,6 +38,7 @@ export function RevealImage({
   variant = 'lift',
   distance = 48,
   start = 'top 85%',
+  fill = false,
 }: RevealImageProps) {
   const wrapRef = useRef<HTMLDivElement>(null);
 
@@ -113,7 +116,8 @@ export function RevealImage({
       className={className}
       style={{
         overflow: 'hidden',
-        ...(aspectRatio ? { aspectRatio: String(aspectRatio) } : null),
+        ...(fill ? { width: '100%', height: '100%' } : null),
+        ...(aspectRatio && !fill ? { aspectRatio: String(aspectRatio) } : null),
       }}
     >
       {/* eslint-disable-next-line @next/next/no-img-element */}
@@ -125,7 +129,7 @@ export function RevealImage({
         style={{
           display: 'block',
           width: '100%',
-          height: aspectRatio ? '100%' : 'auto',
+          height: fill || aspectRatio ? '100%' : 'auto',
           objectFit: 'cover',
         }}
       />

@@ -1,0 +1,309 @@
+/* ============================================================
+   POETRY — /poetry anthology
+   Three per-poem treatments composed into one scrolling stream:
+   · pinned  — long image poems: image sticks, verse scrolls past
+   · static  — short image poems: image + verse side by side
+   · solo    — image-less poems: centred verse, larger type
+   Sides alternate poem-to-poem. Mobile stacks all three.
+   ============================================================ */
+
+.poe {
+  background: var(--color-cream);
+  color: var(--color-ink);
+  min-height: 100svh;
+}
+
+/* ─── Sticky top bar (always-reachable back link) ────────── */
+
+.poe-head {
+  position: sticky;
+  top: 0;
+  z-index: 20;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: var(--space-lg) var(--space-3xl);
+  background: var(--color-cream);
+  border-bottom: 1px solid var(--color-ink-08);
+}
+
+.poe-back,
+.poe-head-count {
+  font-family: var(--font-data);
+  font-size: var(--size-nav);
+  letter-spacing: var(--tracking-label);
+  text-transform: uppercase;
+}
+
+.poe-back {
+  font-weight: var(--weight-bold);
+  color: var(--color-ink);
+  transition: opacity 0.3s ease;
+}
+
+.poe-back:hover {
+  opacity: 0.6;
+}
+
+.poe-head-count {
+  color: var(--color-crimson);
+}
+
+/* ─── Title block — the page opener ──────────────────────── */
+
+.poe-title-block {
+  padding: var(--space-4xl) var(--space-3xl) var(--space-2xl);
+  border-bottom: 1px solid var(--color-ink-08);
+}
+
+.poe-eyebrow {
+  font-family: var(--font-data);
+  font-size: var(--size-label);
+  letter-spacing: var(--tracking-widest);
+  text-transform: uppercase;
+  color: var(--color-crimson);
+  margin-bottom: var(--space-md);
+}
+
+.poe-page-title {
+  font-family: var(--font-editorial);
+  font-weight: var(--weight-semibold);
+  font-size: clamp(40px, 6vw, 72px);
+  line-height: 0.95;
+  letter-spacing: var(--tracking-tight);
+  color: var(--color-ink);
+}
+
+/* ─── Poem blocks ────────────────────────────────────────── */
+
+.poe-poem {
+  position: relative;
+}
+
+.poe-poem + .poe-poem {
+  border-top: 1px solid var(--color-ink-08);
+}
+
+/* Shared verse typography */
+.poe-text-head {
+  margin-bottom: var(--space-2xl);
+}
+
+.poe-title {
+  font-family: var(--font-editorial);
+  font-weight: var(--weight-semibold);
+  font-size: var(--size-poem-title);
+  line-height: 1.1;
+  letter-spacing: var(--tracking-tight);
+  color: var(--color-ink);
+  margin-bottom: var(--space-sm);
+}
+
+.poe-year {
+  font-family: var(--font-data);
+  font-size: var(--size-label);
+  letter-spacing: var(--tracking-wide);
+  text-transform: uppercase;
+  color: var(--color-crimson);
+}
+
+.poe-stanza {
+  font-family: var(--font-editorial);
+  font-weight: var(--weight-light);
+  font-size: var(--size-poem-body);
+  line-height: 2.1;
+  letter-spacing: 0.01em;
+  color: var(--color-ink-soft);
+  white-space: pre-line;
+}
+
+.poe-stanza + .poe-stanza {
+  margin-top: var(--space-xl);
+}
+
+/* ─── Image panel ────────────────────────────────────────── */
+
+.poe-photo {
+  position: relative;
+  overflow: hidden;
+}
+
+/* Subtle scrim so the counter/caption read over any image */
+.poe-photo::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  background:
+    linear-gradient(180deg, rgba(18, 15, 10, 0.35) 0%, transparent 22%),
+    linear-gradient(0deg, rgba(18, 15, 10, 0.35) 0%, transparent 22%);
+}
+
+.poe-counter,
+.poe-caption {
+  position: absolute;
+  left: var(--space-xl);
+  z-index: 2;
+  font-family: var(--font-data);
+  letter-spacing: var(--tracking-wide);
+  text-transform: uppercase;
+  color: var(--color-parchment-text);
+}
+
+.poe-counter {
+  top: var(--space-xl);
+  font-size: var(--size-label);
+  color: var(--color-parchment-70);
+}
+
+.poe-caption {
+  bottom: var(--space-xl);
+  font-size: var(--size-caption);
+  color: var(--color-parchment-60);
+}
+
+/* ─── Treatment: pinned ──────────────────────────────────── */
+
+.poe-pinned {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  /* Image cell must STRETCH to the full text-column height so the sticky
+     inner has room to pin against. align-items:start would shrink it to
+     100svh and the image would just scroll away. */
+  align-items: stretch;
+}
+
+.poe-pinned.is-img-right .poe-pin-img {
+  order: 2;
+}
+
+.poe-pin-img-inner {
+  position: sticky;
+  top: 0;
+  height: 100svh;
+  overflow: hidden;
+}
+
+.poe-pin-img-inner .poe-photo {
+  width: 100%;
+  height: 100%;
+}
+
+.poe-pin-text {
+  padding: var(--space-4xl) var(--space-3xl);
+}
+
+/* ─── Treatment: static two-column ───────────────────────── */
+
+.poe-static {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  gap: var(--space-3xl);
+  padding: var(--space-4xl) var(--space-3xl);
+}
+
+.poe-static.is-img-right .poe-photo {
+  order: 2;
+}
+
+/* ─── Treatment: solo ────────────────────────────────────── */
+
+.poe-solo {
+  display: flex;
+  justify-content: center;
+  padding: var(--space-4xl) var(--space-3xl);
+}
+
+.poe-solo-inner {
+  width: 100%;
+  max-width: 680px;
+  text-align: center;
+}
+
+.poe-text.is-solo .poe-stanza {
+  font-size: var(--size-bio-pull);
+  line-height: 1.55;
+  color: var(--color-ink);
+}
+
+.poe-text.is-solo .poe-text-head {
+  margin-bottom: var(--space-3xl);
+}
+
+/* ─── Empty state ────────────────────────────────────────── */
+
+.poe-empty {
+  min-height: 100svh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-lg);
+  padding: var(--space-3xl);
+  text-align: center;
+  background: var(--color-cream);
+  color: var(--color-ink);
+}
+
+.poe-empty h1 {
+  font-family: var(--font-editorial);
+  font-size: var(--size-series-title);
+}
+
+.poe-eyebrow,
+.poe-home-link {
+  font-family: var(--font-data);
+}
+
+.poe-home-link {
+  font-size: var(--size-nav);
+  letter-spacing: var(--tracking-label);
+  text-transform: uppercase;
+  color: var(--color-ink);
+}
+
+/* ─── Mobile — stack everything, image on top, no pin ────── */
+
+@media (max-width: 768px) {
+  .poe-head {
+    padding: var(--space-md) var(--space-xl);
+  }
+
+  .poe-title-block {
+    padding: var(--space-3xl) var(--space-xl) var(--space-xl);
+  }
+
+  .poe-pinned,
+  .poe-static {
+    grid-template-columns: 1fr;
+    gap: 0;
+    padding: 0;
+  }
+
+  /* Image always returns to the top regardless of alternation */
+  .poe-pinned.is-img-right .poe-pin-img,
+  .poe-static.is-img-right .poe-photo {
+    order: 0;
+  }
+
+  /* Release the pin; give the fill image a fixed height to cover */
+  .poe-pin-img-inner {
+    position: static;
+    height: 56svh;
+  }
+
+  .poe-pin-text,
+  .poe-solo {
+    padding: var(--space-2xl) var(--space-xl) var(--space-3xl);
+  }
+
+  .poe-static-text {
+    padding: var(--space-2xl) var(--space-xl) var(--space-3xl);
+  }
+
+  .poe-counter,
+  .poe-caption {
+    left: var(--space-lg);
+  }
+}

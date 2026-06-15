@@ -1,16 +1,16 @@
-# Graph Report - sarath_menon  (2026-06-14)
+# Graph Report - sarath_menon  (2026-06-15)
 
 ## Corpus Check
-- 87 files · ~61,217 words
+- 95 files · ~85,511 words
 - Verdict: corpus is large enough that graph structure adds value.
 
 ## Summary
-- 731 nodes · 866 edges · 44 communities (31 shown, 13 thin omitted)
+- 761 nodes · 933 edges · 46 communities (33 shown, 13 thin omitted)
 - Extraction: 99% EXTRACTED · 1% INFERRED · 0% AMBIGUOUS · INFERRED: 12 edges (avg confidence: 0.77)
 - Token cost: 0 input · 0 output
 
 ## Graph Freshness
-- Built from commit: `8cc556ca`
+- Built from commit: `3b5f7ff2`
 - Run `git rev-parse HEAD` and compare to check if the graph is stale.
 - Run `graphify update .` after code changes (no API cost).
 
@@ -56,6 +56,7 @@
 - [[_COMMUNITY_Community 41|Community 41]]
 - [[_COMMUNITY_Community 42|Community 42]]
 - [[_COMMUNITY_Community 43|Community 43]]
+- [[_COMMUNITY_Community 44|Community 44]]
 
 ## God Nodes (most connected - your core abstractions)
 1. `Photography Section — AI Build Prompt` - 21 edges
@@ -89,15 +90,15 @@
 - **Shared Crimson/Cream + GSAP + Sanity Design System** — concept_crimson_cream_palette, concept_gsap_scrolltrigger_stack, concept_sanity_cms [INFERRED 0.85]
 - **Preloader to Hero Handoff Flow** — reference_files_preloader_build_prompt_counter_logic, reference_files_hero_section_build_prompt_preloader_handshake, reference_files_hero_section_build_prompt_vimeo_background, reference_files_hero_section_build_prompt_scroll_timeline [INFERRED 0.85]
 
-## Communities (44 total, 13 thin omitted)
+## Communities (46 total, 13 thin omitted)
 
 ### Community 0 - "Sanity Data Layer"
-Cohesion: 0.09
-Nodes (31): FilmLightbox(), FilmLightboxProps, filmStill(), HeroSection(), HeroSectionProps, metaLabelStyle, HeroVideoBackground(), HeroVideoBackgroundProps (+23 more)
+Cohesion: 0.10
+Nodes (26): FilmLightbox(), FilmLightboxProps, filmStill(), HeroSection(), HeroSectionProps, metaLabelStyle, HeroVideoBackground(), HeroVideoBackgroundProps (+18 more)
 
 ### Community 1 - "Page Routes & Nav Observer"
-Cohesion: 0.09
-Nodes (19): HomePage(), HomePageProps, Preloader(), PreloaderProps, useSprocketCount(), getNavHeight(), getSectionBehindNav(), NavTheme (+11 more)
+Cohesion: 0.08
+Nodes (34): CRAFTS, CraftStub(), CraftStubProps, getAllPhotoSeries(), getAllPhotoSeriesSlugs(), getPhotoSeries(), seriesImageUrl(), aboutTeaserQuery (+26 more)
 
 ### Community 2 - "Home Page & Preloader Scroll"
 Cohesion: 0.05
@@ -116,8 +117,8 @@ Cohesion: 0.05
 Nodes (39): ACCEPTANCE CRITERIA, Advancing right (next film), Background and wrapper, Card states, Card width calculations, CAROUSEL HEIGHT, COLOUR TOKEN REFERENCE, Concept (+31 more)
 
 ### Community 6 - "Providers & Layout Effects"
-Cohesion: 0.11
-Nodes (16): PaperGrain(), useMedia(), GSAPProvider(), LenisProvider(), Copy(), CopyProps, metadata, Copy() (+8 more)
+Cohesion: 0.06
+Nodes (27): PaperGrain(), useMedia(), getNavHeight(), getSectionBehindNav(), NavTheme, OBSERVER_THRESHOLDS, resolveRouteLink(), resolveRouteTheme() (+19 more)
 
 ### Community 7 - "TypeScript Config"
 Cohesion: 0.10
@@ -196,15 +197,19 @@ Cohesion: 0.29
 Nodes (5): 1. Think Before Coding, 2. Simplicity First, 3. Surgical Changes, 4. Goal-Driven Execution, graphify
 
 ### Community 41 - "Community 41"
-Cohesion: 0.12
-Nodes (14): metadata, CRAFTS, CraftStub(), CraftStubProps, FilmsExperience(), FilmsPage(), metadata, placeholderMetadata() (+6 more)
+Cohesion: 0.17
+Nodes (10): metadata, FilmsExperience(), FilmsPage(), metadata, placeholderMetadata(), PlaceholderPage(), PlaceholderPageProps, getAllFilms() (+2 more)
 
 ### Community 42 - "Community 42"
 Cohesion: 0.13
 Nodes (14): 0. Design constraint — Hero images on every page, 1. Architecture — Hybrid (teaser → page), 2. Page transition — the crimson shutter (the heartbeat), 3. Home panels — each a unique signature, 4. Craft pages, 5. Reusable motion system (configurable primitives), 6. Cross-cutting defaults (veto-able), 7. CMS reconciliation (+6 more)
 
+### Community 44 - "Community 44"
+Cohesion: 0.33
+Nodes (5): Adaptation for our Photography index, Build notes, Site Teardown: Jason Bergh (hero slider), The effect, deconstructed, THE REVEAL — the viewfinder alignment trick
+
 ## Knowledge Gaps
-- **423 isolated node(s):** `version`, `configurations`, `PreToolUse`, `eslintConfig`, `projectRoot` (+418 more)
+- **428 isolated node(s):** `version`, `configurations`, `PreToolUse`, `eslintConfig`, `projectRoot` (+423 more)
   These have ≤1 connection - possible missing edges or undocumented components.
 - **13 thin communities (<3 nodes) omitted from report** — run `graphify query` to explore isolated nodes.
 
@@ -212,16 +217,16 @@ Nodes (14): 0. Design constraint — Hero images on every page, 1. Architecture 
 _Questions this graph is uniquely positioned to answer:_
 
 - **Why does `Films Section — AI Build Prompt` connect `View Transitions Engine` to `Cinematic Design System`?**
-  _High betweenness centrality (0.012) - this node is a cross-community bridge._
+  _High betweenness centrality (0.011) - this node is a cross-community bridge._
 - **Why does `VIMEO LIGHTBOX` connect `Cinematic Design System` to `View Transitions Engine`?**
-  _High betweenness centrality (0.010) - this node is a cross-community bridge._
-- **Why does `useMedia()` connect `Providers & Layout Effects` to `Sanity Data Layer`, `Page Routes & Nav Observer`?**
-  _High betweenness centrality (0.007) - this node is a cross-community bridge._
+  _High betweenness centrality (0.009) - this node is a cross-community bridge._
+- **Why does `useMedia()` connect `Providers & Layout Effects` to `Sanity Data Layer`?**
+  _High betweenness centrality (0.008) - this node is a cross-community bridge._
 - **What connects `version`, `configurations`, `PreToolUse` to the rest of the system?**
-  _425 weakly-connected nodes found - possible documentation gaps or missing edges._
+  _430 weakly-connected nodes found - possible documentation gaps or missing edges._
 - **Should `Sanity Data Layer` be split into smaller, more focused modules?**
-  _Cohesion score 0.08846153846153847 - nodes in this community are weakly interconnected._
+  _Cohesion score 0.09957325746799431 - nodes in this community are weakly interconnected._
 - **Should `Page Routes & Nav Observer` be split into smaller, more focused modules?**
-  _Cohesion score 0.08817204301075268 - nodes in this community are weakly interconnected._
+  _Cohesion score 0.07878787878787878 - nodes in this community are weakly interconnected._
 - **Should `Home Page & Preloader Scroll` be split into smaller, more focused modules?**
   _Cohesion score 0.046511627906976744 - nodes in this community are weakly interconnected._

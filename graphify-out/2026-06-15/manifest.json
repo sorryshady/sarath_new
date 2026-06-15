@@ -235,8 +235,8 @@
     "semantic_hash": "23a060414de984b25bad60297d09b8cb"
   },
   "src/sanity/lib/queries.ts": {
-    "mtime": 1781412234.4632766,
-    "ast_hash": "bffcd2578a82fe722ddf5f78224995b1",
+    "mtime": 1781427731.3849113,
+    "ast_hash": "370ab186c0f16f83e6fa91f7783d1e4d",
     "semantic_hash": ""
   },
   "src/sanity/schemaTypes/documents/aboutTeaser.ts": {
@@ -425,13 +425,13 @@
     "semantic_hash": ""
   },
   ".claude/launch.json": {
-    "mtime": 1781411018.3497179,
-    "ast_hash": "de095783b03f7ff790c7bff22628f306",
+    "mtime": 1781429500.9933615,
+    "ast_hash": "64f537f85d563f28b9c8624e78157f5c",
     "semantic_hash": ""
   },
   "src/app/(site)/photography/page.tsx": {
-    "mtime": 1781410694.0676646,
-    "ast_hash": "a5f6ff228cc90465b162c0494d5399d5",
+    "mtime": 1781427874.29967,
+    "ast_hash": "a25acb39fa954fe44f110ab7de489980",
     "semantic_hash": ""
   },
   "src/components/dev/CraftStub.tsx": {
@@ -455,8 +455,8 @@
     "semantic_hash": ""
   },
   "src/components/transitions/TransitionProvider.tsx": {
-    "mtime": 1781411618.8255353,
-    "ast_hash": "57519c7ebf3656080c143639f86d5397",
+    "mtime": 1781492294.1501691,
+    "ast_hash": "6fbc7be6397d69172c135222d67def2e",
     "semantic_hash": ""
   },
   "src/lib/films.ts": {
@@ -472,6 +472,46 @@
   "docs/BUILD-PLAN.md": {
     "mtime": 1781411986.6750214,
     "ast_hash": "c029b7ceb213bb9b73fa91706e849997",
+    "semantic_hash": ""
+  },
+  "src/app/(site)/photography/[slug]/page.tsx": {
+    "mtime": 1781427991.4932365,
+    "ast_hash": "0a0d2ae5ad2ae892eae1b3a23ef5765a",
+    "semantic_hash": ""
+  },
+  "src/components/media/RevealImage.tsx": {
+    "mtime": 1781491421.0909493,
+    "ast_hash": "9bd5da57bdc958fbfb6be8d030fd23c8",
+    "semantic_hash": ""
+  },
+  "src/components/photography/PhotoSeriesDetail.tsx": {
+    "mtime": 1781492668.6099327,
+    "ast_hash": "f27de6348a1babb786aac40b28c76078",
+    "semantic_hash": ""
+  },
+  "src/components/photography/PhotographyExperience.tsx": {
+    "mtime": 1781513058.1581068,
+    "ast_hash": "4d2d84c01a19ae1dbcfee478a3b5f746",
+    "semantic_hash": ""
+  },
+  "src/lib/photoSeries.ts": {
+    "mtime": 1781427779.92857,
+    "ast_hash": "e24e17cac858c88007b352f50c5f7642",
+    "semantic_hash": ""
+  },
+  "src/types/photoSeries.ts": {
+    "mtime": 1781427770.6879423,
+    "ast_hash": "8f4d2585185f37e8ff2b0dfe670d3084",
+    "semantic_hash": ""
+  },
+  "reference.md": {
+    "mtime": 1781451173.4720292,
+    "ast_hash": "08257a49300d41fd79463ce50119305a",
+    "semantic_hash": ""
+  },
+  "research/2026-06-14-jasonbergh-teardown.md": {
+    "mtime": 1781450292.6277058,
+    "ast_hash": "118a77ddeab5fe3d8b470d85a44fa717",
     "semantic_hash": ""
   }
 }

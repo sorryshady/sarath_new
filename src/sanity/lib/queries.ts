@@ -77,5 +77,15 @@ export const featuredPoemsQuery = defineQuery(`
 `);
 
 export const allPoemsQuery = defineQuery(`
-  *[_type == "poem"] | order(order asc)
+  *[_type == "poem"] | order(order asc) {
+    _id,
+    title,
+    body,
+    year,
+    image,
+    "imageAspectRatio": image.asset->metadata.dimensions.aspectRatio,
+    imageCaption,
+    featured,
+    order
+  }
 `);

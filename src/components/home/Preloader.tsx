@@ -440,16 +440,19 @@ export function Preloader({ isVideoReady, onComplete }: PreloaderProps) {
 
         <div
           ref={metaTopRef}
-          className="preloader-entry-target preloader-meta absolute flex items-center justify-between uppercase"
+          className="preloader-entry-target preloader-meta absolute items-center uppercase"
           style={{
             top: 'var(--space-lg)',
             left: '28px',
             right: '28px',
+            display: 'grid',
+            gridTemplateColumns: '1fr auto 1fr',
+            alignItems: 'center',
           }}
         >
-          <span>KODAK VISION3 500T</span>
-          <span>35MM · 1.85:1</span>
-          <span>SM · MMXIX</span>
+          <span style={{ textAlign: 'left' }}>KODAK VISION3 500T</span>
+          <span style={{ textAlign: 'center' }}>35MM · 1.85:1</span>
+          <span style={{ textAlign: 'right' }}>SM · MMXIX</span>
         </div>
 
         <div

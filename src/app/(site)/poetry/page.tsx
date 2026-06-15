@@ -1,18 +1,14 @@
 import type { Metadata } from 'next';
 
-import { CraftStub } from '@/components/dev/CraftStub';
+import { PoetryExperience } from '@/components/poetry/PoetryExperience';
+import { getAllPoems } from '@/lib/poems';
 
 export const metadata: Metadata = {
   title: 'Poetry',
-  description: 'Poems with scroll-driven reveals — full build coming soon.',
+  description: 'Selected verse — poems with scroll-driven reveals.',
 };
 
-export default function PoetryPage() {
-  return (
-    <CraftStub
-      name="Poetry"
-      background="var(--color-cream)"
-      foreground="var(--color-ink)"
-    />
-  );
+export default async function PoetryPage() {
+  const poems = await getAllPoems();
+  return <PoetryExperience poems={poems} />;
 }
