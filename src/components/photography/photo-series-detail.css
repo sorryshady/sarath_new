@@ -65,8 +65,8 @@
 
 .psd-back {
   font-family: var(--font-data);
-  font-size: var(--size-nav);
   font-weight: var(--weight-bold);
+  font-size: var(--size-nav);
   letter-spacing: var(--tracking-label);
   text-transform: uppercase;
   color: var(--color-parchment-text);
@@ -99,6 +99,7 @@
 .psd-hero-title p {
   margin-top: var(--space-md);
   font-family: var(--font-data);
+  font-weight: var(--weight-bold);
   font-size: var(--size-nav);
   letter-spacing: var(--tracking-wide);
   text-transform: uppercase;
@@ -133,6 +134,7 @@
 .psd-frame figcaption {
   margin-top: var(--space-md);
   font-family: var(--font-data);
+  font-weight: var(--weight-bold);
   font-size: var(--size-caption);
   letter-spacing: var(--tracking-wide);
   text-transform: uppercase;

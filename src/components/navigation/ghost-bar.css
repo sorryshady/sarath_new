@@ -124,8 +124,8 @@
 .ghost-bar__link {
   position: relative;
   font-family: var(--font-data);
-  font-size: var(--size-nav);
   font-weight: var(--weight-bold);
+  font-size: var(--size-nav);
   letter-spacing: var(--tracking-label);
   text-transform: uppercase;
   color: var(--ghost-brand-muted);
@@ -255,6 +255,7 @@
 
 .mobile-menu__close {
   font-family: var(--font-data);
+  font-weight: var(--weight-bold);
   font-size: var(--size-nav);
   letter-spacing: var(--tracking-wide);
   text-transform: uppercase;
@@ -298,6 +299,7 @@
   display: flex;
   justify-content: space-between;
   font-family: var(--font-data);
+  font-weight: var(--weight-bold);
   font-size: var(--size-label);
   letter-spacing: var(--tracking-wide);
   text-transform: uppercase;

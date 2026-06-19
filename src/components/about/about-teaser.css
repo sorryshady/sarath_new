@@ -58,6 +58,7 @@
 .abt-portrait-cap {
   margin-top: var(--space-sm);
   font-family: var(--font-data);
+  font-weight: var(--weight-bold);
   font-size: var(--size-caption);
   letter-spacing: var(--tracking-label);
   text-transform: uppercase;
@@ -72,6 +73,7 @@
 
 .abt-eyebrow {
   font-family: var(--font-data);
+  font-weight: var(--weight-bold);
   font-size: var(--size-label);
   letter-spacing: var(--tracking-widest);
   text-transform: uppercase;
@@ -110,6 +112,7 @@
   gap: var(--space-xs);
   margin-top: var(--space-xl);
   font-family: var(--font-data);
+  font-weight: var(--weight-bold);
   font-size: var(--size-label);
   letter-spacing: var(--tracking-wide);
   text-transform: uppercase;
@@ -129,8 +132,8 @@
   gap: var(--space-sm);
   margin-top: var(--space-2xl);
   font-family: var(--font-data);
-  font-size: var(--size-nav);
   font-weight: var(--weight-bold);
+  font-size: var(--size-nav);
   letter-spacing: var(--tracking-label);
   text-transform: uppercase;
   color: var(--color-parchment-text);

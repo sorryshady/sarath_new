@@ -215,7 +215,9 @@
   --font-data:      'Courier New', monospace;
   /* Use for: Navigation links, preloader meta text, hero corner meta,
      photo captions, location tags, dates, role tags, colophon,
-     all UI micro-labels, anything functional/archival */
+     all UI micro-labels, anything functional/archival.
+     RULE: always render data-font labels at --weight-bold. Courier is thin
+     at label sizes (8–13px) and reads poorly at 400 — bold is the standard. */
 
 
   /* --- Font sizes --- */
