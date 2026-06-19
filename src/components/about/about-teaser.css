@@ -74,10 +74,10 @@
 .abt-eyebrow {
   font-family: var(--font-data);
   font-weight: var(--weight-bold);
-  font-size: var(--size-label);
+  font-size: var(--size-nav);
   letter-spacing: var(--tracking-widest);
   text-transform: uppercase;
-  color: var(--color-parchment-50);
+  color: var(--color-parchment-60);
   margin-bottom: var(--space-lg);
 }
 
@@ -99,21 +99,21 @@
 
 .abt-bio {
   font-family: var(--font-editorial);
-  font-weight: var(--weight-light);
+  font-weight: var(--weight-regular);
   font-size: var(--size-about-bio);
-  line-height: 1.75;
+  line-height: 1.7;
   color: var(--color-parchment-70);
-  max-width: 480px;
+  max-width: 520px;
 }
 
 .abt-meta {
   display: flex;
   flex-direction: column;
-  gap: var(--space-xs);
-  margin-top: var(--space-xl);
+  gap: var(--space-sm);
+  margin-top: var(--space-2xl);
   font-family: var(--font-data);
   font-weight: var(--weight-bold);
-  font-size: var(--size-label);
+  font-size: var(--size-nav);
   letter-spacing: var(--tracking-wide);
   text-transform: uppercase;
 }

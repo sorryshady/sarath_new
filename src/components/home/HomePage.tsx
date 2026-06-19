@@ -5,17 +5,21 @@ import { useLenis } from 'lenis/react';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 
 import { AboutTeaserSection } from '@/components/about/AboutTeaserSection';
+import { ContactSection } from '@/components/contact/ContactSection';
 import { GhostBar } from '@/components/navigation/GhostBar';
 import { HeroSection } from '@/components/home/HeroSection';
 import { Preloader } from '@/components/home/Preloader';
 import type { AboutMeta, AboutTeaser } from '@/types/about';
+import type { ContactSettings } from '@/types/contact';
 
 export function HomePage({
   aboutTeaser = null,
   aboutMeta = null,
+  contactSettings = null,
 }: {
   aboutTeaser?: AboutTeaser | null;
   aboutMeta?: AboutMeta | null;
+  contactSettings?: ContactSettings | null;
 } = {}) {
   const [isPreloaderDone, setIsPreloaderDone] = useState(false);
   const [isVideoReady, setIsVideoReady] = useState(false);
@@ -79,13 +83,7 @@ export function HomePage({
           aria-label="Films"
         />
 
-        <section
-          id="contact"
-          data-nav-theme="light"
-          className="min-h-screen"
-          style={{ background: 'var(--color-parchment-aged)' }}
-          aria-label="Contact"
-        />
+        <ContactSection settings={contactSettings} />
       </main>
     </>
   );

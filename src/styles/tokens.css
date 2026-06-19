@@ -54,8 +54,8 @@
 
   /* --- Text opacity variants (on light backgrounds) --- */
 
-  --color-ink-60:         rgba(17, 17, 17, 0.60);
-  --color-ink-45:         rgba(17, 17, 17, 0.45);
+  --color-ink-60:         rgba(17, 17, 17, 0.74);
+  --color-ink-45:         rgba(17, 17, 17, 0.60);
   --color-ink-40:         rgba(17, 17, 17, 0.40);
   --color-ink-35:         rgba(17, 17, 17, 0.35);
   --color-ink-25:         rgba(17, 17, 17, 0.25);
@@ -68,10 +68,10 @@
 
   /* --- Text opacity variants (on dark/crimson backgrounds) --- */
 
-  --color-parchment-70:   rgba(239, 217, 182, 0.70);
-  --color-parchment-60:   rgba(239, 217, 182, 0.60);
-  --color-parchment-50:   rgba(239, 217, 182, 0.50);
-  --color-parchment-45:   rgba(239, 217, 182, 0.45);
+  --color-parchment-70:   rgba(239, 217, 182, 0.85);
+  --color-parchment-60:   rgba(239, 217, 182, 0.76);
+  --color-parchment-50:   rgba(239, 217, 182, 0.66);
+  --color-parchment-45:   rgba(239, 217, 182, 0.60);
   --color-parchment-40:   rgba(239, 217, 182, 0.40);
   --color-parchment-35:   rgba(239, 217, 182, 0.35);
   --color-parchment-30:   rgba(239, 217, 182, 0.30);
@@ -233,7 +233,7 @@
   --size-poem-body:     clamp(17px, 1.8vw, 21px);     /* Poem reading text */
   --size-bio-pull:      clamp(26px, 3.2vw, 42px);     /* Poetry CTA excerpt */
   --size-about-name:    clamp(52px, 7vw, 88px);        /* About teaser name */
-  --size-about-bio:     clamp(15px, 1.6vw, 18px);     /* About teaser bio */
+  --size-about-bio:     clamp(17px, 1.9vw, 22px);     /* About teaser bio */
   --size-film-title:    16px;                           /* Film list titles */
   --size-series-title:  clamp(32px, 4vw, 48px);        /* Photography headings */
   --size-preloader-counter: clamp(64px, 12vw, 96px);  /* Preloader number */
@@ -248,7 +248,7 @@
   --preloader-progress-height: 3px;
 
   /* Data — Courier New */
-  --size-nav:           13px;        /* Navigation links */
+  --size-nav:           14px;        /* Navigation links */
   --size-nav-monogram:  20px;        /* SM initials beside logo */
   --nav-logo-height:    100px;        /* Logo mark in ghost bar — desktop */
   --nav-logo-height-mobile: 80px;  /* Logo mark in ghost bar — mobile */
@@ -257,17 +257,20 @@
   --nav-burger-width:     22px;    /* Mobile menu burger icon */
   --nav-burger-line:      1.5px;   /* Burger bar thickness */
   --nav-burger-gap:       5px;     /* Space between burger bars */
-  --size-label:         9px;         /* All UI micro-labels */
-  --size-caption:       8px;         /* Photo/film captions */
-  --size-tag:           8px;         /* Role tags */
-  --size-colophon:      8px;         /* Footer colophon */
-  --size-tiny:          7px;         /* Film counter, sprocket labels */
+  --size-label:         11px;        /* All UI micro-labels */
+  --size-caption:       10px;        /* Photo/film captions */
+  --size-tag:           10px;        /* Role tags */
+  --size-colophon:      9px;         /* Footer colophon */
+  --size-tiny:          9px;         /* Film counter, sprocket labels */
 
 
   /* --- Font weights --- */
 
-  --weight-light:       300;
-  --weight-regular:     400;
+  --weight-light:       400;
+  /* Raised 300 → 400: Cormorant Garamond at 300 is too delicate to read at
+     body sizes over the paper-grain texture. 400 keeps the editorial feel
+     while staying legible. "Light" is now the readable editorial baseline. */
+  --weight-regular:     500;
   --weight-semibold:    600;
   --weight-bold:        700;
 

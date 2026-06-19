@@ -50,7 +50,9 @@ export function AboutTeaserSection({
 
       {/* Text — name, bio, identity meta, full-story link */}
       <div className="abt-text">
-        <p className="abt-eyebrow">About</p>
+        <Copy>
+          <p className="abt-eyebrow">About</p>
+        </Copy>
 
         <Copy>
           <h2 className="abt-name">Sarath Menon</h2>
@@ -62,10 +64,12 @@ export function AboutTeaserSection({
           <p className="abt-bio">{bio}</p>
         </Copy>
 
-        <div className="abt-meta">
-          <span className="abt-roles">{rolesLine(meta)}</span>
-          {subline && <span className="abt-subline">{subline}</span>}
-        </div>
+        <Copy>
+          <div className="abt-meta">
+            <span className="abt-roles">{rolesLine(meta)}</span>
+            {subline && <span className="abt-subline">{subline}</span>}
+          </div>
+        </Copy>
 
         <TransitionLink href="/about" label="About" className="abt-link">
           Full story →

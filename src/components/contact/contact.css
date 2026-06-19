@@ -1,0 +1,248 @@
+/* ============================================================
+   CONTACT — home end-card
+   Aged-parchment closing card. Left: the invitation + details
+   in cinematic display type. Right: a real camera aperture that
+   irises shut as the card settles. A "Fin." slate closes it out.
+   ============================================================ */
+
+.cnt {
+  position: relative;
+  min-height: 100svh;
+  background: var(--color-parchment-aged);
+  color: var(--color-ink);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: var(--space-4xl) var(--space-3xl) var(--space-2xl);
+  overflow: hidden;
+}
+
+/* ─── Main grid — text left, aperture right ──────────────── */
+
+.cnt-inner {
+  flex: 1;
+  display: grid;
+  grid-template-columns: 1.2fr 0.8fr;
+  gap: var(--space-4xl);
+  align-items: center;
+}
+
+/* ─── Text column ────────────────────────────────────────── */
+
+.cnt-eyebrow {
+  font-family: var(--font-data);
+  font-weight: var(--weight-bold);
+  font-size: var(--size-label);
+  letter-spacing: var(--tracking-widest);
+  text-transform: uppercase;
+  color: var(--color-crimson);
+  margin-bottom: var(--space-lg);
+}
+
+.cnt-invite {
+  font-family: var(--font-display);
+  font-weight: var(--weight-regular);
+  font-size: var(--size-contact-headline);
+  line-height: var(--leading-tight);
+  letter-spacing: var(--tracking-tight);
+  text-transform: uppercase;
+  color: var(--color-ink);
+}
+
+.cnt-lede {
+  margin-top: var(--space-lg);
+  max-width: 30ch;
+  font-family: var(--font-editorial);
+  font-weight: var(--weight-regular);
+  font-size: var(--size-about-bio);
+  line-height: var(--leading-relaxed);
+  color: var(--color-ink-60);
+}
+
+.cnt-rule {
+  width: 48px;
+  height: 2px;
+  background: var(--color-crimson);
+  margin: var(--space-2xl) 0 var(--space-xl);
+}
+
+.cnt-details {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-sm);
+  font-family: var(--font-data);
+  font-weight: var(--weight-bold);
+  font-size: var(--size-nav);
+  letter-spacing: var(--tracking-wide);
+  text-transform: uppercase;
+}
+
+.cnt-detail {
+  color: var(--color-ink-60);
+}
+
+.cnt-detail--link {
+  color: var(--color-crimson);
+  width: fit-content;
+  border-bottom: 1px solid transparent;
+  transition: border-color 0.2s ease;
+}
+
+.cnt-detail--link:hover {
+  border-bottom-color: var(--color-crimson);
+}
+
+.cnt-socials {
+  display: flex;
+  align-items: center;
+  gap: var(--space-md);
+  margin-top: var(--space-2xl);
+}
+
+.cnt-social-link {
+  font-family: var(--font-data);
+  font-weight: var(--weight-bold);
+  font-size: var(--size-nav);
+  letter-spacing: var(--tracking-label);
+  text-transform: uppercase;
+  color: var(--color-ink);
+  border-bottom: 1px solid var(--color-ink-25);
+  padding-bottom: 1px;
+  transition: color 0.2s ease, border-color 0.2s ease;
+}
+
+.cnt-social-link:hover {
+  color: var(--color-crimson);
+  border-bottom-color: var(--color-crimson);
+}
+
+.cnt-social-sep {
+  font-family: var(--font-data);
+  font-weight: var(--weight-bold);
+  font-size: var(--size-nav);
+  color: var(--color-ink-25);
+  user-select: none;
+}
+
+/* ─── Aperture stage ─────────────────────────────────────── */
+
+.cnt-stage {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  aspect-ratio: 1;
+  width: min(100%, 380px);
+  justify-self: center;
+}
+
+.cnt-stage-label {
+  position: absolute;
+  font-family: var(--font-data);
+  font-weight: var(--weight-bold);
+  font-size: var(--size-label);
+  letter-spacing: var(--tracking-wide);
+  text-transform: uppercase;
+  color: var(--color-ink-45);
+}
+
+.cnt-stage-label--tl {
+  top: 0;
+  left: 4%;
+}
+
+.cnt-stage-label--tr {
+  top: 0;
+  right: 4%;
+}
+
+.cnt-stage-label--b {
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  color: var(--color-crimson);
+}
+
+.cnt-aperture {
+  width: 74%;
+  aspect-ratio: 1;
+}
+
+.aperture-svg {
+  width: 100%;
+  height: 100%;
+  display: block;
+  overflow: visible;
+}
+
+.aperture-barrel {
+  stroke: var(--color-ink-25);
+  stroke-width: 1;
+}
+
+.aperture-lens {
+  fill: var(--color-cinema-dark);
+}
+
+.aperture-blade {
+  fill: var(--color-crimson);
+  stroke: var(--color-parchment-aged);
+  stroke-width: 0.5;
+  stroke-linejoin: round;
+}
+
+.aperture-shutter {
+  fill: var(--color-cinema-dark);
+}
+
+.aperture-ticks line {
+  stroke: var(--color-ink-25);
+  stroke-width: 0.8;
+}
+
+/* ─── Fin. — closing slate ───────────────────────────────── */
+
+.cnt-fin {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-lg);
+  padding-top: var(--space-2xl);
+}
+
+.cnt-fin-rule {
+  width: clamp(40px, 12vw, 120px);
+  height: 1px;
+  background: var(--color-ink-25);
+}
+
+.cnt-fin-word {
+  font-family: var(--font-editorial);
+  font-style: italic;
+  font-weight: var(--weight-semibold);
+  font-size: var(--size-poem-title);
+  letter-spacing: var(--tracking-tight);
+  color: var(--color-ink-60);
+}
+
+/* ─── Mobile — stack, aperture below text ────────────────── */
+
+@media (max-width: 768px) {
+  .cnt {
+    padding: var(--space-3xl) var(--space-xl) var(--space-2xl);
+  }
+
+  .cnt-inner {
+    grid-template-columns: 1fr;
+    gap: var(--space-3xl);
+  }
+
+  .cnt-stage {
+    width: min(72%, 260px);
+    justify-self: start;
+  }
+
+  .cnt-lede {
+    max-width: 100%;
+  }
+}

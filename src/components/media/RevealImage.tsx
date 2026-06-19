@@ -59,20 +59,25 @@ export function RevealImage({
         return;
       }
 
-      // rackFocus is scroll-LINKED (scrub): the frame pulls from defocused to
-      // sharp as the section travels through the viewport — a literal rack focus.
+      // rackFocus plays ONCE when the frame enters: it pulls from defocused to
+      // sharp on a timed tween (not scrubbed) — a literal rack focus on arrival.
       if (variant === 'rackFocus') {
         const rtl = gsap.timeline({
-          scrollTrigger: { trigger: wrap, start: 'top 85%', end: 'center 55%', scrub: true },
+          scrollTrigger: { trigger: wrap, start: 'top 78%', once: true },
         });
         rtl.fromTo(
           wrap,
-          { filter: 'blur(18px)', opacity: 0.45 },
-          { filter: 'blur(0px)', opacity: 1, ease: 'none' },
+          { filter: 'blur(20px)', opacity: 0.4 },
+          { filter: 'blur(0px)', opacity: 1, duration: 1.5, ease: 'power2.out' },
           0,
         );
         if (img) {
-          rtl.fromTo(img, { scale: 1.08 }, { scale: 1, ease: 'none' }, 0);
+          rtl.fromTo(
+            img,
+            { scale: 1.1 },
+            { scale: 1, duration: 1.7, ease: 'power3.out' },
+            0,
+          );
         }
         return;
       }
