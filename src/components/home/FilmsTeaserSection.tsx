@@ -96,6 +96,9 @@ export function FilmsTeaserSection({ films }: { films: Film[] }) {
         <div className="fts-scrim" />
       </div>
 
+      {/* Heavier film grain + gate-weave, layered over the cinema-dark stage */}
+      <div className="fts-grain" aria-hidden="true" />
+
       {/* Letterbox bars */}
       <div ref={topBarRef} className="fts-bar fts-bar-top" />
       <div ref={botBarRef} className="fts-bar fts-bar-bot" />

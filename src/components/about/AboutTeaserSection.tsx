@@ -2,7 +2,6 @@
 
 import Copy from '@/components/copy/Copy';
 import { RevealImage } from '@/components/media/RevealImage';
-import { TransitionLink } from '@/components/transitions/TransitionLink';
 import { portraitUrl } from '@/lib/about';
 import type { AboutMeta, AboutTeaser } from '@/types/about';
 
@@ -48,7 +47,7 @@ export function AboutTeaserSection({
         {portrait && caption && <span className="abt-portrait-cap">{caption}</span>}
       </div>
 
-      {/* Text — name, bio, identity meta, full-story link */}
+      {/* Text — name, bio, identity meta */}
       <div className="abt-text">
         <Copy>
           <p className="abt-eyebrow">About</p>
@@ -70,10 +69,6 @@ export function AboutTeaserSection({
             {subline && <span className="abt-subline">{subline}</span>}
           </div>
         </Copy>
-
-        <TransitionLink href="/about" label="About" className="abt-link">
-          Full story →
-        </TransitionLink>
       </div>
     </section>
   );

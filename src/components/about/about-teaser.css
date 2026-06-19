@@ -126,24 +126,6 @@
   color: var(--color-parchment-50);
 }
 
-.abt-link {
-  display: inline-flex;
-  align-items: center;
-  gap: var(--space-sm);
-  margin-top: var(--space-2xl);
-  font-family: var(--font-data);
-  font-weight: var(--weight-bold);
-  font-size: var(--size-nav);
-  letter-spacing: var(--tracking-label);
-  text-transform: uppercase;
-  color: var(--color-parchment-text);
-  transition: opacity 0.2s ease;
-}
-
-.abt-link:hover {
-  opacity: 0.6;
-}
-
 /* ─── Mobile — stack, portrait on top ────────────────────── */
 
 @media (max-width: 768px) {

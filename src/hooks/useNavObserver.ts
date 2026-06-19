@@ -15,15 +15,13 @@ const SECTION_TO_LINK: Record<string, string> = {
 
 const ROUTE_TO_LINK: Record<string, string> = {
   '/poetry': 'poetry',
-  '/about': 'about',
-  '/works': 'works',
+  '/photography': 'works',
   '/films': 'films',
 };
 
 const ROUTE_THEME: Record<string, NavTheme> = {
   '/poetry': 'light',
-  '/about': 'light',
-  '/works': 'light',
+  '/photography': 'dark',
   '/films': 'dark',
 };
 
@@ -31,13 +29,13 @@ const OBSERVER_THRESHOLDS = [0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9, 1];
 
 function resolveRouteLink(pathname: string): string | null {
   if (ROUTE_TO_LINK[pathname]) return ROUTE_TO_LINK[pathname];
-  if (pathname.startsWith('/work/')) return 'works';
+  if (pathname.startsWith('/photography')) return 'works';
   return null;
 }
 
 function resolveRouteTheme(pathname: string): NavTheme {
   if (ROUTE_THEME[pathname]) return ROUTE_THEME[pathname];
-  if (pathname.startsWith('/work/')) return 'light';
+  if (pathname.startsWith('/photography')) return 'dark';
   return 'light';
 }
 

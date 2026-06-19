@@ -61,6 +61,13 @@ export function ApertureMark({ triggerRef, className }: ApertureMarkProps) {
 
       const trigger = triggerRef?.current ?? wrap;
 
+      // Reduced motion: skip the scrubbed iris entirely — settle the shutter to
+      // a calm half-closed rest state so the mark still reads as an aperture.
+      if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+        gsap.set(shutter, { attr: { r: HOLE * 0.5 } });
+        return;
+      }
+
       // Mechanical iris: the blade ring rotates while a dark shutter grows from
       // the centre to close the opening as the end-card scrolls into view. It
       // settles shut — the lens stays in frame, never vanishes.

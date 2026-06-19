@@ -58,6 +58,36 @@
     linear-gradient(90deg, rgba(18, 15, 10, 0.7) 0%, transparent 55%);
 }
 
+/* ─── Film grain + gate-weave ────────────────────────────── */
+
+.fts-grain {
+  position: absolute;
+  inset: -2%;
+  z-index: 1;
+  pointer-events: none;
+  opacity: 0.16;
+  mix-blend-mode: overlay;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='140' height='140'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='3' stitchTiles='stitch'/%3E%3CfeColorMatrix type='saturate' values='0'/%3E%3C/filter%3E%3Crect width='140' height='140' filter='url(%23n)'/%3E%3C/svg%3E");
+  background-repeat: repeat;
+  /* Gate-weave — the slight vertical drift of film through a projector gate */
+  animation: fts-gate-weave 0.5s steps(3) infinite;
+}
+
+@keyframes fts-gate-weave {
+  0% {
+    transform: translate3d(0, 0, 0);
+  }
+  33% {
+    transform: translate3d(-1px, 1px, 0);
+  }
+  66% {
+    transform: translate3d(1px, -1.5px, 0);
+  }
+  100% {
+    transform: translate3d(0, 0.5px, 0);
+  }
+}
+
 /* ─── Letterbox bars ─────────────────────────────────────── */
 
 .fts-bar {
@@ -296,5 +326,26 @@
 
   .fts-strip-cells {
     width: max-content;
+  }
+}
+
+/* ─── Reduced motion ─────────────────────────────────────── */
+
+@media (prefers-reduced-motion: reduce) {
+  .fts-grain {
+    animation: none;
+  }
+
+  .fts-still[data-active] {
+    animation: none;
+    transform: none;
+  }
+
+  .fts-title {
+    animation: none;
+  }
+
+  .fts-rec {
+    animation: none;
   }
 }

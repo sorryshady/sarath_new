@@ -50,7 +50,7 @@ const NAV_ITEMS: NavItem[] = [
   { id: 'films', label: 'Films', href: '/#films', sectionId: 'films' },
   { id: 'works', label: 'Works', href: '/#photography', sectionId: 'photography' },
   { id: 'poetry', label: 'Poetry', href: '/poetry' },
-  { id: 'about', label: 'About', href: '/about', sectionId: 'about' },
+  { id: 'about', label: 'About', href: '/#about', sectionId: 'about' },
   { id: 'contact', label: 'Contact', href: '/#contact', sectionId: 'contact' },
 ];
 
