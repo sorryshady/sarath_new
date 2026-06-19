@@ -49,7 +49,6 @@ export function PhotographyTeaserSection({ series }: { series: PhotoSeries[] }) 
           <RevealImage
             src={cover}
             alt={lead.title}
-            variant="develop"
             fill
             className="pht-cover"
           />

@@ -8,6 +8,7 @@ export type NavTheme = 'light' | 'dark';
 const SECTION_TO_LINK: Record<string, string> = {
   photography: 'works',
   films: 'films',
+  poetry: 'poetry',
   about: 'about',
   contact: 'contact',
 };
@@ -110,13 +111,15 @@ export function useNavObserver(pathname: string) {
     let scrollDirection: 'up' | 'down' = 'down';
 
     const pickActive = () => {
-      if (scrollDirection === 'up') {
-        const behindNav = getSectionBehindNav();
-        if (behindNav) {
-          activeSection = behindNav;
-          applySection(behindNav, setHomeTheme, setHomeActiveLink);
-          return;
-        }
+      // Theme must reflect whatever section sits physically behind the bar —
+      // in BOTH scroll directions — so the nav colour never lags the
+      // background it is painted over. The visibility-ratio pass below is only
+      // a fallback for the rare frame where nothing resolves under the bar.
+      const behindNav = getSectionBehindNav();
+      if (behindNav) {
+        activeSection = behindNav;
+        applySection(behindNav, setHomeTheme, setHomeActiveLink);
+        return;
       }
 
       const threshold = getThemeSwitchRatioDown();

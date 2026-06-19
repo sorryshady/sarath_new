@@ -22,23 +22,24 @@ function filmStill(film: Film, width = 1920): string | null {
 }
 
 export function FilmsTeaserSection({ films }: { films: Film[] }) {
-  const reel = films.slice(0, 4);
+  const reel = films.slice(0, 5);
   const [active, setActive] = useState(0);
+  const [paused, setPaused] = useState(false);
 
   const sectionRef = useRef<HTMLElement>(null);
   const topBarRef = useRef<HTMLDivElement>(null);
   const botBarRef = useRef<HTMLDivElement>(null);
 
-  // Auto-crossfade through the featured stills.
+  // Auto-advance through the featured stills; pauses while the strip is hovered.
   useEffect(() => {
-    if (reel.length < 2) return;
+    if (reel.length < 2 || paused) return;
     const id = window.setInterval(() => {
       setActive((i) => (i + 1) % reel.length);
     }, 4200);
     return () => window.clearInterval(id);
-  }, [reel.length]);
+  }, [reel.length, paused]);
 
-  // Letterbox crush — the bars close in to a 2.39:1 frame as the section
+  // Letterbox crush — the bars close in toward a 2.39:1 frame as the section
   // scrolls into view (scrubbed), like a cinema masking down.
   useGSAP(
     () => {
@@ -47,7 +48,7 @@ export function FilmsTeaserSection({ films }: { films: Film[] }) {
       if (!top || !bot) return;
 
       if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
-        gsap.set([top, bot], { height: '12%' });
+        gsap.set([top, bot], { height: '11%' });
         return;
       }
 
@@ -55,11 +56,11 @@ export function FilmsTeaserSection({ films }: { films: Film[] }) {
         scrollTrigger: {
           trigger: sectionRef.current,
           start: 'top bottom',
-          end: 'top 30%',
+          end: 'top 28%',
           scrub: 1,
         },
       });
-      tl.fromTo([top, bot], { height: '0%' }, { height: '12%', ease: 'none' }, 0);
+      tl.fromTo([top, bot], { height: '0%' }, { height: '11%', ease: 'none' }, 0);
     },
     { scope: sectionRef },
   );
@@ -68,6 +69,7 @@ export function FilmsTeaserSection({ films }: { films: Film[] }) {
 
   const current = reel[active];
   const credit = ['Dir. Sarath Menon', current.year].filter(Boolean).join(' · ');
+  const role = filmRoleLabel(current.role);
 
   return (
     <section
@@ -98,27 +100,63 @@ export function FilmsTeaserSection({ films }: { films: Film[] }) {
       <div ref={topBarRef} className="fts-bar fts-bar-top" />
       <div ref={botBarRef} className="fts-bar fts-bar-bot" />
 
-      {/* Content */}
+      {/* Top marquee */}
+      <div className="fts-marquee">
+        <span className="fts-now">
+          <span className="fts-rec" aria-hidden="true" /> Now showing
+        </span>
+        <span className="fts-index" aria-hidden="true">
+          {String(active + 1).padStart(2, '0')}
+          <span className="fts-index-sep"> / </span>
+          {String(reel.length).padStart(2, '0')}
+        </span>
+      </div>
+
+      {/* Title block */}
       <div className="fts-content">
         <p className="fts-eyebrow">Films</p>
-        <h2 className="fts-title">{current.title}</h2>
+        <h2 className="fts-title" key={current._id}>
+          {current.title}
+        </h2>
         <p className="fts-credit">
           {credit}
-          {filmRoleLabel(current.role) && (
-            <span className="fts-role"> · {filmRoleLabel(current.role)}</span>
-          )}
+          {role && <span className="fts-role"> · {role}</span>}
         </p>
 
         <TransitionLink href="/films" label="Films" className="fts-link">
-          Enter the reel →
+          <span className="fts-play" aria-hidden="true">▶</span>
+          Watch the reel
         </TransitionLink>
       </div>
 
-      {/* Frame counter */}
-      <div className="fts-index" aria-hidden="true">
-        <span className="fts-index-now">{String(active + 1).padStart(2, '0')}</span>
-        <span className="fts-index-sep">/</span>
-        <span className="fts-index-total">{String(reel.length).padStart(2, '0')}</span>
+      {/* Filmstrip rail — hover/focus to swap the hero still */}
+      <div
+        className="fts-strip"
+        onMouseEnter={() => setPaused(true)}
+        onMouseLeave={() => setPaused(false)}
+      >
+        <span className="fts-strip-perf" aria-hidden="true" />
+        <div className="fts-strip-cells" role="tablist" aria-label="Featured films">
+          {reel.map((film, i) => {
+            const still = filmStill(film, 480);
+            return (
+              <button
+                key={film._id}
+                type="button"
+                role="tab"
+                aria-selected={i === active}
+                aria-label={film.title}
+                className="fts-cell"
+                data-active={i === active || undefined}
+                style={still ? { backgroundImage: `url(${still})` } : undefined}
+                onMouseEnter={() => setActive(i)}
+                onFocus={() => setActive(i)}
+                onClick={() => setActive(i)}
+              />
+            );
+          })}
+        </div>
+        <span className="fts-strip-perf" aria-hidden="true" />
       </div>
     </section>
   );

@@ -40,11 +40,8 @@ function useSprocketCount() {
 
 export function Preloader({ isVideoReady, onComplete }: PreloaderProps) {
   const [skipped] = useState(() => {
-    // TEMP (testing): always replay the preloader on refresh.
-    // Restore the session check below when done testing.
-    return false;
-    // if (typeof window === 'undefined') return false;
-    // return sessionStorage.getItem(SESSION_KEY) === 'true';
+    if (typeof window === 'undefined') return false;
+    return sessionStorage.getItem(SESSION_KEY) === 'true';
   });
 
   const [visible, setVisible] = useState(!skipped);
