@@ -1,6 +1,8 @@
 'use client';
 
-import { useCallback, useState } from 'react';
+import { useCallback, useEffect, useState } from 'react';
+import { useLenis } from 'lenis/react';
+import { ScrollTrigger } from 'gsap/ScrollTrigger';
 
 import { AboutTeaserSection } from '@/components/about/AboutTeaserSection';
 import { GhostBar } from '@/components/navigation/GhostBar';
@@ -18,6 +20,7 @@ export function HomePage({
   const [isPreloaderDone, setIsPreloaderDone] = useState(false);
   const [isVideoReady, setIsVideoReady] = useState(false);
   const [isHeroComplete, setIsHeroComplete] = useState(false);
+  const lenis = useLenis();
 
   const handlePreloaderComplete = useCallback(() => {
     setIsPreloaderDone(true);
@@ -30,6 +33,25 @@ export function HomePage({
   const handleHeroComplete = useCallback((complete: boolean) => {
     setIsHeroComplete(complete);
   }, []);
+
+  // When the preloader exits, the hero ScrollTrigger creates a pin spacer
+  // (~300vh) that grows the page. Lenis cached its scroll limit at mount and
+  // doesn't know about the spacer — so it caps scroll before the hero can
+  // exit. Two RAFs ensure useGSAP has run and the spacer is in the DOM.
+  useEffect(() => {
+    if (!isPreloaderDone) return;
+    let r1: number, r2: number;
+    r1 = requestAnimationFrame(() => {
+      r2 = requestAnimationFrame(() => {
+        lenis?.resize();
+        ScrollTrigger.refresh();
+      });
+    });
+    return () => {
+      cancelAnimationFrame(r1);
+      cancelAnimationFrame(r2);
+    };
+  }, [isPreloaderDone, lenis]);
 
   return (
     <>
