@@ -1,0 +1,173 @@
+/* ============================================================
+   FILMS TEASER — home section
+   Cinema-dark. Featured stills crossfade with a slow Ken Burns
+   push; letterbox bars crush in to a 2.39:1 frame on scroll.
+   Credit-style caption. Links to the /films reel.
+   ============================================================ */
+
+.fts {
+  position: relative;
+  min-height: 100svh;
+  background: var(--color-cinema-dark);
+  color: var(--color-parchment-text);
+  overflow: hidden;
+  display: flex;
+  align-items: flex-end;
+}
+
+/* ─── Stills stage ───────────────────────────────────────── */
+
+.fts-stage {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+}
+
+.fts-still {
+  position: absolute;
+  inset: 0;
+  background-size: cover;
+  background-position: center;
+  opacity: 0;
+  transform: scale(1.04);
+  transition: opacity 1.4s ease;
+}
+
+/* Active still fades in and slowly pushes (Ken Burns) */
+.fts-still[data-active] {
+  opacity: 1;
+  animation: fts-kenburns 9s ease-out forwards;
+}
+
+@keyframes fts-kenburns {
+  from {
+    transform: scale(1.04);
+  }
+  to {
+    transform: scale(1.13);
+  }
+}
+
+.fts-scrim {
+  position: absolute;
+  inset: 0;
+  background:
+    linear-gradient(180deg, rgba(18, 15, 10, 0.45) 0%, transparent 28%),
+    linear-gradient(0deg, rgba(18, 15, 10, 0.82) 0%, transparent 52%);
+}
+
+/* ─── Letterbox bars ─────────────────────────────────────── */
+
+.fts-bar {
+  position: absolute;
+  left: 0;
+  right: 0;
+  height: 0;
+  z-index: 2;
+  background: var(--color-cinema-dark);
+  will-change: height;
+}
+
+.fts-bar-top {
+  top: 0;
+}
+
+.fts-bar-bot {
+  bottom: 0;
+}
+
+/* ─── Content ────────────────────────────────────────────── */
+
+.fts-content {
+  position: relative;
+  z-index: 3;
+  padding: var(--space-4xl) var(--space-3xl);
+  max-width: 720px;
+}
+
+.fts-eyebrow {
+  font-family: var(--font-data);
+  font-weight: var(--weight-bold);
+  font-size: var(--size-nav);
+  letter-spacing: var(--tracking-widest);
+  text-transform: uppercase;
+  color: var(--color-crimson);
+  margin-bottom: var(--space-md);
+}
+
+.fts-title {
+  font-family: var(--font-editorial);
+  font-style: italic;
+  font-weight: var(--weight-regular);
+  font-size: clamp(40px, 6vw, 88px);
+  line-height: 1;
+  letter-spacing: var(--tracking-tight);
+  color: var(--color-parchment-text);
+}
+
+.fts-credit {
+  margin-top: var(--space-lg);
+  font-family: var(--font-data);
+  font-weight: var(--weight-bold);
+  font-size: var(--size-nav);
+  letter-spacing: var(--tracking-wide);
+  text-transform: uppercase;
+  color: var(--color-parchment-70);
+}
+
+.fts-role {
+  color: var(--color-parchment-50);
+}
+
+.fts-link {
+  display: inline-flex;
+  margin-top: var(--space-2xl);
+  font-family: var(--font-data);
+  font-weight: var(--weight-bold);
+  font-size: var(--size-nav);
+  letter-spacing: var(--tracking-label);
+  text-transform: uppercase;
+  color: var(--color-parchment-text);
+  border-bottom: 1px solid var(--color-parchment-30);
+  padding-bottom: 2px;
+  transition: color 0.2s ease, border-color 0.2s ease;
+}
+
+.fts-link:hover {
+  color: var(--color-crimson);
+  border-bottom-color: var(--color-crimson);
+}
+
+/* ─── Frame counter ──────────────────────────────────────── */
+
+.fts-index {
+  position: absolute;
+  top: var(--space-3xl);
+  right: var(--space-3xl);
+  z-index: 3;
+  display: flex;
+  align-items: center;
+  gap: var(--space-xs);
+  font-family: var(--font-data);
+  font-weight: var(--weight-bold);
+  font-size: var(--size-nav);
+  letter-spacing: var(--tracking-wide);
+  color: var(--color-parchment-50);
+}
+
+.fts-index-now {
+  color: var(--color-parchment-text);
+}
+
+/* ─── Mobile ─────────────────────────────────────────────── */
+
+@media (max-width: 768px) {
+  .fts-content {
+    padding: var(--space-3xl) var(--space-xl) var(--space-4xl);
+  }
+
+  .fts-index {
+    top: var(--space-xl);
+    right: var(--space-xl);
+  }
+}

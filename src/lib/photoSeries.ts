@@ -5,6 +5,7 @@ import { urlFor } from '@/sanity/lib/image';
 import {
   allPhotoSeriesQuery,
   allPhotoSeriesSlugsQuery,
+  featuredPhotoSeriesQuery,
   photoSeriesBySlugQuery,
 } from '@/sanity/lib/queries';
 import type { PhotoSeries, SeriesImage } from '@/types/photoSeries';
@@ -13,6 +14,15 @@ export async function getAllPhotoSeries(): Promise<PhotoSeries[]> {
   if (!isSanityConfigured) return [];
   try {
     return await client.fetch(allPhotoSeriesQuery);
+  } catch {
+    return [];
+  }
+}
+
+export async function getFeaturedPhotoSeries(): Promise<PhotoSeries[]> {
+  if (!isSanityConfigured) return [];
+  try {
+    return await client.fetch(featuredPhotoSeriesQuery);
   } catch {
     return [];
   }

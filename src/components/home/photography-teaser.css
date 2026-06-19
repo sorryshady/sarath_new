@@ -1,0 +1,122 @@
+/* ============================================================
+   PHOTOGRAPHY TEASER — home section
+   Cream. Text left; the lead series cover develops out of
+   near-black grain on the right. Links to the /photography index.
+   ============================================================ */
+
+.pht {
+  position: relative;
+  min-height: 100svh;
+  display: grid;
+  grid-template-columns: 0.9fr 1.1fr;
+  align-items: center;
+  gap: var(--space-4xl);
+  padding: var(--space-4xl) var(--space-3xl);
+  background: var(--color-cream);
+  color: var(--color-ink);
+  overflow: hidden;
+}
+
+/* ─── Text column ────────────────────────────────────────── */
+
+.pht-text {
+  max-width: 460px;
+}
+
+.pht-eyebrow {
+  font-family: var(--font-data);
+  font-weight: var(--weight-bold);
+  font-size: var(--size-nav);
+  letter-spacing: var(--tracking-widest);
+  text-transform: uppercase;
+  color: var(--color-crimson);
+  margin-bottom: var(--space-lg);
+}
+
+.pht-title {
+  font-family: var(--font-editorial);
+  font-weight: var(--weight-semibold);
+  font-size: clamp(40px, 5vw, 72px);
+  line-height: 0.98;
+  letter-spacing: var(--tracking-tight);
+  color: var(--color-ink);
+}
+
+.pht-meta {
+  margin-top: var(--space-lg);
+  font-family: var(--font-data);
+  font-weight: var(--weight-bold);
+  font-size: var(--size-nav);
+  letter-spacing: var(--tracking-wide);
+  text-transform: uppercase;
+  color: var(--color-ink-60);
+}
+
+.pht-link {
+  display: inline-flex;
+  margin-top: var(--space-2xl);
+  font-family: var(--font-data);
+  font-weight: var(--weight-bold);
+  font-size: var(--size-nav);
+  letter-spacing: var(--tracking-label);
+  text-transform: uppercase;
+  color: var(--color-ink);
+  border-bottom: 1px solid var(--color-ink-25);
+  padding-bottom: 2px;
+  transition: color 0.2s ease, border-color 0.2s ease;
+}
+
+.pht-link:hover {
+  color: var(--color-crimson);
+  border-bottom-color: var(--color-crimson);
+}
+
+/* ─── Develop frame ──────────────────────────────────────── */
+
+.pht-frame {
+  position: relative;
+  aspect-ratio: 4 / 5;
+  max-height: 80svh;
+  justify-self: center;
+  width: 100%;
+  background: var(--color-cinema-dark);
+  overflow: hidden;
+}
+
+.pht-cover {
+  width: 100%;
+  height: 100%;
+}
+
+.pht-frame-tag {
+  position: absolute;
+  bottom: var(--space-lg);
+  left: var(--space-lg);
+  z-index: 2;
+  font-family: var(--font-data);
+  font-weight: var(--weight-bold);
+  font-size: var(--size-caption);
+  letter-spacing: var(--tracking-wide);
+  text-transform: uppercase;
+  color: var(--color-parchment-70);
+}
+
+/* ─── Mobile — stack, image on top ───────────────────────── */
+
+@media (max-width: 768px) {
+  .pht {
+    grid-template-columns: 1fr;
+    gap: var(--space-2xl);
+    padding: var(--space-3xl) var(--space-xl);
+  }
+
+  .pht-frame {
+    order: -1;
+    aspect-ratio: 3 / 4;
+    max-height: 56svh;
+  }
+
+  .pht-title {
+    font-size: clamp(36px, 11vw, 56px);
+  }
+}

@@ -1,0 +1,88 @@
+/* ============================================================
+   POETRY TEASER — home section
+   Warm paper. A few verse lines settle and ink in, centred,
+   attributed to the poem. Links to the /poetry anthology.
+   ============================================================ */
+
+.poet {
+  position: relative;
+  min-height: 100svh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: var(--space-4xl) var(--space-3xl);
+  background: var(--color-parchment-aged);
+  color: var(--color-ink);
+  overflow: hidden;
+}
+
+.poet-inner {
+  width: 100%;
+  max-width: 760px;
+  text-align: center;
+}
+
+.poet-eyebrow {
+  font-family: var(--font-data);
+  font-weight: var(--weight-bold);
+  font-size: var(--size-nav);
+  letter-spacing: var(--tracking-widest);
+  text-transform: uppercase;
+  color: var(--color-crimson);
+  margin-bottom: var(--space-2xl);
+}
+
+.poet-verse {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-sm);
+}
+
+.poet-line {
+  font-family: var(--font-editorial);
+  font-style: italic;
+  font-weight: var(--weight-regular);
+  font-size: clamp(26px, 3.4vw, 46px);
+  line-height: 1.35;
+  letter-spacing: 0.01em;
+  color: var(--color-ink);
+}
+
+.poet-attr {
+  margin-top: var(--space-2xl);
+  font-family: var(--font-data);
+  font-weight: var(--weight-bold);
+  font-size: var(--size-nav);
+  letter-spacing: var(--tracking-wide);
+  text-transform: uppercase;
+  color: var(--color-ink-60);
+}
+
+.poet-link {
+  display: inline-flex;
+  margin-top: var(--space-3xl);
+  font-family: var(--font-data);
+  font-weight: var(--weight-bold);
+  font-size: var(--size-nav);
+  letter-spacing: var(--tracking-label);
+  text-transform: uppercase;
+  color: var(--color-ink);
+  border-bottom: 1px solid var(--color-ink-25);
+  padding-bottom: 2px;
+  transition: color 0.2s ease, border-color 0.2s ease;
+}
+
+.poet-link:hover {
+  color: var(--color-crimson);
+  border-bottom-color: var(--color-crimson);
+}
+
+@media (max-width: 768px) {
+  .poet {
+    padding: var(--space-3xl) var(--space-xl);
+  }
+
+  .poet-line {
+    font-size: clamp(22px, 7vw, 34px);
+  }
+}

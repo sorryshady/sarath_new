@@ -6,17 +6,29 @@ import { ScrollTrigger } from 'gsap/ScrollTrigger';
 
 import { AboutTeaserSection } from '@/components/about/AboutTeaserSection';
 import { ContactSection } from '@/components/contact/ContactSection';
+import { FilmsTeaserSection } from '@/components/home/FilmsTeaserSection';
 import { GhostBar } from '@/components/navigation/GhostBar';
 import { HeroSection } from '@/components/home/HeroSection';
+import { PhotographyTeaserSection } from '@/components/home/PhotographyTeaserSection';
+import { PoetryTeaserSection } from '@/components/home/PoetryTeaserSection';
 import { Preloader } from '@/components/home/Preloader';
 import type { AboutMeta, AboutTeaser } from '@/types/about';
 import type { ContactSettings } from '@/types/contact';
+import type { Film } from '@/types/film';
+import type { PhotoSeries } from '@/types/photoSeries';
+import type { PoetryTeaser } from '@/types/poetryTeaser';
 
 export function HomePage({
+  films = [],
+  photoSeries = [],
+  poetryTeaser = null,
   aboutTeaser = null,
   aboutMeta = null,
   contactSettings = null,
 }: {
+  films?: Film[];
+  photoSeries?: PhotoSeries[];
+  poetryTeaser?: PoetryTeaser | null;
   aboutTeaser?: AboutTeaser | null;
   aboutMeta?: AboutMeta | null;
   contactSettings?: ContactSettings | null;
@@ -73,15 +85,13 @@ export function HomePage({
           onHeroComplete={handleHeroComplete}
         />
 
-        <AboutTeaserSection teaser={aboutTeaser} meta={aboutMeta} />
+        <FilmsTeaserSection films={films} />
 
-        <section
-          id="films"
-          data-nav-theme="dark"
-          className="min-h-screen"
-          style={{ background: 'var(--color-cinema-dark)' }}
-          aria-label="Films"
-        />
+        <PhotographyTeaserSection series={photoSeries} />
+
+        <PoetryTeaserSection teaser={poetryTeaser} />
+
+        <AboutTeaserSection teaser={aboutTeaser} meta={aboutMeta} />
 
         <ContactSection settings={contactSettings} />
       </main>

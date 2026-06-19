@@ -6,6 +6,15 @@ export const aboutTeaserQuery = defineQuery(`*[_type == "aboutTeaser"][0]`);
 
 export const poetryTeaserQuery = defineQuery(`*[_type == "poetryTeaser"][0]`);
 
+export const poetryTeaserResolvedQuery = defineQuery(`
+  *[_type == "poetryTeaser"][0]{
+    excerptLines,
+    "title": coalesce(poemTitle, linkedPoem->title),
+    "year": coalesce(poemYear, linkedPoem->year),
+    "bodyFallback": linkedPoem->body
+  }
+`);
+
 export const featuredPhotoSeriesQuery = defineQuery(`
   *[_type == "photoSeries" && featured == true] | order(order asc) [0...6] {
     _id,

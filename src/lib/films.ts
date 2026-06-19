@@ -1,5 +1,5 @@
 import { client, isSanityConfigured } from '@/sanity/lib/client';
-import { allFilmsQuery } from '@/sanity/lib/queries';
+import { allFilmsQuery, featuredFilmsQuery } from '@/sanity/lib/queries';
 import type { Film } from '@/types/film';
 
 import { resolveVideoSource } from './video';
@@ -8,6 +8,15 @@ export async function getAllFilms(): Promise<Film[]> {
   if (!isSanityConfigured) return [];
   try {
     return await client.fetch(allFilmsQuery);
+  } catch {
+    return [];
+  }
+}
+
+export async function getFeaturedFilms(): Promise<Film[]> {
+  if (!isSanityConfigured) return [];
+  try {
+    return await client.fetch(featuredFilmsQuery);
   } catch {
     return [];
   }
