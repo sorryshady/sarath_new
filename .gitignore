@@ -47,3 +47,6 @@ next-env.d.ts
 # Sanity build output & local cache
 /dist
 /.sanity
+
+# Vercel
+/.vercel
