@@ -9,7 +9,9 @@ import { schemaTypes } from './src/sanity/schemaTypes';
 import { structure } from './src/sanity/structure';
 
 export default defineConfig({
-  basePath: '/studio',
+  // Embedded Next route lives at /studio; the hosted Studio is served at the
+  // subdomain root, where SANITY_STUDIO_BASEPATH=/ overrides this.
+  basePath: process.env.SANITY_STUDIO_BASEPATH ?? '/studio',
   projectId: projectId!,
   dataset,
   plugins: [structureTool({ structure }), visionTool()],

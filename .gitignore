@@ -43,3 +43,7 @@ next-env.d.ts
 
 # local Claude Code settings (machine-specific)
 .claude/settings.local.json
+
+# Sanity build output & local cache
+/dist
+/.sanity
