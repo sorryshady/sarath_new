@@ -10,6 +10,7 @@
     "setup": "node scripts/npm.mjs install",
     "audit:check": "node scripts/npm.mjs audit --audit-level=high",
     "npm": "node scripts/npm.mjs",
+    "deploy:studio": "SANITY_STUDIO_BASEPATH=/ sanity deploy",
     "migrate": "npx tsx scripts/migrate-from-legacy.ts",
     "repair:photos": "npx tsx scripts/repair-photo-series.ts",
     "repair:films": "npx tsx scripts/repair-films-video.ts"
